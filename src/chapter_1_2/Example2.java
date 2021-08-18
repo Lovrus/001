@@ -1,6 +1,6 @@
 package chapter_1_2;
 
-class Example2 {
+public class Example2 {
     public static void main(String[] args) {
         int num; // в этой строке кода объявляется
         // переменная с именем num
