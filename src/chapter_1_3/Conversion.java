@@ -13,8 +13,7 @@ public class Conversion {
         System.out.println("Преобразование типа double в тип int.");
         i = (int) d;
         System.out.println("d и i " + d + " " + i);
-        System.out.println(
-                "Преобразование типа double в тип byte.");
+        System.out.println("Преобразование типа double в тип byte.");
         b = (byte) d;
         System.out.println("d и b " + d + " " + b);
     }
