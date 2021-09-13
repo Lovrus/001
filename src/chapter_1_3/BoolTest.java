@@ -12,6 +12,6 @@ public class BoolTest {
         b = false;
         if (b) System.out.println("Этот код не выполняется.");
         // результат сравнения - значение типа boolean
-        System.out.println("10 > 9 равно " +(10 > 9));
+        System.out.println("10 > 9 равно " + (10 > 9));
     }
 }

@@ -1,7 +1,7 @@
 package chapter_1_3;
 
 public class Area {
-    public static void main (String [] ards) {
+    public static void main(String[] ards) {
         double pi, r, a;
 
         r = 10.8; // радиус окружности

@@ -8,8 +8,8 @@ public class LifeTime {
             // каждом вхождении в блок кода
             System.out.println("у равно: " + y);
             // здесь всегда выводится значение -1
-             y = 100;
-             System.out.println("у теперь равно: " + y);
+            y = 100;
+            System.out.println("у теперь равно: " + y);
         }
     }
 }
