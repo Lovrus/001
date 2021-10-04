@@ -7,6 +7,10 @@ public class Box {
     double width;
     double height;
     double depth;
+
+    public double volume() {
+        return 0;
+    }
 }
 
 // В этом классе объявляется объект типа Box
