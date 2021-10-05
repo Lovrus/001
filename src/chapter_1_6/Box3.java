@@ -1,14 +1,15 @@
 package chapter_1_6;
+
 // Теперь метод volume() возвращает объем параллелепипеда
-class Box3 {
+class Box4 {
     double width;
     double height;
     double depth;
 
     //рассчитать и возвратить объем
-    double volume() {
+    double volumes() {
         return width * height * depth;
-    }
+    }// Тут идеа изменила
 }
 
 class BoxDemo4 {
@@ -29,11 +30,11 @@ class BoxDemo4 {
         mybox2.depth = 9;
 
         // получить объем первого параллелепипеда
-        vol = mybox1.volume();
+        vol = mybox1.volumes();
         System.out.println("Объем равен " + vol);
 
         // получить объем второго параллелепипеда
-        vol = mybox2.volume();
+        vol = mybox2.volumes();
         System.out.println("Объем равен " + vol);
     }
 }

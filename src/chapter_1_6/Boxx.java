@@ -1,7 +1,7 @@
 package chapter_1_6;
 
 // В этой прогамме объявляются два обекта класса Box
-class Box1 {
+class Box2 {
     double width;
     double height;
     double depth;
