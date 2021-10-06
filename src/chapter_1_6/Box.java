@@ -3,24 +3,10 @@ package chapter_1_6;
 /* Программа, использующая класс Box
 Присвоить исходному файлу имя BoxDemo.java
 */
-class Box {
+public class Box {
     double width;
     double height;
     double depth;
-
-    public void volume() {
-    }
-
-    public double volumes() {
-        return 0;
-    }
-
-    public void setDim(int i, int i1, int i2) {
-    }
-
-    public double volumess() {
-        return 0;
-    }
 }
 
 // В этом классе объявляется объект типа Box

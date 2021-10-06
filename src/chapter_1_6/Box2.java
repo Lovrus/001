@@ -1,7 +1,6 @@
 package chapter_1_6;
-
-// В этой прогамме объявляются два обекта класса Box
-class Box2 {
+// В этой программе объявляются два объекта класса Box2
+public class Box2 {
     double width;
     double height;
     double depth;
@@ -9,11 +8,11 @@ class Box2 {
 
 class BoxDemo2 {
     public static void main(String[] args) {
-        Box mybox1 = new Box();
-        Box mybox2 = new Box();
+        Box2 mybox1 = new Box2();
+        Box2 mybox2 = new Box2();
         double vol;
 
-        // присвоить значение переменным экземпляра mybox1
+        // присвоить значения переменным экземпляра mybox1
         mybox1.width = 10;
         mybox1.height = 20;
         mybox1.depth = 15;
@@ -24,7 +23,7 @@ class BoxDemo2 {
         mybox2.height = 6;
         mybox2.depth = 9;
 
-        // рассчитать объем первого параллелепипеда
+        // расчитать обхем первого параллелепипеда
         vol = mybox1.width * mybox1.height * mybox1.depth;
         System.out.println("Объем равен " + vol);
 
