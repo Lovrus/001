@@ -1,4 +1,5 @@
 package chapter_1_6;
+
 /* В данном примере программы для иницилизации
 размеров параллелепипеда в классе Box7 применяется
 параметризированный конструктор
@@ -14,9 +15,10 @@ public class Box7 {
         height = h;
         depth = d;
     }
+
     // рассчитать и возвратить объем
     double volume() {
-        return width*height*depth;
+        return width * height * depth;
     }
 }
 
