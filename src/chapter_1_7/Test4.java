@@ -1,25 +1,30 @@
 package chapter_1_7;
 
-// Аргументы примитивных типов передаются по значению
+// Вовзрат объекта
 public class Test4 {
-    void meth(int i, int j) {
-        i *= 2;
-        j /= 2;
+    int a;
+
+    Test4(int i) {
+        a = i;
+    }
+
+    Test4 incrByTen() {
+        Test4 temp = new Test4(a + 10);
+        return temp;
     }
 }
 
-class CallByValue1 {
+class RetOb {
     public static void main(String[] args) {
-        Test4 ob = new Test4();
+        Test4 ob1 = new Test4(2);
+        Test4 ob2;
 
-        int a = 15, b = 20;
-
-        System.out.println(" a и b до вызова: " +
-                a + " " + b);
-
-        ob.meth(a, b);
-
-        System.out.println(" a и b после вызова: " +
-                a + " " + b);
+        ob2 = ob1.incrByTen();
+        System.out.println("ob1.a: " + ob1.a);
+        System.out.println("ob2.a: " + ob2.a);
+        ob2 = ob2.incrByTen();
+        System.out.println(
+                "ob2.a после второго увеличения значения: "
+                        + ob2.a);
     }
 }
