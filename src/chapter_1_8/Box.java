@@ -1,4 +1,5 @@
 package chapter_1_8;
+
 // В этой программе наследование применяется
 // для раширения класса Вох
 class Box {
@@ -20,39 +21,52 @@ class Box {
         depth = d;
     }
 
-    // конструктор применяемый при остутствии размеров
+    // конструктор применяемый в остутствие размеров
     Box() {
-        width - -1; // значение -1 служит для обозначения
+        width = -1; // значение -1 служит для обозначения
         heigth = -1; // неицилизированного
-        depth = -1 // параллелепипеда
-        }
+        depth = -1; // параллелепипеда
+    }
 
-        // конструктор, применяемый при создании куба
+    // конструктор, применяемый при создании куба
     Box(double len) {
         width = heigth = depth = len;
     }
 
     // рассчитать и возвратить объем
     double volume() {
-        return  width*heigth*depth;
+        return width * heigth * depth;
     }
 }
-// рассчитать класс Box, включив в него пол веса
+
+// расширить класс Box, включив в него пол веса
 class BoxWeight extends Box {
     double weight; // вес параллелепипеда
 
     // конструктор BoxWeight ()
     BoxWeight(double w, double h, double d, double m) {
-        weight = w;
+        width = w;
         heigth = h;
         depth = d;
         weight = m;
     }
 }
-public class DemoWeight {
+
+class DemoWeight {
     public static void main(String[] args) {
+        BoxWeight mybox1 = new BoxWeight(10, 20, 15, 34.3);
+        BoxWeight mybox2 = new BoxWeight(2, 3, 4, 0.076);
+        double vol;
 
-    }
-    }
+        vol = mybox1.volume();
+        System.out.println("Объем mybox1 равен " + vol);
+        System.out.println(
+                "Вес mybox1 равен " + mybox1.weight);
+        System.out.println();
 
-)
+        vol = mybox2.volume();
+        System.out.println("Объем mybox2 равен " + vol);
+        System.out.println(
+                "Вес mybox2 равен " + mybox2.weight);
+    }
+}
