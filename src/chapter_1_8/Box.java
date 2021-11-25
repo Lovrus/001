@@ -70,3 +70,16 @@ class DemoWeight {
                 "Вес mybox2 равен " + mybox2.weight);
     }
 }
+
+// Этот класс расширяет класс Box,
+// включая в него свойство цвета
+class ColorBox extends Box {
+    int color; // цвет параллелепипеда
+
+    ColorBox(double w, double h, double d, int c) {
+        width = w;
+        heigth = h;
+        depth = d;
+        color = c;
+    }
+}
