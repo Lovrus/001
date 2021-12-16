@@ -1,13 +1,13 @@
 package Alishev;
 
 // Урок 15. Методы в java
-public class ClassesAndObjects {
+class ClassesAndObjects2 {
     public static void main(String[] args) {
-        Person person1 = new Person();
+        Person2 person1 = new Person2();
         person1.name = "Роман";
         person1.age = 50;
         person1.sayHello();
-        Person person2 = new Person();
+        Person2 person2 = new Person2();
         person2.name = "Вова";
         person2.age = 20;
         person2.speak();
@@ -15,7 +15,7 @@ public class ClassesAndObjects {
     }
 }
 
-class Person {
+class Person2 {
     // У класса могут быть:
     //1. Данные (поля).
     //2. Действия, которые он может совершать (методы)
@@ -32,5 +32,3 @@ class Person {
         System.out.println("Привет!");
     }
 }
-
-
