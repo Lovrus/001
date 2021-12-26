@@ -1,17 +1,19 @@
 package Alishev;
 
-// Урок 15. Методы в java
+// Урок 16. Тип возвращаемого значения метода.
 class ClassesAndObjects2 {
     public static void main(String[] args) {
         Person2 person1 = new Person2();
         person1.name = "Роман";
         person1.age = 50;
-        person1.sayHello();
+
         Person2 person2 = new Person2();
         person2.name = "Вова";
         person2.age = 20;
-        person2.speak();
-
+        int years1 = person1.calculateYearsToRetirement();
+        int years2 = person2.calculateYearsToRetirement();
+        System.out.println("Первому человеку до пенсии: " + years1 + " лет.");
+        System.out.println("Второму человеу до пенсии: " + years2 + " лет.");
     }
 }
 
@@ -22,6 +24,11 @@ class Person2 {
     String name;
     int age;
 
+    int calculateYearsToRetirement() {
+        int years = 65-age;
+        return  years;
+    }
+
     void speak() {
         for (int i = 0; i < 3; i++) {
             System.out.println("Меня зовут " + name + ", мне " + age + " лет");
@@ -29,6 +36,7 @@ class Person2 {
     }
 
     void sayHello() {
+
         System.out.println("Привет!");
     }
 }
