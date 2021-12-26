@@ -1,19 +1,15 @@
 package Alishev;
 
-// Урок 16. Тип возвращаемого значения метода.
+// Урок 17. Параметры метода.
 class ClassesAndObjects2 {
     public static void main(String[] args) {
         Person2 person1 = new Person2();
-        person1.name = "Роман";
-        person1.age = 50;
-
+        person1.setNameAndAge("Роман",20);
+        String s1 = "Вова";
         Person2 person2 = new Person2();
-        person2.name = "Вова";
-        person2.age = 20;
-        int years1 = person1.calculateYearsToRetirement();
-        int years2 = person2.calculateYearsToRetirement();
-        System.out.println("Первому человеку до пенсии: " + years1 + " лет.");
-        System.out.println("Второму человеу до пенсии: " + years2 + " лет.");
+        person2.setNameAndAge(s1,30);
+        person1.speak();
+        person2.speak();
     }
 }
 
@@ -24,9 +20,15 @@ class Person2 {
     String name;
     int age;
 
+    void setNameAndAge(String username, int userage) {
+        name = username;
+        age = userage;
+
+    }
+
     int calculateYearsToRetirement() {
-        int years = 65-age;
-        return  years;
+        int years = 65 - age;
+        return years;
     }
 
     void speak() {
