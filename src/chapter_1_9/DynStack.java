@@ -1,6 +1,6 @@
 package chapter_1_9;
 
-// Реализация "наращиваемого" стека
+// Реализация "наращиваемого" стека.
 public class DynStack implements IntStack {
     private int stck[];
     private int tos;
