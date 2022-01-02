@@ -14,14 +14,14 @@ class Human {
     String name19;
     int age19;
 
-    public void setName19(String theName19) {
+    public void setName19(String name19) {
 
-        name19 = theName19;
+        this.name19 = name19;
     }
 
-    public void setAge19(int myAge19) {
+    public void setAge19(int age19) {
 
-        age19 = myAge19;
+        this.age19 = age19;
     }
 
     public String getName19() {
