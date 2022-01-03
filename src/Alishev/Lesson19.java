@@ -7,6 +7,10 @@ public class Lesson19 {
         human1.setAge19(18);
         human1.setName19("Tom");
         human1.getInfo19();
+        Human human2 = new Human();
+        human2.setAge19(25);
+        human2.setName19("Bob");
+        human2.getInfo19();
     }
 }
 
