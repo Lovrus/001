@@ -1,11 +1,11 @@
 package chapter_1_10;
-
-/* Эта программа содержит ошибку.
+/*
+Эта программа содержит ошибку.
 В последовательности операторов catch подкласс
 исключений должен быть указан перед его суперклассом,
 иначе это приведет к недостижимому коду и ошибке во
 время компиляции
- */
+
 public class SuperSubCatch {
     public static void main(String[] args) {
         try {
@@ -15,11 +15,13 @@ public class SuperSubCatch {
             System.out.println(
                     "Перехват исключений общего класса Exception.");
         }
-        /* Этот оператор catch  вообще не будет достигнут,
+        Этот оператор catch  вообще не будет достигнут,
         так как подкласс ArithmeticException является
-        производным от класса Exception. */ catch (ArithmeticException e) {
+        производным от класса Exception.
+        catch (ArithmeticException e) {
             // Ошибка: недостижимый код!
             System.out.println("Этот код вообще недостижим.");
         }
     }
 }
+*/
