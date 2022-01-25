@@ -1,6 +1,6 @@
 package Alishev;
 
-// Урок 21. Ключевое слово static
+// Урок 21. Ключевое слово static. Продолжение,
 public class Lesson20 {
     public static void main(String[] args) {
 
