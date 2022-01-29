@@ -1,8 +1,8 @@
 package chapter_1_11;
 
-// Создать второй поток исполнения, расширив клас Thread
-class NewThread3 extends Thread {
-    NewThread3() {
+// Создать второй поток исполнения, расширив клас Thread.
+class NewThread2 extends Thread {
+    NewThread2() {
         // создать новый поток исполнения
         super("Демонстрациооный поток");
         System.out.println("Дочерний поток: " + this);
@@ -25,7 +25,7 @@ class NewThread3 extends Thread {
 
 class ExtendThread {
     public static void main(String[] args) {
-        new NewThread3(); // создать новый поток исполнения
+        new NewThread2(); // создать новый поток исполнения
 
         try {
             for (int i = 5; i > 0; i--) {
