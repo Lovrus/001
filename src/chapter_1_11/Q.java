@@ -28,6 +28,8 @@ class Producer implements Runnable {
 
         while (true) {
             q.put(i++);
+            System.out.println();
+
         }
     }
 }
