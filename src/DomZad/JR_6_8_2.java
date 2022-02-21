@@ -3,7 +3,7 @@ package DomZad;
 import java.util.Arrays;
 
 /*
- массив
+ массив.
 */
 public class JR_6_8_2 {
 
