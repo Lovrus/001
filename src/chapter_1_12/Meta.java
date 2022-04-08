@@ -1,17 +1,19 @@
 package chapter_1_12;
+
 import java.lang.annotation.*;
 import java.lang.reflect.*;
 
 // Объявление типа аннотации
 @Retention(RetentionPolicy.RUNTIME)
-@interface Myanno {
+@interface MyAnno {
     String str();
+
     int val();
 }
 
 public class Meta {
     // аннотировать метод
-    @Myanno(str = "Пример аннотации", val = 100)
+    @MyAnno(str = "Пример аннотации", val = 100)
     public static void myMeth() {
         Meta ob = new Meta();
 
@@ -22,9 +24,21 @@ public class Meta {
             // представляющий данный класс
             Class<?> c = ob.getClass();
 
-            // затем получить объект типа
-        }
+            // затем получить объект типа Method,
+            // представляющий данный метод
+            Method m = c.getMethod("myMeth");
 
+            // далее получить аннотацию для данного класса
+            MyAnno anno = m.getAnnotation(MyAnno.class);
+
+            // и наконец, вывести значения членов аннотации
+            System.out.println(anno.str() + " " + anno.val());
+        } catch (NoSuchMethodException exc) {
+            System.out.println("Метод не найден.");
+        }
     }
 
+    public static void main(String[] args) {
+        myMeth();
+    }
 }
