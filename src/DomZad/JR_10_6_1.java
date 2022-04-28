@@ -8,16 +8,16 @@ public class JR_10_6_1 {
     public int age;
     public char sex;
 
-    public Friend(String name) {
+    public JR_10_6_1(String name) {
         this.name = name;
     }
 
-    public Friend(String name, int age) {
+    public JR_10_6_1(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    public Friend(String name, int age, char sex) {
+    public JR_10_6_1(String name, int age, char sex) {
         this.name = name;
         this.age = age;
         this.sex = sex;
