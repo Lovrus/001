@@ -35,9 +35,6 @@ public class JR_14_7_5 {
         for (String key : copy.keySet()) {
             Date date = copy.get(key);
             int month = date.getMonth() + 1;
-            if (month == 6 month == 7 month == 8){
-                map.remove(key);
-            }
         }
     }
 
