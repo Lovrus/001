@@ -49,5 +49,13 @@ public class VectorDemo {
         while (vEnum.hasMoreElements())
             System.out.print(vEnum.nextElement() + " ");
         System.out.println();
+
+        // Использовать итератор для вывода содержимого вектора
+        Iterator<Integer> vItr = v.iterator();
+
+        System.out.println("\nЭлементы вектора:");
+        while (vItr.hasNext())
+            System.out.print(vItr.next() + " ");
+        System.out.println();
     }
 }
