@@ -57,5 +57,13 @@ public class VectorDemo {
         while (vItr.hasNext())
             System.out.print(vItr.next() + " ");
         System.out.println();
+
+        // Использовать усовешенственный цикл for
+        // в стиле for each для вывода элеменов вектора
+        System.out.println("\nЭлементы вектора:");
+        for (int i : v)
+            System.out.print(i + " ");
+
+        System.out.println();
     }
 }
