@@ -5,11 +5,11 @@ package DomZad;
 
 public class JR_11_5_7 {
     public static void main(String[] args) {
-        Cat cat = new Cat();
+        Cat11 cat = new Cat11();
         System.out.println(cat.name);
     }
 }
 
-class Cat {
+class Cat11 {
     String name = "Tom";
 }
