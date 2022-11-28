@@ -7,17 +7,21 @@ public class Cat15 {
     public static String namePrefix;
 
     static {
-        Properties p = new Properties();
-        p.loadFromFile("cat.properties");
-        namePrefix = p.get("name-prefix");
+        Properties p = null;
+        String s;
+        // s = (String) new Properties(Integer.parseInt("name-prefix"));
+
+        Properties properties = new Properties();
+
+         properties = (Properties) p.get("name-prefix");
     }
 
     public static int maxCatCount = 50;
 
     static {
-        Properties p = new Properties();
-        p.loadFromFile("max.properties");
+        var p = new Properties();
+       // p.load ("max.properties");
         if (p.get("cat-max") != null)
-            maxCatCount = p.getInt("cat-max");
+            maxCatCount = (int) p.get("cat-max");
     }
 }
