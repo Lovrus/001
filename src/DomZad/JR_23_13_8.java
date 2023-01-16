@@ -29,7 +29,7 @@ public class JR_23_13_8 {
         public void run() {
             for (int i = 0; i < 10; i++) {
                 System.out.println(message + i);
-                Solution.sleep();
+                JR_23_13_8.sleep();
             }
         }
     }
