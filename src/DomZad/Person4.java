@@ -6,7 +6,7 @@ public class Person4 {
     private Sex2 sex;
     private Date birthDate;
 
-    private Person4(String name, Sex sex, Date birthDate) {
+    private Person4(String name, Sex2 sex, Date birthDate) {
         this.name = name;
         this.sex = sex;
         this.birthDate = birthDate;

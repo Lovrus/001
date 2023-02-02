@@ -10,11 +10,11 @@ CRUD 2
 */
 
 public class JR_24_9_2 {
-    public static volatile List<Person> allPeople = new ArrayList<Person>();
+    public static volatile List<Person4> allPeople = new ArrayList<Person4>();
 
     static {
-        allPeople.add(Person.createMale("Иванов Иван", new Date()));  //сегодня родился    id=0
-        allPeople.add(Person.createFemale("Петров Петр", new Date()));  //сегодня родился    id=1
+        allPeople.add(Person4.createMale("Иванов Иван", new Date()));  //сегодня родился    id=0
+        allPeople.add(Person4.createFemale("Петров Петр", new Date()));  //сегодня родился    id=1
     }
 
     private static SimpleDateFormat inputFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
@@ -30,7 +30,7 @@ public class JR_24_9_2 {
                             String name = args[i];
                             String sex = args[i + 1];
                             Date date = inputFormat.parse(args[i + 2]);
-                            Person person = sex.equals("м") ? Person.createMale(name, date) : Person.createFemale(name, date);
+                            Person4 person = sex.equals("м") ? Person4.createMale(name, date) : Person4.createFemale(name, date);
                             allPeople.add(person);
                             System.out.println(allPeople.indexOf(person));
                         }
@@ -44,7 +44,7 @@ public class JR_24_9_2 {
                             String sex = args[i + 2];
                             Date date = inputFormat.parse(args[i + 3]);
                             allPeople.get(id).setName(name);
-                            allPeople.get(id).setSex("м".equals(sex) ? Sex.MALE : Sex.FEMALE);
+                            allPeople.get(id).setSex("м".equals(sex) ? Sex2.MALE : Sex2.FEMALE);
                             allPeople.get(id).setBirthDate(date);
                         }
                     }
@@ -62,7 +62,7 @@ public class JR_24_9_2 {
                     synchronized (allPeople) {
                         for (int i = 1; i < args.length; i++) {
                             int id = Integer.parseInt(args[i]);
-                            Person person = allPeople.get(id);
+                            Person4 person = allPeople.get(id);
                             System.out.print(person.getName() + " ");
                             System.out.print(person.getSex().equals(Sex.MALE) ? "м " : "ж ");
                             System.out.println(outputFormat.format(person.getBirthDate()));
