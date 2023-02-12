@@ -30,7 +30,7 @@ public class JR_24_10_10 {
             while ((input = fReader2.readLine()) != null)
                 forRemoveLines.add(input);
             fReader2.close();
-            new Solution().joinData();
+            new JR_24_10_10().joinData();
         } catch (Exception ignore) {
         }
 
