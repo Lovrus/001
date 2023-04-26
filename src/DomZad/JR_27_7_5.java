@@ -1,4 +1,5 @@
 package DomZad;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -12,7 +13,7 @@ public class JR_27_7_5 implements Serializable, Runnable {
     transient private Thread runner;
     private int speed;
 
-    public JR_27_7_5 (int speed) {
+    public JR_27_7_5(int speed) {
         this.speed = speed;
         runner = new Thread(this);
         runner.start();
