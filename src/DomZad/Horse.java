@@ -1,6 +1,6 @@
 package DomZad;
 
-public class Horse2 {
+public class Horse {
     public static void main(String[] args) {
     }
 }
