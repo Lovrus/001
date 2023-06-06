@@ -2,9 +2,9 @@ package DomZad;
 
 public class Task implements Runnable {
     private String initialString;
-    private Solution solution;
+    private JR_29_05_01 solution;
 
-    public Task(Solution solution, String initialString) {
+    public Task(JR_29_05_01 solution, String initialString) {
         this.solution = solution;
         this.initialString = initialString;
     }
