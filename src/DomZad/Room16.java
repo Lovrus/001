@@ -5,23 +5,23 @@ import java.util.ArrayList;
 /**
  * Основной класс программы.
  */
-public class Room {
+public class Room16 {
     private int width;
     private int height;
-    private Snake snake;
-    private Mouse mouse;
+    private Snake16 snake;
+    private Mouse16 mouse;
 
-    public Room(int width, int height, Snake snake) {
+    public Room16(int width, int height, Snake16 snake) {
         this.width = width;
         this.height = height;
         this.snake = snake;
     }
 
-    public Snake getSnake() {
+    public Snake16 getSnake() {
         return snake;
     }
 
-    public Mouse getMouse() {
+    public Mouse16 getMouse() {
         return mouse;
     }
 
@@ -41,11 +41,11 @@ public class Room {
         this.height = height;
     }
 
-    public void setSnake(Snake snake) {
+    public void setSnake(Snake16 snake) {
         this.snake = snake;
     }
 
-    public void setMouse(Mouse mouse) {
+    public void setMouse(Mouse16 mouse) {
         this.mouse = mouse;
     }
 
@@ -68,16 +68,16 @@ public class Room {
 
                 //Если "стрелка влево" - сдвинуть фигурку влево
                 if (event.getKeyCode() == KeyEvent.VK_LEFT)
-                    snake.setDirection(SnakeDirection.LEFT);
+                    snake.setDirection(SnakeDirection16_1.LEFT);
                     //Если "стрелка вправо" - сдвинуть фигурку вправо
                 else if (event.getKeyCode() == KeyEvent.VK_RIGHT)
-                    snake.setDirection(SnakeDirection.RIGHT);
+                    snake.setDirection(SnakeDirection16_1.RIGHT);
                     //Если "стрелка вверх" - сдвинуть фигурку вверх
                 else if (event.getKeyCode() == KeyEvent.VK_UP)
-                    snake.setDirection(SnakeDirection.UP);
+                    snake.setDirection(SnakeDirection16_1.UP);
                     //Если "стрелка вниз" - сдвинуть фигурку вниз
                 else if (event.getKeyCode() == KeyEvent.VK_DOWN)
-                    snake.setDirection(SnakeDirection.DOWN);
+                    snake.setDirection(SnakeDirection16_1.DOWN);
             }
 
             snake.move();   //двигаем змею
@@ -97,8 +97,8 @@ public class Room {
         int[][] matrix = new int[height][width];
 
         //Рисуем все кусочки змеи
-        ArrayList<SnakeSection> sections = new ArrayList<SnakeSection>(snake.getSections());
-        for (SnakeSection snakeSection : sections) {
+        ArrayList<SnakeSection16> sections = new ArrayList<SnakeSection16>(snake.getSections());
+        for (SnakeSection16 snakeSection : sections) {
             matrix[snakeSection.getY()][snakeSection.getX()] = 1;
         }
 
@@ -135,14 +135,14 @@ public class Room {
         int x = (int) (Math.random() * width);
         int y = (int) (Math.random() * height);
 
-        mouse = new Mouse(x, y);
+        mouse = new Mouse16(x, y);
     }
 
 
-    public static Room game;
+    public static Room16 game;
     public static void main(String[] args) {
-        game = new Room(20, 20, new Snake(10, 10));
-        game.snake.setDirection(SnakeDirection.DOWN);
+        game = new Room16(20, 20, new Snake16(10, 10));
+        game.snake.setDirection(SnakeDirection16_1.DOWN);
         game.createMouse();
         game.run();
     }

@@ -1,6 +1,6 @@
 package DomZad;
 
-public class SnakeDirection16 {
+public enum SnakeDirection16_1 {
     UP,
     RIGHT,
     DOWN,

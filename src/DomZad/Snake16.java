@@ -7,13 +7,13 @@ import java.util.List;
  */
 public class Snake16 {
     //Направление движения змеи
-    private SnakeDirection16 direction;
+    private SnakeDirection16_1 direction;
     //Состояние - жива змея или нет.
     private boolean isAlive;
     //Список кусочков змеи.
     private List<SnakeSection16> sections;
 
-    public Snake(int x, int y) {
+    public Snake16(int x, int y) {
         sections = new ArrayList<>();
         sections.add(new SnakeSection16(x, y));
         isAlive = true;
@@ -31,11 +31,11 @@ public class Snake16 {
         return sections.get(0).getY();
     }
 
-    public SnakeDirection16 getDirection() {
+    public SnakeDirection16_1 getDirection() {
         return direction;
     }
 
-    public void setDirection(SnakeDirection16 direction) {
+    public void setDirection(SnakeDirection16_1 direction) {
         this.direction = direction;
     }
 
@@ -50,13 +50,13 @@ public class Snake16 {
     public void move() {
         if (!isAlive) return;
 
-        if (direction == SnakeDirection16.UP)
+        if (direction == SnakeDirection16_1.UP)
             move(0, -1);
-        else if (direction == SnakeDirection16.RIGHT)
+        else if (direction == SnakeDirection16_1.RIGHT)
             move(1, 0);
-        else if (direction == SnakeDirection16.DOWN)
+        else if (direction == SnakeDirection16_1.DOWN)
             move(0, 1);
-        else if (direction == SnakeDirection16.LEFT)
+        else if (direction == SnakeDirection16_1.LEFT)
             move(-1, 0);
     }
 
@@ -71,7 +71,7 @@ public class Snake16 {
      * Метод проверяет - находится ли новая голова в пределах комнаты
      */
     void checkBorders(SnakeSection16 head) {
-        if ((head.getX() < 0 || head.getX() >= Room.game.getWidth()) || head.getY() < 0 || head.getY() >= Room.game.getHeight()) {
+        if ((head.getX() < 0 || head.getX() >= Room16.game.getWidth()) || head.getY() < 0 || head.getY() >= Room16.game.getHeight()) {
             isAlive = false;
         }
     }
