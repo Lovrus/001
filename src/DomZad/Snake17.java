@@ -82,7 +82,7 @@ public class Snake17 {
         if (head.getX() == mouse.getX() && head.getY() == mouse.getY()) //съела
         {
             sections.add(0, head);                  //Добавили новую голову
-            Room.game.eatMouse();                   //Хвост не удаляем, но создаем новую мышь.
+            Room17.game.eatMouse();                   //Хвост не удаляем, но создаем новую мышь.
         } else //просто движется
         {
             sections.add(0, head);                  //добавили новую голову
@@ -93,8 +93,8 @@ public class Snake17 {
     /**
      * Метод проверяет - находится ли новая голова в пределах комнаты
      */
-    void checkBorders(SnakeSection head) {
-        if ((head.getX() < 0 || head.getX() >= Room.game.getWidth()) || head.getY() < 0 || head.getY() >= Room.game.getHeight()) {
+    void checkBorders(SnakeSection17 head) {
+        if ((head.getX() < 0 || head.getX() >= Room17.game.getWidth()) || head.getY() < 0 || head.getY() >= Room17.game.getHeight()) {
             isAlive = false;
         }
     }
