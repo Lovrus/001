@@ -5,23 +5,23 @@ import java.util.ArrayList;
 /**
  * Основной класс программы.
  */
-public class Room {
+public class Room17 {
     private int width;
     private int height;
-    private Snake snake;
-    private Mouse mouse;
+    private Snake17 snake;
+    private Mouse17 mouse;
 
-    public Room(int width, int height, Snake snake) {
+    public Room17(int width, int height, Snake17 snake) {
         this.width = width;
         this.height = height;
         this.snake = snake;
     }
 
-    public Snake getSnake() {
+    public Snake17 getSnake() {
         return snake;
     }
 
-    public Mouse getMouse() {
+    public Mouse17 getMouse() {
         return mouse;
     }
 
@@ -41,11 +41,11 @@ public class Room {
         this.height = height;
     }
 
-    public void setSnake(Snake snake) {
+    public void setSnake(Snake17 snake) {
         this.snake = snake;
     }
 
-    public void setMouse(Mouse mouse) {
+    public void setMouse(Mouse17 mouse) {
         this.mouse = mouse;
     }
 
