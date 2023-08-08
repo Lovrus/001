@@ -1,5 +1,4 @@
 package DomZad;
-
 public abstract class BaseObject17 {
     protected double x;
     protected double y;
@@ -35,11 +34,11 @@ public abstract class BaseObject17 {
         this.radius = radius;
     }
 
-    abstract void draw(Canvas16 canvas);
+    abstract void draw(Canvas17 canvas);
 
     abstract void move();
 
-    boolean intersects(BaseObject16 o) {
+    boolean intersects(BaseObject17 o) {
         double dx = x - o.x;
         double dy = y - o.y;
         double destination = Math.sqrt(dx * dx + dy * dy);

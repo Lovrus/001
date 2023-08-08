@@ -1,4 +1,5 @@
 package DomZad;
+
 public class Ball17 extends BaseObject17 {
 
     //скорость
