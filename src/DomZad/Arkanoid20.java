@@ -161,4 +161,59 @@ public class Arkanoid20 {
             }
         }
     }
+    /**
+     * Проверяем столкновение с подставкой.
+     * Если столкновение было - шарик отлетает в случайном направлении  вверх 80..100 градусов.
+     */
+    void checkStandBump() {
+        if (ball.intersects(stand)) {
+            double angle = 90 + 20 * (Math.random() - 0.5);
+            ball.setDirection(angle);
+        }
+    }
+
+    /**
+     * Проверяем - не улетел ли шарик через дно.
+     * Если да - игра окончена (isGameOver = true)
+     */
+    void checkEndGame() {
+        if (ball.getY() > height && ball.getDy() > 0)
+            isGameOver = true;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public static Arkanoid20 game;
+
+    public static void main(String[] args) throws Exception {
+        game = new Arkanoid20(20, 30);
+
+        Ball20 ball = new Ball20(10, 29, 2, 95);
+        game.setBall(ball);
+
+        Stand20 stand = new Stand20(10, 30);
+        game.setStand(stand);
+
+        game.getBricks().add(new Brick20(3, 3));
+        game.getBricks().add(new Brick20(7, 5));
+        game.getBricks().add(new Brick20(12, 5));
+        game.getBricks().add(new Brick20(16, 3));
+
+        game.run();
+    }
+}
 
