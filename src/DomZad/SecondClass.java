@@ -5,7 +5,7 @@ public class SecondClass implements Action {   //second implementation
     private static String SECOND_CLASS_METHOD_STRING = "class SecondClass, method someAction";
 
     public SecondClass() {
-        Solution.countActionObjects++;
+        JR_31_4_2.countActionObjects++;
     }
 
     protected StringBuilder sb = new StringBuilder(SECOND_CLASS_METHOD_STRING);
