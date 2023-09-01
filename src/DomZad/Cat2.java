@@ -3,10 +3,10 @@ package DomZad;
 В работе вам иногда будет нужно закастить класс к какому-нибудь интерфейсу (тут Sayable),
 который не реализован в текущем классе
  */
-public class Cat implements Pet {
+public class Cat2 implements Pet2 {
     private String name;
 
-    public Cat(String name) {
+    public Cat2(String name) {
         this.name = name;
     }
 
@@ -33,9 +33,9 @@ public class Cat implements Pet {
             @Override
             public String say() {
                 if (i < 1)
-                    return Cat.this.name + " спит.";
+                    return Cat2.this.name + " спит.";
 
-                StringBuilder sb = new StringBuilder(Cat.this.name).append(" говорит м");
+                StringBuilder sb = new StringBuilder(Cat2.this.name).append(" говорит м");
                 for (int j = 0; j < i; j++)
                     sb.append("я");
                 sb.append("у!");

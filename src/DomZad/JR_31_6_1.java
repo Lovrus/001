@@ -7,8 +7,8 @@ import java.util.List;
 
 public class SJR_31_6_1 {
     public static void main(String[] args) {
-        List<Pet2> pet = Util.getPets();
-        List<Sayable> pets = Util.convertPetToSayable(pet);
-        Util.printDialog(pets);
+        List<Pet2> pet = Util2.getPets();
+        List<Sayable> pets = Util2.convertPetToSayable(pet);
+        Util2.printDialog(pets);
     }
 }
