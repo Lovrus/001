@@ -11,18 +11,18 @@ public class Util3 {
     }
 
     public static List<Pet3> getPets() {
-        List<Pet> pets = new LinkedList<>();
+        List<Pet3> pets = new LinkedList<>();
         pets.add(new Dog("Барбос"));
         pets.add(new Dog("Тузик"));
         pets.add(new Dog("Бобик"));
-        pets.add(new Mouse());
+        pets.add(new Mouse20());
         pets.add(new Dog("Шарик"));
         return pets;
     }
 
     public static List<Sayable2> convertPetToSayable(List<Pet3> pets) {
         List<Sayable2> result = new LinkedList<>();
-        for (Pet pet : pets) {
+        for (Pet3 pet : pets) {
             int i = (int) (Math.random() * 7) - 2;
             result.add(pet.toSayable(i));
         }

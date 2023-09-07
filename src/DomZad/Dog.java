@@ -39,7 +39,7 @@ public class Dog implements Pet3 {
      */
 
     public Sayable2 toSayable(final int i) {
-        class DogPet extends SuperDog implements Sayable {
+        class DogPet extends SuperDog implements Sayable2 {
             private String getName() {
                 //we use logic from Dog and SuperDog - 2 classes!
                 return getSuperQuotes() + Dog.this.name + getSuperQuotes();
