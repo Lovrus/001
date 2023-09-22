@@ -1,13 +1,13 @@
 package DomZad;
 
 public class ModelData {
-    private List<User> users;
+    private List<User3> users;
 
-    public List<User> getUsers() {
+    public List<User3> getUsers() {
         return users;
     }
 
-    public void setUsers(List<User> users) {
+    public void setUsers(List<User3> users) {
         this.users = users;
     }
 }

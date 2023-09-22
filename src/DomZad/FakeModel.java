@@ -1,7 +1,5 @@
 package DomZad;
 
-import com.javarush.task.task36.task3608.bean.User;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,9 +14,9 @@ public class FakeModel implements Model {
 
     @Override
     public void loadUsers() {
-        List<User> users = new ArrayList<>();
-        users.add(new User("A", 1l, 1));
-        users.add(new User("B", 2l, 1));
+        List<User3> users = new ArrayList<>();
+        users.add(new User3("A", 1l, 1));
+        users.add(new User3("B", 2l, 1));
         modelData.setUsers(users);
     }
 }
