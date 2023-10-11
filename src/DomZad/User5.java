@@ -24,7 +24,7 @@ public class User5 implements Cloneable {
 
     public User5 clone() {
         try {
-            return (User) super.clone();
+            return (User5) super.clone();
         } catch (CloneNotSupportedException ignored) {
             return NULL_USER;
         }
