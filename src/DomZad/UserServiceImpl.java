@@ -7,8 +7,8 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao = new UserDao();
 
     @Override
-    public User deleteUser(long id) {
-        User user = userDao.getUserById(id);
+    public User6 deleteUser(long id) {
+        User6 user = userDao.getUserById(id);
         Util.markDeleted(user);
         userDao.createOrUpdate(user);
 
@@ -16,20 +16,20 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User createOrUpdateUser(String name, long id, int level) {
-        User user = new User(name, id, level);
+    public User6 createOrUpdateUser(String name, long id, int level) {
+        User6 user = new User6(name, id, level);
         return userDao.createOrUpdate(user);
     }
 
     @Override
-    public List<User> getUsersByName(String name) {
+    public List<User6> getUsersByName(String name) {
         return userDao.getUsersByName(name);
     }
 
     @Override
-    public List<User> getAllDeletedUsers() {
-        List<User> result = new ArrayList<>();
-        for (User user : userDao.getAllUsers()) {
+    public List<User6> getAllDeletedUsers() {
+        List<User6> result = new ArrayList<>();
+        for (User6 user : userDao.getAllUsers()) {
             if (Util.isUserDeleted(user)) {
                 result.add(user);
             }
@@ -39,9 +39,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> getUsersBetweenLevels(int fromLevel, int toLevel) {
+    public List<User6> getUsersBetweenLevels(int fromLevel, int toLevel) {
         //it's better to get all users from DAO by one DB request, but we will use what we have
-        List<User> result = new ArrayList<>();
+        List<User6> result = new ArrayList<>();
         for (int i = fromLevel; i <= toLevel; i++) {
             result.addAll(userDao.getUsersByLevel(i));
         }
@@ -50,10 +50,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> filterOnlyActiveUsers(List<User> allUsers) {
+    public List<User6> filterOnlyActiveUsers(List<User6> allUsers) {
         //will not change allUsers list, create new one instead of that
-        List<User> result = new ArrayList<>();
-        for (User user : allUsers) {
+        List<User6> result = new ArrayList<>();
+        for (User6 user : allUsers) {
             if (User.NULL_USER != user && !Util.isUserDeleted(user)) {
                 result.add(user);
             }
@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getUsersById(long userId) {
+    public User6 getUsersById(long userId) {
         return userDao.getUsersById(userId);
     }
 }

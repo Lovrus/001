@@ -1,18 +1,19 @@
 package DomZad;
+
 public class User6 implements Cloneable {
     private String name;
     private final long id;
     private int level;
 
-    public static final User NULL_USER = new User();
+    public static final User6 NULL_USER = new User6();
 
-    public User(String name, long id, int level) {
+    public User6(String name, long id, int level) {
         this.name = name;
         this.id = id;
         this.level = level;
     }
 
-    public User() {
+    public User6() {
         this("", 0, 0);
     }
 
@@ -22,18 +23,18 @@ public class User6 implements Cloneable {
         return id == 0;
     }
 
-    public User clone() {
+    public User6 clone() {
         try {
-            return (User) super.clone();
+            return (User6) super.clone();
         } catch (CloneNotSupportedException ignored) {
             return NULL_USER;
         }
     }
 
-    public User clone(long newId) {
+    public User6 clone(long newId) {
         if (this == NULL_USER) return NULL_USER;
 
-        return new User(name, newId, level);
+        return new User6(name, newId, level);
     }
 
     /////  getters and setters
