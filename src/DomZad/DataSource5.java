@@ -4,31 +4,31 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class DataSource5 {
-    private static DataSource ourInstance = new DataSource();
+    private static DataSource5 ourInstance = new DataSource5();
 
-    public static DataSource getInstance() {
+    public static DataSource5 getInstance() {
         return ourInstance;
     }
 
-    private DataSource() {
+    private DataSource5() {
     }
 
-    private List<User> users = new LinkedList<User>() {{
-        add(new User("Ivanov", 123l, 1));
-        add(new User("Petrov", 124l, 2));
-        add(new User("Petrov", 125l, 1));
-        add(new User("Sidorov", 126l, 2));
+    private List<User6> users = new LinkedList<User6>() {{
+        add(new User6("Ivanov", 123l, 1));
+        add(new User6("Petrov", 124l, 2));
+        add(new User6("Petrov", 125l, 1));
+        add(new User6("Sidorov", 126l, 2));
     }};
 
     private long maxUserId = 126l;
 
-    public List<User> getUsers() {
+    public List<User6> getUsers() {
         return users;
     }
 
-    public User createOrUpdate(User newUser) {
-        if (newUser == User.NULL_USER)
-            return User.NULL_USER;
+    public User6 createOrUpdate(User6 newUser) {
+        if (newUser == User6.NULL_USER)
+            return User6.NULL_USER;
 
         //new User
         if (newUser.getId() == 0)
@@ -37,14 +37,14 @@ public class DataSource5 {
             return updateUser(newUser);
     }
 
-    private User createNewUser(User newUser) {
-        User clone = newUser.clone(++maxUserId);
+    private User6 createNewUser(User6 newUser) {
+        User6 clone = newUser.clone(++maxUserId);
         users.add(clone);
         return clone;
     }
 
-    private User updateUser(User newUser) {
-        for (User user : users) {
+    private User6 updateUser(User6 newUser) {
+        for (User6 user : users) {
             if (user.getId() == newUser.getId()) {
                 user.setName(newUser.getName());
                 user.setLevel(newUser.getLevel());
@@ -52,6 +52,6 @@ public class DataSource5 {
             }
         }
         //if we didn't find such a user
-        return User.NULL_USER;
+        return User6.NULL_USER;
     }
 }
