@@ -4,13 +4,13 @@ import java.util.List;
 
 public class ModelData6 {
 
-    private List<User> users;
+    private List<User7> users;
 
-    public List<User> getUsers() {
+    public List<User7> getUsers() {
         return users;
     }
 
-    public void setUsers(List<User> users) {
+    public void setUsers(List<User7> users) {
         this.users = users;
     }
 }

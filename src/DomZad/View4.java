@@ -3,5 +3,5 @@ package DomZad;
 public interface View4 {
     void refresh(ModelData modelData);
 
-    void setController(Controller controller);
+    void setController(Controller4 controller);
 }

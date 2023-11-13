@@ -3,11 +3,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserServiceImpl2 implements UserService2 {
-    private UserDao userDao = new UserDao();
+    private UserDao5 userDao = new UserDao5();
 
     @Override
-    public User deleteUser(long id) {
-        User user = userDao.getUserById(id);
+    public User7 deleteUser(long id) {
+        User7 user = userDao.getUserById(id);
         Util.markDeleted(user);
         userDao.createOrUpdate(user);
 
@@ -15,20 +15,20 @@ public class UserServiceImpl2 implements UserService2 {
     }
 
     @Override
-    public User createOrUpdateUser(String name, long id, int level) {
-        User user = new User(name, id, level);
+    public User7 createOrUpdateUser(String name, long id, int level) {
+        User7 user = new User7(name, id, level);
         return userDao.createOrUpdate(user);
     }
 
     @Override
-    public List<User> getUsersByName(String name) {
+    public List<User7> getUsersByName(String name) {
         return userDao.getUsersByName(name);
     }
 
     @Override
-    public List<User> getAllDeletedUsers() {
-        List<User> result = new ArrayList<>();
-        for (User user : userDao.getAllUsers()) {
+    public List<User7> getAllDeletedUsers() {
+        List<User7> result = new ArrayList<>();
+        for (User7 user : userDao.getAllUsers()) {
             if (Util.isUserDeleted(user)) {
                 result.add(user);
             }
@@ -38,9 +38,9 @@ public class UserServiceImpl2 implements UserService2 {
     }
 
     @Override
-    public List<User> getUsersBetweenLevels(int fromLevel, int toLevel) {
+    public List<User7> getUsersBetweenLevels(int fromLevel, int toLevel) {
         //it's better to get all users from DAO by one DB request, but we will use what we have
-        List<User> result = new ArrayList<>();
+        List<User7> result = new ArrayList<>();
         for (int i = fromLevel; i <= toLevel; i++) {
             result.addAll(userDao.getUsersByLevel(i));
         }
@@ -49,11 +49,11 @@ public class UserServiceImpl2 implements UserService2 {
     }
 
     @Override
-    public List<User> filterOnlyActiveUsers(List<User> allUsers) {
+    public List<User7> filterOnlyActiveUsers(List<User7> allUsers) {
         //will not change allUsers list, create new one instead of that
-        List<User> result = new ArrayList<>();
-        for (User user : allUsers) {
-            if (User.NULL_USER != user && !Util.isUserDeleted(user)) {
+        List<User7> result = new ArrayList<>();
+        for (User7 user : allUsers) {
+            if (User7.NULL_USER != user && !Util.isUserDeleted(user)) {
                 result.add(user);
             }
         }
@@ -62,7 +62,7 @@ public class UserServiceImpl2 implements UserService2 {
     }
 
     @Override
-    public User getUsersById(long userId) {
+    public User7 getUsersById(long userId) {
         return userDao.getUsersById(userId);
     }
 }
