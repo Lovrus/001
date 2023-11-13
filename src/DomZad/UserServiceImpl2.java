@@ -8,7 +8,7 @@ public class UserServiceImpl2 implements UserService2 {
     @Override
     public User7 deleteUser(long id) {
         User7 user = userDao.getUserById(id);
-        Util.markDeleted(user);
+        Util5.markDeleted(user);
         userDao.createOrUpdate(user);
 
         return user;
@@ -29,7 +29,7 @@ public class UserServiceImpl2 implements UserService2 {
     public List<User7> getAllDeletedUsers() {
         List<User7> result = new ArrayList<>();
         for (User7 user : userDao.getAllUsers()) {
-            if (Util.isUserDeleted(user)) {
+            if (Util5.isUserDeleted(user)) {
                 result.add(user);
             }
         }
@@ -53,7 +53,7 @@ public class UserServiceImpl2 implements UserService2 {
         //will not change allUsers list, create new one instead of that
         List<User7> result = new ArrayList<>();
         for (User7 user : allUsers) {
-            if (User7.NULL_USER != user && !Util.isUserDeleted(user)) {
+            if (User7.NULL_USER != user && !Util5.isUserDeleted(user)) {
                 result.add(user);
             }
         }
