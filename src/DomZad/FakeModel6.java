@@ -2,20 +2,20 @@ package DomZad;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FakeModel6 implements Model {
+public class FakeModel6 implements Model6 {
 
-    private ModelData modelData = new ModelData();
+    private ModelData7 modelData = new ModelData7();
 
     @Override
-    public ModelData getModelData() {
+    public ModelData7 getModelData() {
         return modelData;
     }
 
     @Override
     public void loadUsers() {
-        List<User> users = new ArrayList<>();
-        users.add(new User("A", 1l, 1));
-        users.add(new User("B", 2l, 1));
+        List<User8> users = new ArrayList<>();
+        users.add(new User8("A", 1l, 1));
+        users.add(new User8("B", 2l, 1));
         modelData.setUsers(users);
     }
 

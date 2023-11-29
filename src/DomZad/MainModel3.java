@@ -1,22 +1,22 @@
 package DomZad;
 import java.util.List;
 
-public class MainModel3 implements Model {
+public class MainModel3 implements Model6 {
 
     //use helpful services
-    private UserService userService = new UserServiceImpl();
+    private UserService3 userService = new UserServiceImpl3();
 
     //use special object to keep data for view rendering
-    private ModelData modelData = new ModelData();
+    private ModelData7 modelData = new ModelData7();
 
     @Override
-    public ModelData getModelData() {
+    public ModelData7 getModelData() {
         return modelData;
     }
 
     @Override
     public void loadUsers() {
-        List<User> users = userService.getUsersBetweenLevels(1, 100);
+        List<User8> users = userService.getUsersBetweenLevels(1, 100);
         //refresh model data
         modelData.setUsers(users);
         modelData.setDisplayDeletedUserList(false);
@@ -24,7 +24,7 @@ public class MainModel3 implements Model {
 
     @Override
     public void loadDeletedUsers() {
-        List<User> users = userService.getAllDeletedUsers();
+        List<User8> users = userService.getAllDeletedUsers();
         //refresh model data
         modelData.setUsers(users);
         modelData.setDisplayDeletedUserList(true);

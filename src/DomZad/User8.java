@@ -6,13 +6,13 @@ public class User8 implements Cloneable {
 
     public static final User NULL_USER = new User();
 
-    public User(String name, long id, int level) {
+    public User8(String name, long id, int level) {
         this.name = name;
         this.id = id;
         this.level = level;
     }
 
-    public User() {
+    public User8() {
         this("", 0, 0);
     }
 
@@ -22,18 +22,18 @@ public class User8 implements Cloneable {
         return id == 0;
     }
 
-    public User clone() {
+    public User8 clone() {
         try {
-            return (User) super.clone();
+            return (User8) super.clone();
         } catch (CloneNotSupportedException ignored) {
             return NULL_USER;
         }
     }
 
-    public User clone(long newId) {
+    public User8 clone(long newId) {
         if (this == NULL_USER) return NULL_USER;
 
-        return new User(name, newId, level);
+        return new User8(name, newId, level);
     }
 
     /////  getters and setters

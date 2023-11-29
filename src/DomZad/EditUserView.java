@@ -1,7 +1,7 @@
 package DomZad;
-public class EditUserView implements View {
+public class EditUserView implements View5 {
 
-    private Controller controller;
+    private Controller5 controller;
 
     @Override
     public void refresh(ModelData modelData) {
@@ -11,7 +11,7 @@ public class EditUserView implements View {
     }
 
     @Override
-    public void setController(Controller controller) {
+    public void setController(Controller5 controller) {
         this.controller = controller;
     }
 }
