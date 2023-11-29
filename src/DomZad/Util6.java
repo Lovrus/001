@@ -2,7 +2,7 @@ package DomZad;
 public final class Util6 {
     public static final String DELETED_MARKER = " (deleted)";
 
-    public static boolean isUserDeleted(User user) {
+    public static boolean isUserDeleted(User8 user) {
         return user.getName().endsWith(DELETED_MARKER);
     }
 
