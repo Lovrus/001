@@ -2,7 +2,7 @@ package DomZad;
 /*
 В работе вам иногда будет нужно закастить класс к какому-нибудь интерфейсу (тут Sayable),
 который не реализован в текущем классе
- */
+
 public class Cat2 implements Pet2 {
     private String name;
 
@@ -27,7 +27,7 @@ public class Cat2 implements Pet2 {
      *
      * @param i количество букв 'я' в слове мяу
      * @return экземпляр класса CatPet
-     */
+
     public Sayable toSayable(final int i) {
         class CatPet implements Sayable {
             @Override
@@ -45,3 +45,4 @@ public class Cat2 implements Pet2 {
         return new CatPet();
     }
 }
+*/
