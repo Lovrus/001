@@ -14,7 +14,7 @@ public class JR_27_10_4 implements Serializable {
         FileOutputStream fileOutput = new FileOutputStream("your.file.name");
         ObjectOutputStream outputStream = new ObjectOutputStream(fileOutput);
 
-        Solution solution = new Solution();
+        JR_27_10_4 solution = new JR_27_10_4 ();
         outputStream.writeObject(solution);
 
         fileOutput.close();
@@ -24,7 +24,7 @@ public class JR_27_10_4 implements Serializable {
         FileInputStream fiStream = new FileInputStream("your.file.name");
         ObjectInputStream objectStream = new ObjectInputStream(fiStream);
 
-        Solution loadedObject = (Solution) objectStream.readObject();
+        JR_27_10_4 loadedObject = (JR_27_10_4) objectStream.readObject();
 
         fiStream.close();
         objectStream.close();
@@ -39,7 +39,7 @@ public class JR_27_10_4 implements Serializable {
         return m;
     }
 
-    public Solution() {
+    public JR_27_10_4 () {
         m.put("Mickey", "Mouse");
         m.put("Mickey", "Mantle");
     }
