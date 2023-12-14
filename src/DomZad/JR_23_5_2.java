@@ -10,14 +10,14 @@ Horse Racing
 public class JR_23_5_2 {
 
     public static void main(String[] args) throws InterruptedException {
-        List<Horse> horses = prepareHorsesAndStart(10);
+        List<Horse25> horses = prepareHorsesAndStart(10);
         while (calculateHorsesFinished(horses) != horses.size()) {
         }
     }
 
-    public static int calculateHorsesFinished(List<Horse> horses) throws InterruptedException {
+    public static int calculateHorsesFinished(List<Horse25> horses) throws InterruptedException {
         int finishedCount = 0;
-        for (Horse horse : horses) {
+        for (Horse25 horse : horses) {
             if (horse.isFinished()) {
                 finishedCount++;
             } else {
@@ -28,12 +28,12 @@ public class JR_23_5_2 {
         return finishedCount;
     }
 
-    public static List<Horse> prepareHorsesAndStart(int horseCount) {
-        List<Horse> horses = new ArrayList<>(horseCount);
+    public static List<Horse25> prepareHorsesAndStart(int horseCount) {
+        List<Horse25> horses = new ArrayList<>(horseCount);
         String number;
         for (int i = 1; i < horseCount + 1; i++) {
             number = i < 10 ? ("0" + i) : "" + i;
-            horses.add(new Horse("Horse_" + number));
+            horses.add(new Horse25("Horse_" + number));
         }
 
         System.out.println("All horses start the race!");
@@ -44,11 +44,11 @@ public class JR_23_5_2 {
     }
 }
 
-class Horse extends Thread {
+class Horse25 extends Thread {
 
     private boolean isFinished;
 
-    public Horse(String name) {
+    public Horse25(String name) {
         super(name);
     }
 
