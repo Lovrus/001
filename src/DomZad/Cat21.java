@@ -1,5 +1,4 @@
 package DomZad;
-package DomZad;
 /*
 В работе вам иногда будет нужно закастить класс к какому-нибудь интерфейсу (тут Sayable),
 который не реализован в текущем классе
@@ -34,9 +33,9 @@ public class Cat21 implements Pet2 {
             @Override
             public String say() {
                 if (i < 1)
-                    return Cat2.this.name + " спит.";
+                    return Cat21.this.name + " спит.";
 
-                StringBuilder sb = new StringBuilder(Cat2.this.name).append(" говорит м");
+                StringBuilder sb = new StringBuilder(Cat21.this.name).append(" говорит м");
                 for (int j = 0; j < i; j++)
                     sb.append("я");
                 sb.append("у!");
