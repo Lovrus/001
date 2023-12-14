@@ -9,7 +9,7 @@ Serializable Solution
 
 public class JR_27_7_4 implements Serializable {
     public static void main(String[] args) {
-        System.out.println(new Solution(4));
+        System.out.println(new JR_27_7_4(4));
     }
 
     private transient final String pattern = "dd MMMM yyyy, EEEE";
@@ -17,7 +17,7 @@ public class JR_27_7_4 implements Serializable {
     private transient int temperature;
     String string;
 
-    public Solution(int temperature) {
+    public JR_27_7_4 (int temperature) {
         this.currentDate = new Date();
         this.temperature = temperature;
 
