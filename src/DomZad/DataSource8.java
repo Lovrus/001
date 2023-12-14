@@ -3,13 +3,13 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class DataSource8 {
-    private static DataSource ourInstance = new DataSource();
+    private static DataSource8 ourInstance = new DataSource8();
 
-    public static DataSource getInstance() {
+    public static DataSource8 getInstance() {
         return ourInstance;
     }
 
-    private DataSource() {
+    private DataSource8() {
     }
 
     private List<User> users = new LinkedList<User>() {{
