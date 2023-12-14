@@ -3,9 +3,8 @@ package DomZad;
 Клонирование растений
 */
 
-public class public class JR_28_08_2 {
-    {
-    public static void main(String[] args) {
+public class JR_28_08_2 {
+        public static void main(String[] args) {
         Tree tree = new Tree("willow", new String[]{"s1", "s2", "s3", "s4"});
         Tree clone = null;
         try {
