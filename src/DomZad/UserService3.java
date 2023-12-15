@@ -1,5 +1,6 @@
 package DomZad;
 
+import java.util.List;
 public interface UserService3 {
     User8 deleteUser(long id);
 
