@@ -1,6 +1,6 @@
 package DomZad;
 
-public class UsersView2 {
+public class UsersView2 implements View3{
     private Controller3 controller;
 
     @Override
