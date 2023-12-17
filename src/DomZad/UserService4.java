@@ -1,17 +1,19 @@
 package DomZad;
 
+import java.util.List;
+
 public interface UserService4 {
-    User deleteUser(long id);
+    User9 deleteUser(long id);
 
-    User createOrUpdateUser(String name, long id, int level);
+    User9 createOrUpdateUser(String name, long id, int level);
 
-    List<User> getUsersByName(String name);
+    List<User9> getUsersByName(String name);
 
-    List<User> getAllDeletedUsers();
+    List<User9> getAllDeletedUsers();
 
-    List<User> getUsersBetweenLevels(int fromLevel, int toLevel);
+    List<User9> getUsersBetweenLevels(int fromLevel, int toLevel);
 
-    List<User> filterOnlyActiveUsers(List<User> allUsers);
+    List<User9> filterOnlyActiveUsers(List<User9> allUsers);
 
-    User getUsersById(long userId);
+    User9 getUsersById(long userId);
 }
