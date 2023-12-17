@@ -1,6 +1,7 @@
 package DomZad;
 import java.util.*;
 
+
 /*
 Общий список
 */
