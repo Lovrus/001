@@ -12,22 +12,22 @@ public class DataSource8 {
     private DataSource8() {
     }
 
-    private List<User> users = new LinkedList<User>() {{
-        add(new User("Ivanov", 123l, 1));
-        add(new User("Petrov", 124l, 2));
-        add(new User("Petrov", 125l, 1));
-        add(new User("Sidorov", 126l, 2));
+    private List<User9> users = new LinkedList<User9>() {{
+        add(new User9("Ivanov", 123l, 1));
+        add(new User9("Petrov", 124l, 2));
+        add(new User9("Petrov", 125l, 1));
+        add(new User9("Sidorov", 126l, 2));
     }};
 
     private long maxUserId = 126l;
 
-    public List<User> getUsers() {
+    public List<User9> getUsers() {
         return users;
     }
 
-    public User createOrUpdate(User newUser) {
-        if (newUser == User.NULL_USER)
-            return User.NULL_USER;
+    public User9 createOrUpdate(User9 newUser) {
+        if (newUser == User9.NULL_USER)
+            return User9.NULL_USER;
 
         //new User
         if (newUser.getId() == 0)
@@ -36,14 +36,14 @@ public class DataSource8 {
             return updateUser(newUser);
     }
 
-    private User createNewUser(User newUser) {
-        User clone = newUser.clone(++maxUserId);
+    private User9 createNewUser(User9 newUser) {
+        User9 clone = newUser.clone(++maxUserId);
         users.add(clone);
         return clone;
     }
 
-    private User updateUser(User newUser) {
-        for (User user : users) {
+    private User9 updateUser(User9 newUser) {
+        for (User9 user : users) {
             if (user.getId() == newUser.getId()) {
                 user.setName(newUser.getName());
                 user.setLevel(newUser.getLevel());
@@ -51,6 +51,6 @@ public class DataSource8 {
             }
         }
         //if we didn't find such a user
-        return User.NULL_USER;
+        return User9.NULL_USER;
     }
 }
