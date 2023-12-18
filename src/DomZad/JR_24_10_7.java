@@ -4,15 +4,15 @@ package DomZad;
 */
 
 public class JR_24_10_7 {
-    private double param = Math.random();
+    private static double param = Math.random();
     private StringBuilder sb = new StringBuilder();
 
-    private void method0() {
+    private static void method0() {
         Double d = method3();
     }
 
     protected void method1(String param1) {
-        Solution solution = new Solution();
+        JR_24_10_7 solution = new JR_24_10_7();
         JR_24_10_7.method0();
     }
 
@@ -20,7 +20,7 @@ public class JR_24_10_7 {
         param1++;
     }
 
-    synchronized double method3() {
+    static synchronized double method3() {
         double random = Math.random();
         param += 40.7;
         return random + param;
