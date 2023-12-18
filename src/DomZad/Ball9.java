@@ -5,7 +5,7 @@ public class Ball9 extends BaseObject9 {
     }
 
     @Override
-    void draw(Canvas canvas) {
+    void draw(Canvas9 canvas) {
 
     }
 

@@ -10,7 +10,7 @@ CRUD
 */
 
 public class JR_24_9_1 {
-    public static List<Person3> allPeople = new ArrayList<Person>();
+    public static List<Person3> allPeople = new ArrayList<Person3>();
 
     static {
         allPeople.add(Person3.createMale("Иванов Иван", new Date()));  //сегодня родился    id=0
@@ -60,10 +60,10 @@ public class JR_24_9_1 {
                 allPeople.set(id, person);
                 break;
             case "-d":
-                Person currentPerson = allPeople.get(Integer.parseInt(args[1]));
-                currentPerson3.setName(null);
-                currentPerson3.setSex(null);
-                currentPerson3.setBirthDate(null);
+                Person3 currentPerson = allPeople.get(Integer.parseInt(args[1]));
+                currentPerson.setName(null);
+                currentPerson.setSex(null);
+                currentPerson.setBirthDate(null);
                 break;
         }
 
