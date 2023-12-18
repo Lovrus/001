@@ -1,5 +1,7 @@
 package DomZad;
 
+import java.util.List;
+
 public class ModelData3 {
     private List<User> users;
 

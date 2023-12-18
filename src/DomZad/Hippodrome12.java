@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Hippodrome12 {
     static Hippodrome12 game;
-    private List<Horse> horses;
+    private List<Horse12> horses;
 
     void run() throws InterruptedException {
         for (int i = 0; i < 100; i++) {
