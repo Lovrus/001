@@ -24,9 +24,9 @@ public class JR_28_05_3 {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Solution)) return false;
+        if (!(o instanceof JR_28_05_3)) return false;
 
-        Solution solution1 = (Solution) o;
+        JR_28_05_3 solution1 = (JR_28_05_3) o;
 
         if (Double.compare(solution1.aDouble, aDouble) != 0) return false;
         if (anInt != solution1.anInt) return false;
