@@ -1,43 +1,71 @@
 package DomZad;
-
-import java.lang.reflect.ParameterizedType;
-import java.util.ArrayList;
 import java.util.List;
 
-public abstract class JR_30_8_1<T extends NamedItem> {
+/*
+Анонимность иногда так приятна!
+*/
 
-    public abstract String getQuery();
-
-    /**
-     * This is a fake method
-     *
-     * @return a list of 5 fake items
-     */
-    public List<T> execute() {
-        List<T> result = new ArrayList<>();
-        //check that the query is not null
-        String query = getQuery();
-        if (query == null) return result;
-
-        try {
-            //generate 5 fake items
-            for (int i = 1; i <= 5; i++) {
-                T newItem = getNewInstanceOfGenericType();
-                newItem.setId(i);
-                newItem.setName(newItem.getClass().getSimpleName() + "-" + i);
-                newItem.setDescription("Received from executing '" + query + "'");
-                result.add(newItem);
-            }
-        } catch (InstantiationException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        return result;
+public class JR_30_8_1 {
+    public static void main(String[] args) {
+        JR_30_8_1 solution = new JR_30_8_1();
+        print(solution.getUsers());
+        print(solution.getLocations());
+        print(solution.getServers());
+        print(solution.getSubjects());
+        print(solution.getSubscriptions());
     }
 
-    //reflection
-    //you need to know that it is possible to create a new instance of the T (generic type) class using its default constructor
-    private T getNewInstanceOfGenericType() throws InstantiationException, IllegalAccessException {
-        return (T) ((Class) ((ParameterizedType) this.getClass().
-                getGenericSuperclass()).getActualTypeArguments()[0]).newInstance();
+    public static void print(List list) {
+        String format = "Id=%d, name='%s', description=%s";
+        for (Object obj : list) {
+            NamedItem item = (NamedItem) obj;
+            System.out.println(String.format(format, item.getId(), item.getName(), item.getDescription()));
+        }
+    }
+
+    public List<User01> getUsers() {
+        return new AbstractDbSelectExecutor<User01>() {
+            @Override
+            public String getQuery() {
+                return ("select * from " + "User").toUpperCase();
+            }
+        }.execute();
+    }
+
+
+    public List<Location> getLocations() {
+        return new AbstractDbSelectExecutor<Location>() {
+            @Override
+            public String getQuery() {
+                return ("select * from " + "Location").toUpperCase();
+            }
+        }.execute();
+    }
+
+    public List<Server> getServers() {
+        return new AbstractDbSelectExecutor<Server>() {
+            @Override
+            public String getQuery() {
+                return ("select * from " + "Server").toUpperCase();
+            }
+        }.execute();
+    }
+
+    public List<Subject> getSubjects() {
+        return new AbstractDbSelectExecutor<Subject>() {
+            @Override
+            public String getQuery() {
+                return ("select * from " + "Subject").toUpperCase();
+            }
+        }.execute();
+    }
+
+    public List<Subscription> getSubscriptions() {
+        return new AbstractDbSelectExecutor<Subscription>() {
+            @Override
+            public String getQuery() {
+                return ("select * from " + "Subscription").toUpperCase();
+            }
+        }.execute();
     }
 }
