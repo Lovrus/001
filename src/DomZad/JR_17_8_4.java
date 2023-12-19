@@ -30,7 +30,7 @@ class Cat {
         return speed;
     }
 
-    public boolean isDogNear(Dog dog) {
+    public boolean isDogNear(Dog1 dog) {
         return this.speed > dog.getSpeed();
     }
 }

@@ -5,22 +5,22 @@ import java.util.List;
 public class UserDao4 {
     private DataSource4 dataSource = DataSource4.getInstance();
 
-    public User getUserById(long id) {
-        List<User> users = dataSource.getUsers();
-        for (User user : users) {
+    public User6 getUserById(long id) {
+        List<User6> users = dataSource.getUsers();
+        for (User6 user : users) {
             if (user.getId() == id) {
                 return user.clone();
             }
         }
-        return User.NULL_USER;
+        return User6.NULL_USER;
     }
 
-    public List<User> getUsersByName(String name) {
+    public List<User6> getUsersByName(String name) {
         if (name == null || name.trim().isEmpty()) throw new IllegalArgumentException();
 
-        List<User> users = dataSource.getUsers();
-        List<User> result = new ArrayList<>();
-        for (User user : users) {
+        List<User6> users = dataSource.getUsers();
+        List<User6> result = new ArrayList<>();
+        for (User6 user : users) {
             if (name.equals(user.getName())) {
                 addUserToResult(result, user);
             }
@@ -28,22 +28,22 @@ public class UserDao4 {
         return result;
     }
 
-    public List<User> getAllUsers() {
-        List<User> users = dataSource.getUsers();
-        List<User> result = new ArrayList<>();
-        for (User user : users) {
+    public List<User6> getAllUsers() {
+        List<User6> users = dataSource.getUsers();
+        List<User6> result = new ArrayList<>();
+        for (User6 user : users) {
             addUserToResult(result, user);
         }
         return result;
     }
 
-    public List<User> getUsersByLevel(int level) {
+    public List<User6> getUsersByLevel(int level) {
         if (level < 1) throw new IllegalArgumentException();
 
-        List<User> users = dataSource.getUsers();
-        List<User> result = new ArrayList<>();
+        List<User6> users = dataSource.getUsers();
+        List<User6> result = new ArrayList<>();
 
-        for (User user : users) {
+        for (User6 user : users) {
             if (level == user.getLevel()) {
                 addUserToResult(result, user);
             }
@@ -51,28 +51,28 @@ public class UserDao4 {
         return result;
     }
 
-    public void addUserToResult(List<User> result, User user) {
-        User clone = user.clone();
+    public void addUserToResult(List<User6> result, User6 user) {
+        User6 clone = user.clone();
 
         //skip bad users
-        if (clone != User.NULL_USER) {
+        if (clone != User6.NULL_USER) {
             result.add(clone);
         }
     }
 
-    public User createOrUpdate(User user) {
+    public User6 createOrUpdate(User6 user) {
         return dataSource.createOrUpdate(user);
     }
 
-    public User getUsersById(long userId) {
+    public User6 getUsersById(long userId) {
         if (userId < 1) throw new IllegalArgumentException();
 
-        List<User> users = dataSource.getUsers();
-        for (User user : users) {
+        List<User6> users = dataSource.getUsers();
+        for (User6 user : users) {
             if (userId == user.getId()) {
                 return user;
             }
         }
-        return User.NULL_USER;
+        return User6.NULL_USER;
     }
 }

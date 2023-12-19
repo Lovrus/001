@@ -51,8 +51,8 @@ public class UserDao3 {
         return result;
     }
 
-    public void addUserToResult(List<User5> result, User user) {
-        User clone = user.clone();
+    public void addUserToResult(List<User5> result, User5 user) {
+        User5 clone = user.clone();
 
         //skip bad users
         if (clone != User5.NULL_USER) {
