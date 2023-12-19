@@ -1,4 +1,6 @@
 package DomZad;
+
+import java.text.SimpleDateFormat;
 public abstract class SuperDog {
     protected String getSuperQuotes() {
         //some logic here
