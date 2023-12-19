@@ -4,7 +4,7 @@ public class User8 implements Cloneable {
     private final long id;
     private int level;
 
-    public static final User NULL_USER = new User();
+    public static final User8 NULL_USER = new User8();
 
     public User8(String name, long id, int level) {
         this.name = name;
