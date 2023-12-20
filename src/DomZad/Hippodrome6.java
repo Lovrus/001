@@ -6,7 +6,7 @@ public class Hippodrome6 {
     static Hippodrome6 game;
     private List<Horse6> horses6;
 
-    public Hippodrome6(List<Horse> horses6) {
+    public Hippodrome6(List<Horse6> horses6) {
         this.horses6 = horses6;
     }
 
@@ -19,6 +19,6 @@ public class Hippodrome6 {
         horses.add(new Horse6("Lucky", 3, 0));
         horses.add(new Horse6("Slevin", 3, 0));
         horses.add(new Horse6("Homer", 3, 0));
-        game = new Hippodrome6(horses6);
+        game = new Hippodrome6(horses);
     }
 }

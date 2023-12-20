@@ -34,7 +34,7 @@ public class JR_21_12_10 {
         System.out.println("Static block");
     }
 
-    public static void printAllFields(Solution obj) {
+    public static void printAllFields(JR_21_12_10 obj) {
         System.out.println("static void printAllFields");
         System.out.println(obj.i);
         System.out.println(obj.name);

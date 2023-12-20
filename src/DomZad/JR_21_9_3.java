@@ -13,7 +13,7 @@ public class JR_21_9_3 {
     String StringVar;
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        JR_21_9_3 solution = new JR_21_9_3();
         System.out.println(solution.intVar);
         System.out.println(solution.doubleVar);
         System.out.println(solution.DoubleVar);

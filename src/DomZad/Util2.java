@@ -12,11 +12,11 @@ public class Util2 {
 
     public static List<Pet2> getPets() {
         List<Pet2> pets = new LinkedList<>();
-        pets.add(new Cat2("Мурзик"));
-        pets.add(new Cat2("Васька"));
-        pets.add(new Cat2("Кошка"));
+        pets.add(new Cat21("Мурзик"));
+        pets.add(new Cat21("Васька"));
+        pets.add(new Cat21("Кошка"));
         pets.add(new Mouse19());
-        pets.add(new Cat2("Томас"));
+        pets.add(new Cat21("Томас"));
         return pets;
     }
 

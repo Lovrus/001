@@ -31,7 +31,7 @@ public class JR_21_12_8 {
                 thePlanet = Earth.getInstance();
                 break;
             case Planet.MOON:
-                thePlanet = Moon.getInstance();
+                thePlanet = (Planet) Moon.getInstance();
                 break;
             case Planet.SUN:
                 thePlanet = Sun.getInstance();

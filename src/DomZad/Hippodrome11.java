@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Hippodrome11 {
     static Hippodrome11 game;
-    private List<Horse> horses;
+    private List<Horse11> horses;
 
     void run() throws InterruptedException {
         for (int i = 0; i < 100; i++) {
@@ -31,7 +31,7 @@ public class Hippodrome11 {
         }
     }
 
-    public Hippodrome11(List<Horse> horses) {
+    public Hippodrome11(List<Horse11> horses) {
         this.horses = horses;
     }
 
