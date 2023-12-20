@@ -19,10 +19,10 @@ public class JR_28_5_1 {
         if (this == o) return true;
         if (!(o instanceof JR_28_5_1)) return false;
 
-        JR_28_5_1 solutions1 = (JR_28_5_1) o;
+        JR_28_5_1 solutions = (JR_28_5_1) o;
 
-        if (first != null ? !first.equals(solutions1.first) : solutions1.first != null) return false;
-        return last != null ? last.equals(solutions1.last) : solutions1.last == null;
+        if (first != null ? !first.equals(solutions.first) : solutions.first != null) return false;
+        return last != null ? last.equals(solutions.last) : solutions.last == null;
     }
 
     @Override
@@ -34,7 +34,7 @@ public class JR_28_5_1 {
 
     public static void main(String[] args) {
         Set<JR_28_5_1> s = new HashSet<>();
-        s.add(new solutions1("Donald", "Duck"));
+        s.add(new JR_28_5_1("Donald", "Duck"));
         System.out.println(s.contains(new JR_28_5_1("Donald", "Duck")));
     }
 }

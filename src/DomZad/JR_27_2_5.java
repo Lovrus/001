@@ -38,7 +38,7 @@ public class JR_27_2_5 {
 
     public static class Human {
         public String name;
-        public List<Asset> assets = new ArrayList<>();
+        public List<Asset2> assets = new ArrayList<>();
 
         @Override
         public boolean equals(Object o) {
@@ -62,7 +62,7 @@ public class JR_27_2_5 {
         public Human() {
         }
 
-        public Human(String name, Asset... assets) {
+        public Human(String name, Asset2... assets) {
             this.name = name;
             if (assets != null) {
                 this.assets.addAll(Arrays.asList(assets));
@@ -74,7 +74,7 @@ public class JR_27_2_5 {
             PrintWriter printWriter = new PrintWriter(outputStream);
             printWriter.println(this.name);
             if (this.assets.size() > 0) {
-                for (Asset current : this.assets)
+                for (Asset2 current : this.assets)
                     printWriter.println(current.getName());
             }
             printWriter.close();
