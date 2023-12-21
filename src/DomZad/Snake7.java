@@ -6,7 +6,7 @@ public class Snake7 {
     private boolean isAlive;
     private SnakeDirection7 direction;
 
-    public void setDirection(SnakeDirection direction) {
+    public void setDirection(SnakeDirection7 direction) {
         this.direction = direction;
     }
 
@@ -19,7 +19,7 @@ public class Snake7 {
         return isAlive;
     }
 
-    public SnakeDirection getDirection() {
+    public SnakeDirection7 getDirection() {
         return direction;
     }
 }
