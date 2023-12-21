@@ -9,12 +9,12 @@ import java.util.Map;
 
 public class JR_28_08_1 implements Cloneable {
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        JR_28_08_1 solution = new JR_28_08_1();
         solution.users.put("Hubert", new User(172, "Hubert"));
         solution.users.put("Zapp", new User(41, "Zapp"));
-        Solution clone = null;
+        JR_28_08_1 clone = null;
         try {
-            clone = (Solution) solution.clone();
+            clone = (JR_28_08_1) solution.clone();
             System.out.println(solution);
             System.out.println(clone);
 

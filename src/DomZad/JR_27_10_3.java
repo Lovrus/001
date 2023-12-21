@@ -11,7 +11,7 @@ public class JR_27_10_3 implements Serializable {
         ByteArrayOutputStream arrayOutputStream = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(arrayOutputStream);
 
-        Solution solution = new Solution();
+        JR_27_10_3 solution = new JR_27_10_3();
         B b = solution.new B("B2", "C33");
         System.out.println("nameA: " + b.nameA + ", nameB: " + b.nameB);
 

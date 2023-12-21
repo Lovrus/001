@@ -28,15 +28,15 @@ public class JR_26_11_13 {
             String s = "a";
             switch (s) {
                 case "a": {
-                    result = new Solution().new A();
+                    result = new JR_26_11_13().new A();
                     break;
                 }
                 case "b": {
-                    result = new Solution().new B();
+                    result = new JR_26_11_13().new B();
                     break;
                 }
                 case "c": {
-                    result = new Solution().new C();
+                    result = new JR_26_11_13().new C();
                     break;
                 }
             }

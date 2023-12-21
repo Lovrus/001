@@ -13,14 +13,14 @@ public class JR_27_10_7 implements Serializable, AutoCloseable {
              FileInputStream fiStream = new FileInputStream("your_file_name_2.txt");
              ObjectInputStream objectStream = new ObjectInputStream(fiStream)
         ) {
-            Solution solution = new JR_27_10_7("your_file_name_1.txt");
+            JR_27_10_7 solution = new JR_27_10_7("your_file_name_1.txt");
             solution.writeObject("some text");
 
             outputStream.writeObject(solution);
             outputStream.flush();
 
             //load object from file
-            Solution loadedObject = (Solution) objectStream.readObject();
+            JR_27_10_7 loadedObject = (JR_27_10_7) objectStream.readObject();
 
             loadedObject.writeObject("some text - 2");
         } catch (Exception skipped) {
