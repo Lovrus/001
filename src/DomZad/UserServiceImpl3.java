@@ -15,7 +15,7 @@ public class UserServiceImpl3 implements UserService3 {
     }
 
     @Override
-    public User createOrUpdateUser(String name, long id, int level) {
+    public User8 createOrUpdateUser(String name, long id, int level) {
         User8 user = new User8(name, id, level);
         return userDao.createOrUpdate(user);
     }

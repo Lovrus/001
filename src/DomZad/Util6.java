@@ -6,7 +6,7 @@ public final class Util6 {
         return user.getName().endsWith(DELETED_MARKER);
     }
 
-    public static void markDeleted(User user) {
+    public static void markDeleted(User8 user) {
         if (User8.NULL_USER != user && !Util6.isUserDeleted(user)) {
             user.setName(user.getName() + DELETED_MARKER);
         }
