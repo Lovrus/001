@@ -62,7 +62,7 @@ public class JR_28_08_1 implements Cloneable {
     }
 
     public Object clone() throws CloneNotSupportedException {
-        Solution o = (Solution) super.clone();
+        JR_28_08_1 o = (JR_28_08_1) super.clone();
 
         //clone users
         Map<String, User> newUsers = new LinkedHashMap<>();
