@@ -15,6 +15,6 @@ public interface UserService {
 
     List<User6> filterOnlyActiveUsers(List<User6> allUsers);
 
-    User getUsersById(long userId);
+    User6 getUsersById(long userId);
 }
 

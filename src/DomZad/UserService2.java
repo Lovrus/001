@@ -15,5 +15,5 @@ public interface UserService2 {
 
     List<User7> filterOnlyActiveUsers(List<User7> allUsers);
 
-    User getUsersById(long userId);
+    User7 getUsersById(long userId);
 }

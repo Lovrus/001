@@ -48,6 +48,9 @@ public class User {
         this.country = country;
     }
 
+    public void setName(String s) {
+    }
+
     public enum Country {
         UKRAINE("Ukraine"),
         RUSSIA("Russia"),
