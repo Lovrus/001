@@ -1,9 +1,8 @@
 package chapter_1_3;
-
-//Иницилизировать двухмерный массив
-public class Matrix {
+// Как в Matrix Иницилизация двухмерного массива, плюс new double[][]
+public class Matrix2 {
     public static void main(String[] args) {
-        double m[][] = {
+        double m[][] = new double[][]{
                 {0 * 0, 1 * 0, 2 * 0, 3 * 0},
                 {0 * 1, 1 * 1, 2 * 1, 3 * 1},
                 {0 * 2, 1 * 2, 2 * 2, 3 * 2},

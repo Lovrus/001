@@ -1,5 +1,5 @@
 package chapter_1_3;
-
+// Продемонстировать применение трехмерного массива
 public class ThreeDMatrix {
     public static void main(String[] args) {
         int threeD[][][] = new int[3][4][5];
@@ -19,6 +19,5 @@ public class ThreeDMatrix {
             System.out.println();
         }
     }
-
 }
 
