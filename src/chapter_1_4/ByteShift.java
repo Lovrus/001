@@ -1,4 +1,5 @@
 package chapter_1_4;
+
 // Сдвиг влево значения типа byte
 public class ByteShift {
     public static void main(String[] args) {

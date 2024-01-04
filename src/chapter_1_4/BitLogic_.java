@@ -10,7 +10,7 @@ public class BitLogic_ {
         };
         int a = 3; // 0+2+1, или 0011
         // в двоичном представлении
-        int b = 6; //4+2+0, &#x438;&#x43B;&#x438; 0110
+        int b = 6; //4+2+0, или 0110
         // в двоичном представлении
         int c = a | b;
         int d = a & b;
@@ -18,7 +18,7 @@ public class BitLogic_ {
         int f = (~a & b) | (a & ~b);
         int g = ~a & 0x0f;
         System.out.println(" a = " + binary[a]);
-        System.out.println(" b = " + binary [b]);
+        System.out.println(" b = " + binary[b]);
         System.out.println(" a|b =" + binary[c]);
         System.out.println(" a&b = " + binary[d]);
         System.out.println("a^b = " + binary[e]);
