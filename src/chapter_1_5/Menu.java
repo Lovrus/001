@@ -50,8 +50,5 @@ public class Menu {
                 System.out.println(" оператор;");
                 break;
         }
-
-
     }
-
 }
