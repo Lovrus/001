@@ -1,7 +1,7 @@
 package chapter_1_4;
 
 // Беззнаковый сдвиг двоичных разрядов значения типа byte
-class ByteUShift_{
+class ByteUShift {
     static public void main(String[] args) {
         char[] hex = {
                 '0', '1', '2', '3', '4', '5', '6', '7',

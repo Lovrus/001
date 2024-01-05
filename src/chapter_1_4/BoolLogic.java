@@ -9,9 +9,6 @@ public class BoolLogic {
         boolean e = a ^ b;
         boolean f = (!a & b) | (a & !b);
         boolean g = !a;
-        String aa = "Good morning";
-        String bb = "Good day";
-        System.out.println("aa == bb, " + (aa == bb));
 
         System.out.println("        a = " + a);
         System.out.println("        b = " + b);
