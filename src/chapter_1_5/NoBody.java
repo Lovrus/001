@@ -1,6 +1,6 @@
 package chapter_1_5;
 
-// Целеувая часть цикла может быть пустой
+// Целевая часть цикла может быть пустой
 public class NoBody {
     public static void main(String[] args) {
         int i, j;
