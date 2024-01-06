@@ -1,5 +1,7 @@
 package chapter_1_5;
 
+// Применение цикла for в стиле for each для
+// обращения к двухмерному массиву
 public class ForEach3 {
     public static void main(String[] args) {
         int sum = 0;
