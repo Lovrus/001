@@ -1,19 +1,19 @@
 package DomZad;
-public class UsersView6 implements View {
+public class UsersView6 implements View7 {
 
-    private Controller controller;
+    private Controller7 controller;
 
     @Override
-    public void refresh(ModelData modelData) {
+    public void refresh(ModelData9 modelData) {
         System.out.println("All " + (modelData.isDisplayDeletedUserList() ? "deleted " : "") + "users:");
-        for (User user : modelData.getUsers()) {
+        for (User10 user : modelData.getUsers()) {
             System.out.println("\t" + user);
         }
         System.out.println("===================================================");
     }
 
     @Override
-    public void setController(Controller controller) {
+    public void setController(Controller7 controller) {
         this.controller = controller;
     }
 

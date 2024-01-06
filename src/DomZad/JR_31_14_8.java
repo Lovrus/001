@@ -2,10 +2,10 @@ package DomZad;
 
 public class JR_31_14_8 {
     public static void main(String[] args) {
-        Model model = new MainModel();
-        UsersView usersView = new UsersView();
-        EditUserView editUserView = new EditUserView();
-        Controller controller = new Controller();
+        Model8 model = new MainModel5();
+        UsersView6 usersView = new UsersView6();
+        EditUserView3 editUserView = new EditUserView3();
+        Controller7 controller = new Controller7();
 
         usersView.setController(controller);
         editUserView.setController(controller);

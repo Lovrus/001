@@ -1,7 +1,7 @@
 package DomZad;
 
 public interface Model8 {
-    ModelData getModelData();
+    ModelData9 getModelData();
 
     void loadUsers();
 

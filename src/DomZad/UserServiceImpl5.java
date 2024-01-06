@@ -2,34 +2,34 @@ package DomZad;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserServiceImpl5 implements UserService {
-    private UserDao userDao = new UserDao();
+public class UserServiceImpl5 implements UserService5 {
+    private UserDao8 userDao = new UserDao8();
 
     @Override
-    public User deleteUser(long id) {
-        User user = userDao.getUserById(id);
-        Util.markDeleted(user);
+    public User10 deleteUser(long id) {
+        User10 user = userDao.getUserById(id);
+        Util8.markDeleted(user);
         userDao.createOrUpdate(user);
 
         return user;
     }
 
     @Override
-    public User createOrUpdateUser(String name, long id, int level) {
-        User user = new User(name, id, level);
+    public User10 createOrUpdateUser(String name, long id, int level) {
+        User10 user = new User10(name, id, level);
         return userDao.createOrUpdate(user);
     }
 
     @Override
-    public List<User> getUsersByName(String name) {
+    public List<User10> getUsersByName(String name) {
         return userDao.getUsersByName(name);
     }
 
     @Override
-    public List<User> getAllDeletedUsers() {
-        List<User> result = new ArrayList<>();
-        for (User user : userDao.getAllUsers()) {
-            if (Util.isUserDeleted(user)) {
+    public List<User10> getAllDeletedUsers() {
+        List<User10> result = new ArrayList<>();
+        for (User10 user : userDao.getAllUsers()) {
+            if (Util8.isUserDeleted(user)) {
                 result.add(user);
             }
         }
@@ -38,9 +38,9 @@ public class UserServiceImpl5 implements UserService {
     }
 
     @Override
-    public List<User> getUsersBetweenLevels(int fromLevel, int toLevel) {
+    public List<User10> getUsersBetweenLevels(int fromLevel, int toLevel) {
         //it's better to get all users from DAO by one DB request, but we will use what we have
-        List<User> result = new ArrayList<>();
+        List<User10> result = new ArrayList<>();
         for (int i = fromLevel; i <= toLevel; i++) {
             result.addAll(userDao.getUsersByLevel(i));
         }
@@ -49,11 +49,11 @@ public class UserServiceImpl5 implements UserService {
     }
 
     @Override
-    public List<User> filterOnlyActiveUsers(List<User> allUsers) {
+    public List<User10> filterOnlyActiveUsers(List<User10> allUsers) {
         //will not change allUsers list, create new one instead of that
-        List<User> result = new ArrayList<>();
-        for (User user : allUsers) {
-            if (User.NULL_USER != user && !Util.isUserDeleted(user)) {
+        List<User10> result = new ArrayList<>();
+        for (User10 user : allUsers) {
+            if (User10.NULL_USER != user && !Util8.isUserDeleted(user)) {
                 result.add(user);
             }
         }
@@ -62,7 +62,7 @@ public class UserServiceImpl5 implements UserService {
     }
 
     @Override
-    public User getUsersById(long userId) {
+    public User10 getUsersById(long userId) {
         return userDao.getUsersById(userId);
     }
 }

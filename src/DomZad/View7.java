@@ -1,7 +1,7 @@
 package DomZad;
 
 public interface View7 {
-    void refresh(ModelData modelData);
+    void refresh(ModelData9 modelData);
 
-    void setController(Controller controller);
+    void setController(Controller7 controller);
 }
