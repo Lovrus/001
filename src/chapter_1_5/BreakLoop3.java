@@ -7,7 +7,7 @@ public class BreakLoop3 {
             System.out.print("Проход " + i + ": ");
             for (int j = 0; j < 100; j++) {
                 if (j == 10) break;// выходи цикла, значение
-                // переменной j равно 10
+                                   // переменной j равно 10
                 System.out.print(j + " ");
             }
             System.out.println();
