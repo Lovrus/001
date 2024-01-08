@@ -13,7 +13,7 @@ public class Test {
     // возвратить логическое значение true, если в
     // качестве паараметра о указан вызывающий объект
     boolean equalTo(Test o) {
-        if(o.a == a && o.b == b) return true;
+        if (o.a == a && o.b == b) return true;
         else return false;
     }
 }
