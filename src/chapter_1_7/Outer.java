@@ -1,7 +1,9 @@
 package chapter_1_7;
+
 // Продемонстрировать применение внутреннего класса
 public class Outer {
     int outer_x = 100;
+
     void test() {
         Inner inner = new Inner();
         inner.display();
