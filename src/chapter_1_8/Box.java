@@ -39,7 +39,7 @@ class Box {
     }
 }
 
-// расширить класс Box, включив в него пол веса
+// расширить класс Box, включив в него поле веса
 class BoxWeight extends Box {
     double weight; // вес параллелепипеда
 
@@ -52,7 +52,7 @@ class BoxWeight extends Box {
     }
 }
 
-class DemoWeight {
+class DemoBoxWeight {
     public static void main(String[] args) {
         BoxWeight mybox1 = new BoxWeight(10, 20, 15, 34.3);
         BoxWeight mybox2 = new BoxWeight(2, 3, 4, 0.076);

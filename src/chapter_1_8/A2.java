@@ -9,7 +9,7 @@ class A2 {
     int i; // этот член открыт по умолчанию,
     private int j; // а этот член закрыт в классе А
 
-    void setij (int x, int y) {
+    void setij(int x, int y) {
         i = x;
         j = y;
     }
@@ -20,7 +20,7 @@ class B2 extends A2 {
     int total;
 
     void sum() {
-       // total = i + j; // ОШИБКА: член j в этом
+        // total = i + j; // ОШИБКА: член j в этом
         // классе недоступен
     }
 }
@@ -29,7 +29,7 @@ class Access {
     public static void main(String[] args) {
         B2 subOb = new B2();
 
-        subOb.setij(10,12);
+        subOb.setij(10, 12);
 
         subOb.sum();
         System.out.println("Сумма равна " + subOb.total);
