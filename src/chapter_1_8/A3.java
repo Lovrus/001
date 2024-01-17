@@ -2,7 +2,7 @@ package chapter_1_8;
 
 // Использовать ключевое слово super с целью
 // предотвратить сокрытие имен
-public  class A3 {
+public class A3 {
     int i;
 }
 
