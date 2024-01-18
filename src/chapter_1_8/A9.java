@@ -2,11 +2,9 @@ package chapter_1_8;
 
 // Простой пример абстракции
 abstract class A9 {
-    void callme9() {
+   abstract void callme9();
 
-    }
-
-    // абстрактные классы вс же могут
+    // абстрактные классы все же могут
     //содержать конкретные методы
     void callmetoo() {
         System.out.println("Это конкретный метод.");
