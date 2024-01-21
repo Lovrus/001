@@ -1,7 +1,7 @@
 package chapter_1_9;
 
 // Еще одна реализация интерфейса Callback
-public class AnotherClient implements Callback {
+public class AnotherClient implements Callback2 {
     // реализовать интерфейс Callback
     public void callback3(int p) {
         System.out.println(
@@ -10,7 +10,7 @@ public class AnotherClient implements Callback {
     }
 
     @Override
-    public void callback(int param) {
+    public void callback2(int param) {
 
     }
 }
