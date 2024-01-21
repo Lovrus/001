@@ -1,6 +1,6 @@
 package chapter_1_9;
 // С наступающим 2022 годом!
-/* Создать переенную интерфейса и
+/* Создать переменную интерфейса и
 обратиться к стекам через нее.
  */
 public class IFTest3 {
@@ -10,14 +10,14 @@ public class IFTest3 {
         DynStack ds = new DynStack(5);
         FixedStack fs = new FixedStack(8);
 
-        mystack = ds; // загрузить динамический стек
+        mystack = (IntStack) ds; // загрузить динамический стек
         // разместить числа в стеке
         for (int i = 0; i < 12; i++) mystack.push(i);
 
         mystack = fs; // загрузить фиксированный стек
         for (int i = 0; i < 8; i++) mystack.push(i);
 
-        mystack = ds;
+        mystack = (IntStack) ds;
         System.out.println("Значение в динамическом стеке: ");
         for (int i = 0; i < 12; i++)
             System.out.println(mystack.pop());

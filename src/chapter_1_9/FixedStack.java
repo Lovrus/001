@@ -1,4 +1,5 @@
 package chapter_1_9;
+
 // Определить интерфейс для целочисленного стека
 interface IntStack {
     void push(int item); // сохранить элемент в стеке
@@ -44,6 +45,11 @@ class IFTest {
         // расместить числа в стеке
         for (int i = 0; i < 5; i++) mystack1.push(i);
         for (int i = 0; i < 8; i++) mystack2.push(i);
+
+        // извлечь эти числа из стека
+        System.out.println("Стек в mystakc1:");
+        for (int i = 0; i < 5; i++)
+            System.out.println(mystack1.pop());
 
         System.out.println("Стек в mystack2:");
         for (int i = 0; i < 8; i++)
