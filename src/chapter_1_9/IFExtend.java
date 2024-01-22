@@ -8,7 +8,7 @@ interface A1 {
 }
 
 // теперь интерфейс В влючает в себя метоы meth1()
-// и meth2() и добавляет метод meth()
+// и meth2() и добавляет метод meth3()
 interface B1 extends A1 {
     void meth3();
 }

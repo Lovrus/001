@@ -1,4 +1,5 @@
 package chapter_1_9;
+
 // Использовать метод с реализцией по умолчанию
 public class DefaultMethodDemo {
     public static void main(String[] args) {

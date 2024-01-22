@@ -8,6 +8,6 @@ public class MyIFImp2 implements MyIF {
     }
 
     public String getString() {
-        return  "Это другая символьная строка.";
+        return "Это другая символьная строка.";
     }
 }
