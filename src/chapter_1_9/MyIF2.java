@@ -1,6 +1,6 @@
 package chapter_1_9;
 
-interface MyIF2 {
+public interface MyIF2 {
     // Это объявление обычного метода в интерфейсе.
     // Он НЕ предоставляет реализацию по умолчанию
     int getNumber();
