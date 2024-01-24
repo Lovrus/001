@@ -3,7 +3,7 @@ package chapter_1_10;
 // Эта программа написано верно
 public class TrowsDemo2 {
     static void trowOne() throws IllegalAccessException {
-        System.out.println("В теле метода trowone().");
+        System.out.println("В теле метода trowOne().");
         throw new IllegalAccessException("Демонстрация");
     }
 
