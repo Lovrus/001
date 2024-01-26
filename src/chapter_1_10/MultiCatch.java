@@ -14,7 +14,7 @@ public class MultiCatch {
             // В этом операторе catch перехватываются
             // оба исключения
         } catch (ArithmeticException |
-                ArrayIndexOutOfBoundsException e) {
+                 ArrayIndexOutOfBoundsException e) {
             System.out.println("Исключение перевачено: " + e);
         }
         System.out.println("После многократного перехвата.");

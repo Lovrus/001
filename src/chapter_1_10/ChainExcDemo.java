@@ -1,6 +1,6 @@
 package chapter_1_10;
 
-// Продемонстрировать цепочки исключений.
+// Демонстрация работы сцепленных исключений.
 public class ChainExcDemo {
     static void demoproc() {
 
