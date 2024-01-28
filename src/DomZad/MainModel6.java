@@ -1,22 +1,22 @@
 package DomZad;
 import java.util.List;
 
-public class MainModel6 implements Model {
+public class MainModel6 implements Model9 {
 
     //use helpful services
-    private UserService userService = new UserServiceImpl();
+    private UserService6 userService = new UserServiceImpl6();
 
     //use special object to keep data for view rendering
-    private ModelData modelData = new ModelData();
+    private ModelData10 modelData = new ModelData10();
 
     @Override
-    public ModelData getModelData() {
+    public ModelData10 getModelData() {
         return modelData;
     }
 
     @Override
     public void loadUsers() {
-        List<User> users = getAllUsers();
+        List<User10> users = getAllUsers();
         //refresh model data
         modelData.setUsers(users);
         modelData.setDisplayDeletedUserList(false);
@@ -24,7 +24,7 @@ public class MainModel6 implements Model {
 
     @Override
     public void loadDeletedUsers() {
-        List<User> users = userService.getAllDeletedUsers();
+        List<User10> users = userService.getAllDeletedUsers();
         //refresh model data
         modelData.setUsers(users);
         modelData.setDisplayDeletedUserList(true);
@@ -32,14 +32,14 @@ public class MainModel6 implements Model {
 
     @Override
     public void loadUserById(long userId) {
-        User user = userService.getUsersById(userId);
+        User10 user = userService.getUsersById(userId);
         modelData.setActiveUser(user);
     }
 
     @Override
     public void deleteUserById(long id) {
         userService.deleteUser(id);
-        List<User> users = getAllUsers();
+        List<User10> users = getAllUsers();
         //refresh model data
         modelData.setUsers(users);
     }
@@ -47,14 +47,14 @@ public class MainModel6 implements Model {
     @Override
     public void changeUserData(String name, long id, int level) {
         userService.createOrUpdateUser(name, id, level);
-        List<User> users = getAllUsers();
+        List<User10> users = getAllUsers();
         //refresh model data
         modelData.setUsers(users);
     }
 
-    private List<User> getAllUsers() {
+    private List<User10> getAllUsers() {
         //model should contain all business logic in the methods
-        List<User> allUsers = userService.getUsersBetweenLevels(1, 100);
+        List<User10> allUsers = userService.getUsersBetweenLevels(1, 100);
         allUsers = userService.filterOnlyActiveUsers(allUsers);
         return allUsers;
     }

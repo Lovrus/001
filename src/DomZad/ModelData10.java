@@ -3,23 +3,23 @@ import java.util.List;
 
 public class ModelData10 {
 
-    private List<User> users;
-    private User activeUser;
+    private List<User10> users;
+    private User10 activeUser;
     private boolean displayDeletedUserList;
 
-    public List<User> getUsers() {
+    public List<User10> getUsers() {
         return users;
     }
 
-    public void setUsers(List<User> users) {
+    public void setUsers(List<User10> users) {
         this.users = users;
     }
 
-    public User getActiveUser() {
+    public User10 getActiveUser() {
         return activeUser;
     }
 
-    public void setActiveUser(User activeUser) {
+    public void setActiveUser(User10 activeUser) {
         this.activeUser = activeUser;
     }
 

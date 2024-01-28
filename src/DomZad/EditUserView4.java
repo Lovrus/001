@@ -1,17 +1,17 @@
 package DomZad;
-public class EditUserView4 implements View {
+public class EditUserView4 implements View8 {
 
-    private Controller controller;
+    private Controller8 controller;
 
     @Override
-    public void refresh(ModelData modelData) {
+    public void refresh(ModelData10 modelData) {
         System.out.println("User to be edited:");
         System.out.println("\t" + modelData.getActiveUser());
         System.out.println("===================================================");
     }
 
     @Override
-    public void setController(Controller controller) {
+    public void setController(Controller8 controller) {
         this.controller = controller;
     }
 

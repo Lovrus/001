@@ -2,19 +2,19 @@ package DomZad;
 public class Controller8 {
     //controller cannot contain business logic, only operate with views
 
-    private Model model;
-    private UsersView usersView;
-    private EditUserView editUserView;
+    private Model9 model;
+    private UsersView7 usersView;
+    private EditUserView4 editUserView;
 
-    public void setModel(Model model) {
+    public void setModel(Model9 model) {
         this.model = model;
     }
 
-    public void setUsersView(UsersView usersView) {
+    public void setUsersView(UsersView7 usersView) {
         this.usersView = usersView;
     }
 
-    public void setEditUserView(EditUserView editUserView) {
+    public void setEditUserView(EditUserView4 editUserView) {
         this.editUserView = editUserView;
     }
 
