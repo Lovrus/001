@@ -26,7 +26,7 @@ class NewThread implements Runnable {
 }
 
 class ThreadDemo {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         new NewThread(); // создать новый поток
 
         try {
