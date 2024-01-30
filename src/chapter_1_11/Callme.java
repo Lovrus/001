@@ -31,15 +31,14 @@ class Caller implements Runnable {
 }
 
 class Synch {
-    private static String[] args;
 
     public static void main(String[] args) {
-        Synch.args = args;
-        Callme target = new Callme();
-        Caller ob1 = new Caller(target, "Добро пожаловать");
-        Caller ob2 = new Caller(target,
+
+        Callme target2 = new Callme();
+        Caller ob1 = new Caller(target2, "Добро пожаловать");
+        Caller ob2 = new Caller(target2,
                 "в синхрозинированный");
-        Caller ob3 = new Caller(target, "мир!");
+        Caller ob3 = new Caller(target2, "мир!");
 
         // ожидать завершения потока исполнения
         try {
