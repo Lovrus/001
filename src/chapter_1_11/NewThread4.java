@@ -30,8 +30,8 @@ class NewThread4 implements Runnable {
 class DemoJoin {
     public static void main(String[] args) {
         NewThread4 ob1 = new NewThread4("Один");
-        NewThread4 ob2 = new  NewThread4("Два");
-        NewThread4 ob3 = new  NewThread4("Три");
+        NewThread4 ob2 = new NewThread4("Два");
+        NewThread4 ob3 = new NewThread4("Три");
 
         System.out.println("Поток Один запущен: "
                 + ob1.t.isAlive());
