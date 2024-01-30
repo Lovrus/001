@@ -42,5 +42,3 @@ class MultiThreadDemo3 {
         System.out.println("Главный поток завершен.");
     }
 }
-
-Сам
