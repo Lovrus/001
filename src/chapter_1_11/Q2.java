@@ -39,7 +39,7 @@ public class Q2 {
 class Producer2 implements Runnable {
     Q2 q2;
 
-    Producer2 (Q2 q2) {
+    Producer2(Q2 q2) {
         this.q2 = q2;
         new Thread(this, "Поставщик").start();
     }
@@ -55,7 +55,7 @@ class Producer2 implements Runnable {
 class Consumer2 implements Runnable {
     Q2 q2;
 
-    Consumer2  (Q2 q2) {
+    Consumer2(Q2 q2) {
         this.q2 = q2;
         new Thread(this, "Потребитель").start();
     }
