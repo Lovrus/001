@@ -43,3 +43,4 @@ class MultiThreadDemo3 {
     }
 }
 
+Сам
