@@ -23,15 +23,15 @@ public class NewThread5 implements Runnable {
                 Thread.sleep(200);
                 synchronized (this) {
                     while (suspendFlag) {
-                        wait ();
+                        wait();
                     }
                 }
             }
         } catch (InterruptedException e) {
-            System.out.println(name + " прерва.");
+            System.out.println(name + " прерван.");
         }
 
-        System.out.println(name + " завершен");
+        System.out.println(name + " завершен.");
     }
 
     synchronized void mysuspend() {
