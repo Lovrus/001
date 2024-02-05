@@ -6,7 +6,7 @@ enum Apple3 {
     Jonathan(10), GolenDel(9), RedDel(12),
     Winesap(15), Cortlamd(8);
 
-    private int price; // цена яблока каждого сора
+    private int price; // цена яблока каждого сорта
 
     // Конструктор
     Apple3(int p) {
@@ -26,7 +26,7 @@ public class EnumDemo3 {
         System.out.println("Яблоко сорта Winesap стоит "
                 + Apple3.Winesap.getPrice()
                 + " центов. \n");
-        // вывести цена на все сорта яблок
+        // вывести цены на все сорта яблок
         System.out.println("Цены на все сорта яблок:");
         for (Apple3 a : Apple3.values())
             System.out.println(a + " стоит " + a.getPrice()
