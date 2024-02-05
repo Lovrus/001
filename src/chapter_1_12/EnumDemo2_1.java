@@ -13,7 +13,7 @@ public class EnumDemo2_1 {
                 "Константы перечислимого типа Apple:");
 
         // применить метод values()
-        Apple2_1[] allapples = Apple2_1.values();
+
         for (Apple2_1 a : Apple2_1.values())
             System.out.println(a);
 
