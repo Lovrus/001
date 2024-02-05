@@ -1,26 +1,25 @@
 package chapter_1_12;
-// Воспользоваться встроенными в перчисление методами
 
-// Перечисление сортов яблок
-enum Apple2 {
+// Корректировка класса EnumDemo2
+enum Apple2_1 {
     Jonathan, GoldenDel, RedDel, Winesap, Cortland
 }
 
-public class EnumDemo2 {
+public class EnumDemo2_1 {
     public static void main(String[] args) {
-        Apple2 ap;
+        Apple2_1 ap;
 
         System.out.println(
                 "Константы перечислимого типа Apple:");
 
         // применить метод values()
-        Apple2[] allapples = Apple2.values();
-        for (Apple2 a : allapples)
+        Apple2_1[] allapples = Apple2_1.values();
+        for (Apple2_1 a : Apple2_1.values())
             System.out.println(a);
 
         System.out.println();
         // примениь метод valueOf()
-        ap = Apple2.valueOf("Winesap");
+        ap = Apple2_1.valueOf("Winesap");
         System.out.println("Переменная ар содержит " + ap);
     }
 }
