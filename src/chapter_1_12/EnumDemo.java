@@ -1,5 +1,6 @@
 package chapter_1_12;
 
+// Перечисление сортов яблок
 enum Apple {
     Jonathan, GoldenDel, RedDel, Winesap, Cortland
 }
