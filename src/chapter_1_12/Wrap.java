@@ -4,7 +4,7 @@ package chapter_1_12;
 public class Wrap {
     public static void main(String[] args) {
 
-        Integer iOb = new Integer(100);
+        Integer iOb = Integer.valueOf(100);
 
         int i = iOb.intValue();
 
