@@ -94,7 +94,7 @@ class TypeAnnoDemo<@What1(
         @Unique TypeAnnoDemo<Integer> ob2 =
                 new @Unique TypeAnnoDemo<Integer>();
 
-        Object x = new Integer(10);
+        Object x = Integer.valueOf(10);
         Integer y;
 
         // применить типовую аннотацию в приведенни типов
