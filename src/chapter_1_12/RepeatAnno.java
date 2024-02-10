@@ -5,10 +5,10 @@ package chapter_1_12;
 import java.lang.annotation.*;
 import java.lang.reflect.*;
 
-// сделать аннотацию MyAnno повтояющейся
+// сделать аннотацию MyAnno повторяющейся
 @Retention(RetentionPolicy.RUNTIME)
 @Repeatable(MyRepeatedAnnos.class)
-@interface MyyAnno  {
+@interface MyyAnno {
     String str() default "Тестирование";
 
     int val() default 9000;
@@ -22,7 +22,7 @@ import java.lang.reflect.*;
 
 public class RepeatAnno {
 
-    // повторить аннотацию MyAnno в методе ьнЬуер()
+    // повторить аннотацию MyAnno в методе myMeth()
     @MyyAnno(str = "Первая аннотация", val = -1)
     @MyyAnno(str = "Вторая аннотация", val = 100)
     public static void myMeth(String str, int i) {
