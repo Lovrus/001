@@ -8,8 +8,8 @@ public class TinyEdit {
         // создать поток ввода типа BufferedReader,
         // используя стандартны поток ввода System.in
         BufferedReader br = new BufferedReader(new
-                InputStreamReader(System.in));
-        String str[] = new String[100];
+                InputStreamReader(System.in, System.console().charset()));
+        String[] str = new String[100];
         System.out.println("Введите строки текста.");
         System.out.println("Введите 'стоп' для завершения.");
         for (int i = 0; i < 100; i++) {
