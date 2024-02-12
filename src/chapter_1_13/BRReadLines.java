@@ -1,5 +1,5 @@
 package chapter_1_13;
-// Чтение символьных строк с косоли средствами
+// Чтение символьных строк с консоли средствами
 // класа BufferedReader
 
 import java.io.*;
@@ -9,7 +9,7 @@ public class BRReadLines {
         // создать поток ввода типа BufferedReader,
         // используя стандартный поток ввода System.in
         BufferedReader br = new BufferedReader(new
-                InputStreamReader(System.in));
+                InputStreamReader(System.in, System.console().charset()));
         String str;
         System.out.println("Введите строки текста.");
         System.out.println("Введите 'стоп' для завершения.");
