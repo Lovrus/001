@@ -38,5 +38,3 @@ public class ShowFile_2 {
         }
     }
 }
-
-
