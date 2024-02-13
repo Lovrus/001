@@ -32,7 +32,7 @@ class InsanceOf {
         if (c instanceof A)
             System.out.println("c можно привести к типу А");
         if (a instanceof C)
-            System.out.println("c можно привести к типу А");
+            System.out.println("c можно привести к типу С");
 
         System.out.println();
 
