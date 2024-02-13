@@ -5,6 +5,7 @@ package chapter_1_13;
 Например, чтобы скопировать файл FIRST.TXT
 в файл SECOND.TXT, введите в командной строке
 следующую коанду:
+
 java CopyFile FIRST.TXT SECOND.TXT
  */
 
@@ -16,7 +17,7 @@ public class CopyFile {
         FileInputStream fin = null;
         FileOutputStream fout = null;
 
-        // сначала убедиься, что указаны имена обоих файлов
+        // сначала убедиться, что указаны имена обоих файлов
         if (args.length != 2) {
             System.out.println(
                     "Использование: CopyFile откуда куда");
