@@ -14,6 +14,6 @@ public class Hypot {
 
         System.out.println("При заданной длине сторон "
                 + side1 + " и " + side2
-                + "гипотенуза равна " + hypot);
+                + " гипотенуза равна " + hypot);
     }
 }
