@@ -19,6 +19,6 @@ public class Stats<T> {
         //   sum+= nums[i].doubleValue();// ОШИБКА!!
         //     return sum / nums.length;
         //}
-        return sum;
+        return sum / nums.length;
     }
 }
