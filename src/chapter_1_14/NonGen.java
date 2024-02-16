@@ -18,7 +18,7 @@ public class NonGen {
     // показать тип объекта ob
     void showType() {
         System.out.println("Объект ob относится к типу "
-        + ob.getClass().getName());
+                + ob.getClass().getName());
     }
 }
 
