@@ -85,7 +85,7 @@ class BoundedWildcard {
         // showAll2(tdlocs); // Ошибка, это не тип FourD2
 
         // а теперь создать несколько объектов типа FourD2
-        FourD2 fd[] = {
+        FourD2[] fd = {
                 new FourD2(1, 2, 3, 4),
                 new FourD2(6, 8, 14, 8),
                 new FourD2(22, 9, 4, 9),

@@ -30,7 +30,7 @@ class FourD extends ThreeD {
     }
 }
 
-// Этот класс хранит массив координативных объектов
+// Этот класс хранит массив объектов координат.
 class Coords<T extends TwoD> {
     T[] coords;
 
@@ -47,7 +47,7 @@ class Coords<T extends TwoD> {
     }
 
     static void showXYZ(Coords<? extends ThreeD> c) {
-        System.out.println("X Y Z Coordinates:");
+        System.out.println("Координаты X Y Z:");
         for (int i = 0; i < c.coords.length; i++)
             System.out.println(c.coords[i].x + " "
                     + c.coords[i].y + " "
@@ -55,4 +55,3 @@ class Coords<T extends TwoD> {
         System.out.println();
     }
 }
-
