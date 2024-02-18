@@ -2,14 +2,14 @@ package chapter_1_14;
 
 // Использовать обобщенный конструктор
 public class GenCons {
-    private double val2;
+    private final double val2;
 
     <T extends Number> GenCons(T arg) {
         val2 = arg.doubleValue();
     }
 
-    void showval() {
-        System.out.println("val: "+ val2);
+    void showVal() {
+        System.out.println("val: " + val2);
     }
 }
 
@@ -18,7 +18,7 @@ class GenConsDemo {
 
         GenCons test = new GenCons(100);
         GenCons test2 = new GenCons(123.5F);
-        test.showval();
-        test2.showval();
+        test.showVal();
+        test2.showVal();
     }
 }
