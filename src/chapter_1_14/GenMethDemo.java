@@ -13,8 +13,8 @@ public class GenMethDemo {
     }
 
     public static void main(String[] args) {
-        // применить метод isIn() для целых чисел
-        Integer nums[] = {1, 2, 3, 4, 5};
+        // применить метод isIn() для целых чисел Integer
+        Integer[] nums = {1, 2, 3, 4, 5};
 
         if (isIn(2, nums))
             System.out.println("Число 2 содержится в массиве nums");
@@ -23,7 +23,7 @@ public class GenMethDemo {
         System.out.println();
 
         // применить метод isIn() для символьных строк
-        String strs[] = {"один", "два", "три",
+        String[] strs = {"один", "два", "три",
                 "четыре", "пять"};
 
         if (isIn("два", strs))
