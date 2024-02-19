@@ -42,8 +42,8 @@ class MyClass<T extends Comparable<T>> implements MinMax<T> {
 
 class GenIFDemo {
     public static void main(String[] args) {
-        Integer inums[] = {3, 6, 2, 8, 6};
-        Character chs[] = {'b', 'r', 'p', 'w'};
+        Integer[] inums = {3, 6, 2, 8, 6};
+        Character[] chs = {'b', 'r', 'p', 'w'};
 
         MyClass<Integer> iob = new MyClass<Integer>(inums);
         MyClass<Character> cob = new MyClass<Character>(chs);
