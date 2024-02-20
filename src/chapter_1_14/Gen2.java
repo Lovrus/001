@@ -28,7 +28,7 @@ class RawDemo {
 
         // создать объект базового типа Gen и присвоить ему
         // значение типа Double
-        Gen2 raw = new Gen2(98.6);
+        Gen2 raw = new Gen2(Double.valueOf(98.6));
 
         // Требуется приведение типов, поскольку тип неизвестен
         double d = (Double) raw.getOb();
