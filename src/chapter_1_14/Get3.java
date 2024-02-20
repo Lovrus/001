@@ -14,7 +14,7 @@ public class Get3<T> {
     }
 }
 
-// Подкласс, производный от класса Gen
+// Подкласс, производный от класса Get3
 class Gen4<T> extends Get3<T> {
     Gen4(T o) {
         super(o);
