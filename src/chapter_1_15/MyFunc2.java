@@ -8,7 +8,7 @@ public interface MyFunc2<T> {
 
 // Класс, предназначенный для хранения самой высокой температуры за сутки.
 class HighTemp {
-    private int hTemp;
+    private final int hTemp;
 
     HighTemp(int ht) {
         hTemp = ht;
