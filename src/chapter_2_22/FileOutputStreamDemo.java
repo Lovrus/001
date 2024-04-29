@@ -6,7 +6,7 @@ import java.io.*;
 
 public class FileOutputStreamDemo {
     public static void main(String[] args) {
-        String source = "Настало время все порядочным людям\n"
+        String source = "Настало время всем порядочным людям\n"
                 + " прийти на помощь своей стране\n"
                 + " и заплатить надлежащие налоги";
         byte[] buf = source.getBytes();
