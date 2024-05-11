@@ -10,7 +10,7 @@ public class ExplicitChannelWrite {
     public static void main(String[] args) {
         // Получить канал к файлу внутри блока try с ресурсами.
         try (FileChannel fChan = (FileChannel)
-                Files.newByteChannel(Path.of("twst.txt"),
+                Files.newByteChannel(Path.of("test.txt"),
                         StandardOpenOption.WRITE, StandardOpenOption.CREATE)) {
             // Выделить память под буфер.
             ByteBuffer mBuf = ByteBuffer.allocate(26);
