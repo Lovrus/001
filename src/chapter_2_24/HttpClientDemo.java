@@ -14,9 +14,8 @@ public class HttpClientDemo {
         HttpRequest myReq = HttpRequest.newBuilder(
                 new URI("http://www.google.com/")).build();
         // Отправить запрос и получить ответ. Для тела применяется объект InputStream.
-        HttpResponse<InputStream> myResp = myHC.send(myReq,
-                HttpResponse.BodyHandler.ofInputStream());
-        // Отобразить код ответа и метод запроса.
+        HttpResponse<InputStream> myResp = myHC.send(myReq,HttpResponse.BodyHandlers.ofInputStream());
+        /* Отобразить код ответа и метод запроса. */
         System.out.println("Код ответа: " + myResp.statusCode());
         System.out.println("Метод запроса: " + myReq.method());
         // Получить заголовок из ответа.
