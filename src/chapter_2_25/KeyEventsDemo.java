@@ -4,8 +4,8 @@ package chapter_2_25;
 import java.awt.*;
 import java.awt.event.*;
 
-public class KeyEventsDemo extends Frame implements KeyListener {
-    String msg = "";
+abstract class KeyEventsDemo extends Frame implements KeyListener {
+/*String msg = "";
     String keyState = "";
 
     public KeyEventsDemo() {
@@ -18,17 +18,20 @@ public class KeyEventsDemo extends Frame implements KeyListener {
         keyState = "Key Down"; // Клавиша нажата.
         int key = ke.getKeyCode();
         switch (key) {
-            case KeyEvent.VK_1:
+            case KeyEvent.VK_F1:
                 msg += "<F1>";
                 break;
-            case KeyEvent.VK_2:
+            case KeyEvent.VK_F2:
                 msg += "<F2>";
                 break;
-            case KeyEvent.VK_3:
+            case KeyEvent.VK_F3:
                 msg += "<F3>";
                 break;
-            case KeyEvent.VK_PASTE_DOWN:
+            case KeyEvent.VK_PAGE_DOWN:
                 msg += "<PgDn>";
+                break;
+            case KeyEvent.VK_PAGE_UP:
+                msg += "<PgUp>";
                 break;
             case KeyEvent.VK_LEFT:
                 msg += "<Left Arrow>"; // Стрелка влево
@@ -70,5 +73,5 @@ public class KeyEventsDemo extends Frame implements KeyListener {
 class MyWindowAdapter3 extends WindowAdapter {
     public void windowClosing(WindowEvent we) {
         System.exit(0);
-    }
+    }*/
 }
