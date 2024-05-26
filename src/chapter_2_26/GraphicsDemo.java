@@ -20,7 +20,7 @@ public class GraphicsDemo extends Frame {
         g.drawLine(20, 90, 100, 40);
         g.drawLine(40, 45, 250, 80);
         // Вычертить прямоугольники.
-        g.clearRect(20, 150, 60, 50);
+        g.drawRect(20, 150, 60, 50);
         g.fillRect(110, 150, 60, 50);
         g.drawRoundRect(200, 150, 60, 50, 15, 15);
         g.fillRoundRect(290, 150, 60, 50, 30, 40);
