@@ -1,14 +1,15 @@
 package chapter_2_27;
-// Распознавание объектов Button.
+
+// Распознавание объектов Button2.
 
 import java.awt.*;
 import java.awt.event.*;
 
-public class ButtonList extends Frame implements ActionListener {
+abstract public class ButtonList2 extends Frame implements ActionListener {
     String msg = "";
     Button[] bList = new Button[3];
 
-    public ButtonList() {
+    public ButtonList2() {
         // Использовать поточную компоновку.
         setLayout(new FlowLayout());
         // Создать несколько кнопок.
@@ -28,18 +29,20 @@ public class ButtonList extends Frame implements ActionListener {
                 System.exit(0);
             }
         });
+        yes.addActionListener((ae) -> {
+            msg = "You pressed " + ae.getActionCommand();
+            repaint();
+        });
+        no.addActionListener((ae) -> {
+            msg = "You pressed " + ae.getActionCommand();
+            repaint();
+        });
+        mayme.addActionListener((ae) -> {
+            msg = "You pressed " + ae.getActionCommand();
+        });
     }
 
-    // Обработать события действий для кнопок.
-    public void actionPerformed(ActionEvent ae) {
-        for (int i = 0; i < 3; i++) {
-            if (ae.getSource() == bList[i]) {
-                msg = "You pressed " + bList[i].getLabel();
-                // Щелчок на кнопке ...
-            }
-        }
-        repaint();
-    }
+    // Использовать лямбда-выражение для обработки событий действий.
 
     public void paint(Graphics g) {
         g.drawString(msg, 20, 100);
