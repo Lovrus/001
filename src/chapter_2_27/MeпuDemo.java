@@ -23,8 +23,9 @@ public class MeпuDemo extends Frame {
         java.awt.Menu edit = new Menu("Edit"); // Правка
         MenuItem item6, item7, item8, item9;
         edit.add(item6 = new MenuItem("Cut")); // Вырезать
-        edit.add(item7 = new  MenuItem("Paste")); // Вставить.
-        edit.add(item8 = new MenuItem("-"));
+        edit.add(item7 = new MenuItem("Copy")); // Скопировать
+        edit.add(item8 = new  MenuItem("Paste")); // Вставить.
+        edit.add(item9 = new MenuItem("-"));
 
         Menu sub = new Menu("Special"); // Сервис
         MenuItem item10, item11, item12;
@@ -42,6 +43,19 @@ public class MeпuDemo extends Frame {
 
         // Создать объект для обработки событий действий и элементов.
         MyMenuHandler handler = new MyMenuHandler();
-        // Зарегистри
+        // Зарегистрировать для получения этих событий.
+        item1.addActionListener(handler);
+        item2.addActionListener(handler);
+        item3.addActionListener(handler);
+        item4.addActionListener(handler);
+        item5.addActionListener(handler);
+        item6.addActionListener(handler);
+        item7.addActionListener(handler);
+        item8.addActionListener(handler);
+        item9.addActionListener(handler);
+        item10.addActionListener(handler);
+        item11.addActionListener(handler);
+        item12.addActionListener(handler);
+
     }
 }
