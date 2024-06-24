@@ -88,7 +88,7 @@ public class MeпuDemo extends Frame {
         appwin.setVisible(true);
     }
 
-    // Внутренний классдля обработки событий действий и элементов в меню.
+    // Внутренний класс для обработки событий действий и элементов в меню.
     class MyMenuHandler implements ActionListener, ItemListener {
         // Обработать события действий.
         public void actionPerformed(ActionEvent ae) {
