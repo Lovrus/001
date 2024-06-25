@@ -1,17 +1,20 @@
 package chapter_2_27;
 // Демонстрация использования диалогового окна.
+
 import java.awt.*;
 import java.awt.event.*;
+
 public class DialogDemo extends Frame {
     String msg = "";
     CheckboxMenuItem debug, test;
     SampleDialog myDialog;
-    public DialogDemo () {
-        myDialog = new  SampleDialog(this, "New Dialog Box");
+
+    public DialogDemo() {
+        myDialog = new SampleDialog(this, "New Dialog Box");
         // создать панель меню и добавить ее во фрейм.
         MenuBar mbar = new MenuBar();
-                setMenuBar(mbar);
-                // Создать пункты меню.
+        setMenuBar(mbar);
+        // Создать пункты меню.
         Menu file = new Menu("File");
         MenuItem item1, item2, item3, item4, item5;
         file.add(item1 = new MenuItem("New..."));
@@ -116,4 +119,25 @@ public class DialogDemo extends Frame {
     }
 }
 
+// Создать подкласс Dialog.
+class SampleDialog extends Dialog {
+    SampleDialog(Frame parent, String title) {
+        super(parent, title, false);
+        setLayout(new FlowLayout());
+        setSize(300, 200);
+        add(new Label("Press this button:")); // Нажмите на эту кнопку
+        Button b;
+        add(b = new Button("Cancel"));
+        b.addActionListener((ae) -> dispose());
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                dispose();
+            }
+        });
+    }
 
+    public void paint(Graphics g) {
+        g.drawString("This is in the dialog box", 20, 80);
+        // Строка в диалоговом окне
+    }
+}
