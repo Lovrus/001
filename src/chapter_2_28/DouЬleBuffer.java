@@ -24,6 +24,11 @@ public class DouЬleBuffer extends Frame {
                 repaint();
             }
         });
-
+addWindowListener(new WindowAdapter() {
+    public void windowsClosing(WindowEvent we) {
+        System.exit(0);
     }
+});
+    }
+
 }
