@@ -17,9 +17,14 @@ public  MemoryImageGenerator() {
             int g = (x*2^y*2)&0xff;
             int b = (x*4^y*4) &0xff;
             pixels[i++] = (255<<24) | (r<<16) | (g << 8) | b;
-
-
+img = createImage(new MemoryImageSource(w, h, pixels,0,w));
+addWindowListener(new WindowAdapter() {
+    public void windowClosing(WindowEvent we) {
+        System.exit(0);
+    }
+});
         }
+
     }
 }
 }
