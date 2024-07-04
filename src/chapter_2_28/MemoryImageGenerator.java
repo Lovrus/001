@@ -24,7 +24,9 @@ addWindowListener(new WindowAdapter() {
     }
 });
         }
+public void paint (Graphics g) {
 
+        }
     }
 }
 }
