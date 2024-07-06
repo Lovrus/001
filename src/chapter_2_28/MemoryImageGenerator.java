@@ -27,7 +27,9 @@ addWindowListener(new WindowAdapter() {
 public void paint (Graphics g) {
 g.drawImage(img, getInsets().left, getInsets().top, null);
         }
+public static void main (String[] args) {
 
+        }
     }
 }
 }
