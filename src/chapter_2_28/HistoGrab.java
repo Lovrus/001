@@ -15,6 +15,15 @@ public class HistoGrab extends Frame {
     int max_hist = 0;
     Insets ins;
     public HistoGrab () {
-
+try {
+    File imageFile = new File("Lilies.jpg");
+    // Загрузить изображение.
+    img = ImageIO.read(imageFile);
+    iw = img.getWidth(null);
+    ih = img.getHeight(null);
+    pixels = new int[iw*ih];
+    PixelGrabber pg = new PixelGrabber(img, 0,0, iw, ih,
+            pixels, 0,iw);
+}
     }
 }
