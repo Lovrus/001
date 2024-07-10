@@ -24,6 +24,14 @@ try {
     pixels = new int[iw*ih];
     PixelGrabber pg = new PixelGrabber(img, 0,0, iw, ih,
             pixels, 0,iw);
+    pg.grabPixels();
+} catch (InterruptedException e) {
+    System.out.println("Interrupted");
+    return;
+} catch (IOException exc) {
+    System.out.println("Не удалось загрузить файл изображения.");
+    System.exit(0);
 }
+
     }
 }
