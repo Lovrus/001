@@ -42,5 +42,10 @@ public class HistoGrab extends Frame {
             int y = (int) (.33 * r + .56 * g + .11 * b);
             hist[y]++;
         }
+        for (int i = 0; i < 256; i++) {
+            if (hist[i] > max_hist)
+                max_hist = hist[i];
+        }
+
     }
 }
