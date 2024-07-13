@@ -46,6 +46,11 @@ public class HistoGrab extends Frame {
             if (hist[i] > max_hist)
                 max_hist = hist[i];
         }
-
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                System.exit(0);
+            }
+        });
     }
+
 }
