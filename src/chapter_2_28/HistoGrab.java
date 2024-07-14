@@ -53,4 +53,12 @@ public class HistoGrab extends Frame {
         });
     }
 
+    public void paint(Graphics g) {
+        // Получить вставки кромки/заголовка.
+        ins = getInsets();
+        g.drawImage(img, ins.left, ins.top, null);
+        int x = (iw - 256) / 2;
+        int lasty = ih - ih * hist[0] / max_hist;
+
+    }
 }
