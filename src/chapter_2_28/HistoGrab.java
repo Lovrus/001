@@ -59,6 +59,14 @@ public class HistoGrab extends Frame {
         g.drawImage(img, ins.left, ins.top, null);
         int x = (iw - 256) / 2;
         int lasty = ih - ih * hist[0] / max_hist;
-
+        for (int i = 0; i < 256; i++, x++) {
+            int y = ih - ih * hist[i] / max_hist;
+            g.setColor(new Color(i, i, i));
+            g.fillRect(x + ins.left, y + ins.top, 1, ih - y);
+            g.setColor(Color.red);
+            g.drawLine((x - 1) + ins.left, lasty + ins.top, x + ins.left, y + ins.top);
+            lasty = y;
+        }
     }
+
 }
