@@ -69,4 +69,10 @@ public class HistoGrab extends Frame {
         }
     }
 
+    public static void main(String[] args) {
+        HistoGrab appwin = new HistoGrab();
+        appwin.setSize(new Dimension(400, 380));
+        appwin.setTitle("HistoGrab");
+        appwin.setVisible(true);
+    }
 }
