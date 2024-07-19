@@ -22,6 +22,9 @@ public class Tileimage extends Frame {
             ih = img.getHeight(null);
             tw = iw / 4;
             th = ih / 4;
+            CropImageFilter f;
+            FilteredImageSource fis;
+
         }
     }
 }
