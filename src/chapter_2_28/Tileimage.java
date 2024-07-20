@@ -24,6 +24,14 @@ public class Tileimage extends Frame {
             th = ih / 4;
             CropImageFilter f;
             FilteredImageSource fis;
+            for (int y = 0; y < 4; y++) {
+                for (int x = 0; x < 4; x++) {
+                    f = new CropImageFilter(tw * x, th * y, tw, th);
+                    fis = new FilteredImageSource(img.getSource(), f);
+                    int i = y * 4 + x;
+                    cell[i] = createImage(fis);
+                }
+            }
 
         }
     }
