@@ -32,7 +32,37 @@ public class Tileimage extends Frame {
                     cell[i] = createImage(fis);
                 }
             }
-
+            for (int i = 0; i < 32; i++) {
+                int si = (int) (Math.random() * 16);
+                int di = (int) (Math.random() * 16);
+                Image tmp = cell[si];
+                cell[si] = cell[di];
+                cell[di] = tmp;
+            }
+        } catch (IOException exc) {
+            System.out.println("Не удалось загрузить файл изображения.");
+            System.exit(0);
         }
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                System.exit(0);
+            }
+        });
+    }
+
+    public void paint(Graphics g) {
+        for (int y = 0; y < 4; y++) {
+            for (int x = 0; x < 4; x++) {
+                g.drawImage(cell[y * 4 + x], x * tw + getInsets().left,
+                        y * th + getInsets().top, null);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Tileimage appwin = new Tileimage();
+        appwin.setSize(new Dimension(420, 420));
+        appwin.setTitle("Tileimage");
+        appwin.setVisible(true);
     }
 }
