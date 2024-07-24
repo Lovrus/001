@@ -15,5 +15,10 @@ public class ImageFilterDemo extends Frame implements ActionListener {
     Button reset;
     // Имена фильтров.
     String[] filters = {"Grayscale", "Invert", "Contrast", "Blur", "Sharpen"};
+public ImageFilterDemo() {
+    Panel p = new Panel();
+    add(p, BorderLayout.SOUTH);
+    // Создать кнопку Reset(Сброс).
 
+}
 }
