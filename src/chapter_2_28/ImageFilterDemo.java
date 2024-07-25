@@ -19,6 +19,16 @@ public ImageFilterDemo() {
     Panel p = new Panel();
     add(p, BorderLayout.SOUTH);
     // Создать кнопку Reset(Сброс).
+reset = new Button("Reset");
+reset.addActionListener(this);
+p.add(reset);
+// Добавить кнопки фильтров.
+    for (String fstr: filters) {
+        Button b = new Button(fstr);
+        b.addActionListener(this);
+        p.add(b);
+    }
+    // Создать верхнюю кнопку.
 
 }
 }
