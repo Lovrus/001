@@ -29,6 +29,7 @@ p.add(reset);
         p.add(b);
     }
     // Создать верхнюю кнопку.
-
+lab = new Label("");
+    add(lab, BorderLayout.NORTH);
 }
 }
