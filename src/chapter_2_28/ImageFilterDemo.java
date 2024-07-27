@@ -31,5 +31,10 @@ p.add(reset);
     // Создать верхнюю кнопку.
 lab = new Label("");
     add(lab, BorderLayout.NORTH);
+    // Загрузить изображение.
+    try {
+        File imageFile = new File("Lilies.jpg");
+        img = ImageIO.read(imageFile);
+    }
 }
 }
