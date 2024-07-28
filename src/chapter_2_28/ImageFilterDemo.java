@@ -35,6 +35,11 @@ lab = new Label("");
     try {
         File imageFile = new File("Lilies.jpg");
         img = ImageIO.read(imageFile);
+    } catch (IOException exc) {
+        System.out.println("Не удалось загрузить файл изображения.");
+        System.exit(0);
     }
+    // Получить объект LoadedImage и расположить его по центру.
+
 }
 }
