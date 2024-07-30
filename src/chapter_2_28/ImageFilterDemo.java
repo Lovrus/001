@@ -55,6 +55,10 @@ public void actionPerformed(ActionEvent ae) {
         String a = "";
         try {
             a = ae.getActionCommand();
+            if (a.equals("Reset")) {
+                lim.set(img);
+                lab.setText("Normal"); // Нормальное
+            }
         }
 }
 }
