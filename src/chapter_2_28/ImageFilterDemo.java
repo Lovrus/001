@@ -51,5 +51,10 @@ public class ImageFilterDemo extends Frame implements ActionListener {
             }
         });
     }
-
+public void actionPerformed(ActionEvent ae) {
+        String a = "";
+        try {
+            a = ae.getActionCommand();
+        }
+}
 }
