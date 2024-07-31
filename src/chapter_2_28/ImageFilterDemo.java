@@ -17,6 +17,7 @@ public class ImageFilterDemo extends Frame implements ActionListener {
     Button reset;
     // Имена фильтров.
     String[] filters = {"Grayscale", "Invert", "Contrast", "Blur", "Sharpen"};
+    private PlugInFilter filter(t);
 
     public ImageFilterDemo() {
         Panel p = new Panel();
@@ -59,6 +60,17 @@ public void actionPerformed(ActionEvent ae) {
                 lim.set(img);
                 lab.setText("Normal"); // Нормальное
             }
+            else {
+                // Получить выбранный фильтр.
+                pif = (PlugInFilter)
+                        (Class.forName(a)).getConstructor().newInstance();
+                fimg = pif.filter(this, img);
+                lim.set(fimg);
+                lab.setText("Filtered: " + a); // Отфильтрованное
+            }
+            repaint();
+        } catch (CloneNotSupportedException e) {
+
         }
 }
 }
