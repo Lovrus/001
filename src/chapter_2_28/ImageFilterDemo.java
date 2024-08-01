@@ -69,8 +69,12 @@ public void actionPerformed(ActionEvent ae) {
                 lab.setText("Filtered: " + a); // Отфильтрованное
             }
             repaint();
-        } catch (CloneNotSupportedException e) {
-
-        }
+        } catch (ClassNotFoundException e) {
+lab.setText(a + "not found"); // не найдено
+            lim.set(img);
+            repaint();
+        } catch (InstantiationException e) {
+            lab.setText("couldnt new " +a); // не удается создать
+        } catch ()
 }
 }
