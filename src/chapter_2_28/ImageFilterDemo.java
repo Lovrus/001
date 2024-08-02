@@ -17,6 +17,7 @@ public class ImageFilterDemo extends Frame implements ActionListener {
     Button reset;
     // Имена фильтров.
     String[] filters = {"Grayscale", "Invert", "Contrast", "Blur", "Sharpen"};
+
     private PlugInFilter filter(t);
 
     public ImageFilterDemo() {
@@ -52,15 +53,15 @@ public class ImageFilterDemo extends Frame implements ActionListener {
             }
         });
     }
-public void actionPerformed(ActionEvent ae) {
+
+    public void actionPerformed(ActionEvent ae) {
         String a = "";
         try {
             a = ae.getActionCommand();
             if (a.equals("Reset")) {
                 lim.set(img);
                 lab.setText("Normal"); // Нормальное
-            }
-            else {
+            } else {
                 // Получить выбранный фильтр.
                 pif = (PlugInFilter)
                         (Class.forName(a)).getConstructor().newInstance();
@@ -70,11 +71,16 @@ public void actionPerformed(ActionEvent ae) {
             }
             repaint();
         } catch (ClassNotFoundException e) {
-lab.setText(a + "not found"); // не найдено
+            lab.setText(a + "not found"); // не найдено
             lim.set(img);
             repaint();
         } catch (InstantiationException e) {
-            lab.setText("couldnt new " +a); // не удается создать
-        } catch ()
-}
+            lab.setText("couldnt new " + a); // не удается создать
+        } catch (IllegalAccessException e) {
+            lab.setText("no access: " + a); // нет доступа
+        } catch (NoSuchMethodException | InvocationTargetException e) {
+            lab.setText("Filter creation error: " + e); // Ошибка создания фильтра
+        }
+    }
+
 }
