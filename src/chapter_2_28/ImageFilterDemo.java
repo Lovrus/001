@@ -2,6 +2,7 @@ package chapter_2_28;
 // Демонстрация использования фильтров изображений.
 
 import com.sun.source.util.Plugin;
+
 import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -9,14 +10,14 @@ import javax.imageio.*;
 import java.io.*;
 import java.lang.reflect.*;
 
-public class ImageFilterDemo  {
-    /*
+public class ImageFilterDemo extends Frame implements ActionListener {
+
     Image img;
     PlugInFilter pif;
     Image fimg;
     Image curImg;
     LoadedImage lim;
-    label lab;
+    Label lab;
     Button reset;
     // Имена фильтров.
     String[] filters = {"Grayscale", "Invert", "Contrast", "Blur", "Sharpen"};
@@ -92,5 +93,3 @@ public class ImageFilterDemo  {
     }
 }
 
-     */
-}
