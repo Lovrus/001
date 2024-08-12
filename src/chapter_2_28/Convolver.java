@@ -39,5 +39,13 @@ public void setProperties(java.util.Hashtable<?,?> dummy) { }
     imageReady = true;
     notifyAll();
     }
+public void setDimensions(int x, int y) {
+    width = x;
+    height = y;
+    imgpixels = new int[x*y];
+}
+public void setPixels(int x1, int y1, int w, int h,
+                      ColorModel model, byte[] pixels, int off, int scansize) {
 
+}
 }
