@@ -14,7 +14,7 @@ abstract class Convolver implements ImageConsumer, PlugInFilter {
     abstract void convolve(); // Здесь находится фильтр...
 
     public Image filter(Frame f, Image in) {
-        ImageReady = false;
+        boolean ImageReady = false;
         in.getSource().startProduction(this);
         waitForImage();
         newimgpixels = new int[width * height];
@@ -76,4 +76,21 @@ abstract class Convolver implements ImageConsumer, PlugInFilter {
         }
     }
 
+    public void setPixels(int x1, int y1, int w, int h,
+                          ColorModel model, int[] pixels, int off, int scansize) {
+        int pix, x, y, x2, y2, sx, sy;
+        x2 = x1 + w;
+        y2 = y1 + h;
+        sy = off;
+        for (y = y1; y < y2; y++) {
+            sx = sy;
+            for (x = x1; x < x2; x++) {
+                pix = model.getRGB(pixels[sx++]);
+                if ((pix & 0xff000000) == 0)
+                    pix = 0x00ffffff;
+                imgpixels[y * width + x] = pix;
+            }
+            sy += scansize;
+        }
+    }
 }
