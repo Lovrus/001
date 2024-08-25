@@ -10,6 +10,9 @@ public class BarDemo {
         new Thread(new MyThread1(cb, "A")).start();
         new Thread(new MyThread1(cb, "B")).start();
         new Thread(new MyThread1(cb, "C")).start();
+        new Thread(new MyThread1(cb, "X")).start();
+        new Thread(new MyThread1(cb, "Y")).start();
+        new Thread(new MyThread1(cb, "Z")).start();
     }
 }
 
