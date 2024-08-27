@@ -49,7 +49,7 @@ class UseString implements Runnable {
     public void run() {
         for (int i = 0; i < 3; i++) {
             try {
-                // Обменять пустой буфер на полный .
+                // Обменять пустой буфер на полный.
                 str = ex.exchange(new String());
                 System.out.println("Получено " + str);
             } catch (InterruptedException exc) {
