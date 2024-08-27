@@ -37,7 +37,7 @@ class MakeString implements Runnable {
     }
 }
 
-// Поток котоый использует строку.
+// Поток который использует строку.
 class UseString implements Runnable {
     Exchanger<String> ex;
     String str;
