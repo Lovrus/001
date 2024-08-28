@@ -6,6 +6,10 @@ public class PhaserDemo {
         Phaser phsr = new Phaser();
         int curPhase;
         System.out.println("Начало");
+        new Thread(new MyThread1(cb, "A")).start();
+        new Thread(new MyThread1(cb, "B")).start();
+        new Thread(new MyThread1(cb, "C")).start();
+
 
     }
 }
