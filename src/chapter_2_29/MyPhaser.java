@@ -13,7 +13,8 @@ public class MyPhaser extends Phaser {
         super(parties);
         numPhases = phaseCount - 1;
     }
-        // Переопределить метод onAdvance() для выполенения указанного
+
+    // Переопределить метод onAdvance() для выполенения указанного
     // количества стадий.
     protected boolean onAdvance(int p, int regParties) {
         // Этот оператор println() предназначен только для иллюстративных целей
@@ -25,9 +26,10 @@ public class MyPhaser extends Phaser {
         return false;
     }
 }
+
 class PhaserDemo2 {
     public static void main(String[] args) {
-        MyPhaser phsr = new MyPhaser(1,4);
+        MyPhaser phsr = new MyPhaser(1, 4);
         System.out.println("Начало\n");
         new Thread(new MyThread3(phsr, "A")).start();
         new Thread(new MyThread3(phsr, "B")).start();
@@ -39,18 +41,31 @@ class PhaserDemo2 {
         System.out.println("Объект Phaser закончил работу.");
     }
 }
+
 // Поток выполнения, который использует Phaser.
-class MyThread3  implements Runnable {
+class MyThread3 implements Runnable {
     Phaser phsr;
     String name;
+
     MyThread3(Phaser p, String n) {
         phsr = p;
         name = n;
         phsr.register();
     }
+
     public void run() {
         while (!phsr.isTerminated()) {
-            System.out.println();
+            System.out.println("Поток " + name + " начинает стадию " +
+                    phsr.getPhase());
+            phsr.arriveAndAwaitAdvance();
+            // Организовать небольшую паузу, чтобы предотвратить беспорядочный
+            // вывод. Это делается только в целях иллюстрации и не требуется
+            // для корректной работы объекта Phaser.
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                System.out.println(e);
+            }
         }
     }
 }
