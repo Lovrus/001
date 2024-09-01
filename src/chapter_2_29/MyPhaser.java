@@ -13,8 +13,7 @@ public class MyPhaser extends Phaser {
         super(parties);
         numPhases = phaseCount - 1;
     }
-
-    // Переопределить метод onAdvance() для выполенения указанного
+        // Переопределить метод onAdvance() для выполенения указанного
     // количества стадий.
     protected boolean onAdvance(int p, int regParties) {
         // Этот оператор println() предназначен только для иллюстративных целей
@@ -24,5 +23,34 @@ public class MyPhaser extends Phaser {
         if (p == numPhases || regParties == 0) return true;
         // В противном случае возвратить false.
         return false;
+    }
+}
+class PhaserDemo2 {
+    public static void main(String[] args) {
+        MyPhaser phsr = new MyPhaser(1,4);
+        System.out.println("Начало\n");
+        new Thread(new MyThread3(phsr, "A")).start();
+        new Thread(new MyThread3(phsr, "B")).start();
+        new Thread(new MyThread3(phsr, "C")).start();
+        // Ожидать завершерния указанного количества стадий.
+        while (!phsr.isTerminated()) {
+            phsr.arriveAndAwaitAdvance();
+        }
+        System.out.println("Объект Phaser закончил работу.");
+    }
+}
+// Поток выполнения, который использует Phaser.
+class MyThread3  implements Runnable {
+    Phaser phsr;
+    String name;
+    MyThread3(Phaser p, String n) {
+        phsr = p;
+        name = n;
+        phsr.register();
+    }
+    public void run() {
+        while (!phsr.isTerminated()) {
+            System.out.println();
+        }
     }
 }
