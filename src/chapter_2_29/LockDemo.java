@@ -16,3 +16,9 @@ public class LockDemo {
 class Shared2 {
     static int count = 0;
 }
+// Поток, который икрементирует count.
+class LockThread implements Runnable {
+    String name;
+    ReentrantLock lock;
+    LockThread
+}
