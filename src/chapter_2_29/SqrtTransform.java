@@ -1,16 +1,18 @@
 package chapter_2_29;
-// Простой пример применения базовой стретегии "разделяй и властвуй".
+// Простой пример применения базовой стратегии "разделяй и властвуй".
 // В этом случае используется RecursiveAction.
 
 import java.util.concurrent.*;
 import java.util.*;
 
+import static java.util.concurrent.ForkJoinTask.invokeAll;
+
 // Задача ForkJoinTask, которая (через RecursiveAction) трансформирует
 // элементы массива значений double в их квадратные корни.
-public class SqrtTransform extends RecursiveAction {
+abstract class SqrtTransform extends RecursiveAction {
     // Произвольно установить пороговое значение в этом примере в 1000.
     // В реальном коде оптимальное пороговое значение может быть
-    // выяснено за счет профилирования и эспериментирования.
+    // выяснено за счет профилирования и экспериментирования.
     final int seqThreshold = 1000;
     // Массив, в который будет осуществляться доступ.
     double[] data;
@@ -26,7 +28,7 @@ public class SqrtTransform extends RecursiveAction {
     // Метод, в котором будут происходить параллельные вычисления.
     protected void compure() {
         // Если количество элементов меньше порогового значения,
-        // тогда обрабатыать последовательно.
+        // тогда обрабатывать последовательно.
         if ((end - start) < seqThreshold) {
             // Трансформировать каждый элемент в его квадратный корень.
             for (int i = start; i < end; i++) {
@@ -38,8 +40,44 @@ public class SqrtTransform extends RecursiveAction {
             int middle = (start + end) / 2;
             // Запустить новые задачи, используя дополнительно разделенные
             // на части данные.
-            invokeAll(new SqrtTransform(data, start, middle),
-                    new SqrtTransform(data, middle, end));
+            invokeAll(new SqrtTransform(data, start, middle) {
+                          @Override
+                          protected void compute() {
+
+                          }
+                      },
+                    new SqrtTransform(data, middle, end) {
+                        @Override
+                        protected void compute() {
+
+                        }
+                    });
         }
+    }
+}
+
+// Демонстрация параллельного выполнения.
+class ForkJoinDemo {
+    public static void main(String[] args) {
+        // Создать пул задач.
+        ForkJoinPool fjp = new ForkJoinPool();
+        double[] nums = new double[10000];
+        // Присвоить nums ряд значений.
+        for (int i = 0; i < 10; i++)
+            System.out.println(nums[i] + " ");
+        System.out.println("\n");
+        SqrtTransform task = new SqrtTransform(nums, 0, nums.length) {
+            @Override
+            protected void compute() {
+
+            }
+        };
+// Запустить главную задачу ForkJoinTask.
+        fjp.invoke(task);
+        System.out.println("Часть трансформированный последовательности" +
+                " (с четырьмя знаками после десятичной точки) : ");
+        for (int i = 0; i < 10; i++)
+            System.out.format("%.4f ", nums[i]);
+        System.out.println();
     }
 }
