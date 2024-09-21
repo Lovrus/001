@@ -13,7 +13,7 @@ public class CallableDemo {
         Future<Double> f2;
         Future<Integer> f3;
         System.out.println("Начало");
-        f = es.submit(new Sum(10));
+        f = es.submit(new Sum2(10));
         f2 = es.submit(new Hypot3(3, 4));
         f3 = es.submit(new Factorial1(5));
         try {
@@ -33,10 +33,10 @@ public class CallableDemo {
 }
 
 // Далее следуют три вычислительных потока.
-class Sum implements Callable<Integer> {
+class Sum2 implements Callable<Integer> {
     int stop;
 
-    Sum(int v) {
+    Sum2(int v) {
         stop = v;
     }
 
