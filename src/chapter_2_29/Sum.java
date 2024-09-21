@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 
 // Задача RecurrsiveTask, которая вычисляет сумму значений
 // в массиве типа double.
-public class Sum extends RecursiveTask<Double> {
+abstract class Sum extends RecursiveTask<Double> {
     // Порог последовательной обработки.
     final int seqThresHold = 500;
     // Массив,  в который будет осуществляться доступ.
@@ -26,17 +26,26 @@ public class Sum extends RecursiveTask<Double> {
         // тогда обрабатывать последовательно.
         if ((end - start) < seqThresHold) {
             // Суммировать элементы.
-            for (int i=start; i< end; i++)
+            for (int i = start; i < end; i++)
                 sum += data[i];
-        }
-        else {
+        } else {
             // В противном случае продолжить разделение данных на меньшие части.
             // Найти среднюю точку.
-            int middle = (start + end)/2;
+            int middle = (start + end) / 2;
             // Запустить новые задачи, используя дополнительно разделенные
             // на части данные.
-            Sum subTaskA = new Sum(data, start, middle);
-            Sum subTaskB = new Sum(data, middle, end);
+            Sum subTaskA = new Sum(data, start, middle) {
+                @Override
+                protected Double compute() {
+                    return 0.0;
+                }
+            };
+            Sum subTaskB = new Sum(data, middle, end) {
+                @Override
+                protected Double compute() {
+                    return 0.0;
+                }
+            };
             // Запустить все задачи с помощью fork().
             subTaskA.fork();
             subTaskB.fork();
@@ -45,9 +54,10 @@ public class Sum extends RecursiveTask<Double> {
             sum = subTaskA.join() + subTaskB.join();
         }
         // Возвратить окончательную сумму.
-        return  sum;
+        return sum;
     }
 }
+
 // Демонстрация параллельного выполнения.
 class RecurTaskDemo {
     public static void main(String[] args) {
@@ -56,6 +66,17 @@ class RecurTaskDemo {
         double[] nums = new double[5000];
         // Иницилизировать nums чередующимся положительными
         // и отрицательными значениями.
-        for ()
+        for (int i = 0; i < nums.length; i++)
+            nums[i] = (double) (((i % 2) == 0) ? i : -i);
+        Sum task = new Sum(nums, 0, nums.length) {
+            @Override
+            protected Double compute() {
+                return 0.0;
+            }
+        };
+// Запустить задачи ForkJoinTask. Обратите внимание,
+        // что в этом случае метод invoke() возвращает результат.
+        double summatiom = fjp.invoke(task);
+        System.out.println("Результат суммирования: " + summatiom);
     }
 }
