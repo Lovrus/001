@@ -15,6 +15,9 @@ public class StreamDemo {
         myList.add(17);
         myList.add(5);
         System.out.println("Исходный список: " + myList);
-
+// Получить поток для ArrayList.
+        Stream<Integer> myStream = myList.stream();
+        // Получить минимальное и максимальное значения с использованием
+        // методов min(), max(), isPresent() и get().
     }
 }
