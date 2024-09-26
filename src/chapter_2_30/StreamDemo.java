@@ -19,5 +19,9 @@ public class StreamDemo {
         Stream<Integer> myStream = myList.stream();
         // Получить минимальное и максимальное значения с использованием
         // методов min(), max(), isPresent() и get().
+        Optional<Integer> minVal = myStream.min(Integer::compare);
+        if (minVal.isPresent()) System.out.println("Минимальное значение: " +
+                minVal.get());
+
     }
 }
