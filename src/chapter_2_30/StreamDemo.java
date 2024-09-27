@@ -22,6 +22,7 @@ public class StreamDemo {
         Optional<Integer> minVal = myStream.min(Integer::compare);
         if (minVal.isPresent()) System.out.println("Минимальное значение: " +
                 minVal.get());
+// Требуется получить новый поток, поскольку предыдущий вызов min()
 
     }
 }
