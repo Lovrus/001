@@ -23,6 +23,7 @@ public class StreamDemo {
         if (minVal.isPresent()) System.out.println("Минимальное значение: " +
                 minVal.get());
 // Требуется получить новый поток, поскольку предыдущий вызов min()
-
+// является заключительной операцией, которая потребляет поток.
+        myStream = myList.stream();
     }
 }
