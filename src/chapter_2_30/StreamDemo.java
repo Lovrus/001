@@ -25,5 +25,9 @@ public class StreamDemo {
 // Требуется получить новый поток, поскольку предыдущий вызов min()
 // является заключительной операцией, которая потребляет поток.
         myStream = myList.stream();
+        Optional<Integer> maxVal = myStream.max(Integer::compare);
+        if (minVal.isPresent()) System.out.println("Максимальное значение: " +
+                minVal.get());
+        // Отсортировать поток с применение sorted().
     }
 }
