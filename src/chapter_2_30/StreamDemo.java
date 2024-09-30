@@ -29,5 +29,8 @@ public class StreamDemo {
         if (minVal.isPresent()) System.out.println("Максимальное значение: " +
                 minVal.get());
         // Отсортировать поток с применение sorted().
+        Stream<Integer> sortedStream = myList.stream().sorted();
+        // Отобразить отсортирвоанный поток с использование forEach().
+
     }
 }
