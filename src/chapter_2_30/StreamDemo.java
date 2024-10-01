@@ -30,7 +30,11 @@ public class StreamDemo {
                 minVal.get());
         // Отсортировать поток с применение sorted().
         Stream<Integer> sortedStream = myList.stream().sorted();
-        // Отобразить отсортирвоанный поток с использование forEach().
+        // Отобразить отсортированный поток с использование forEach().
+        System.out.println("Отсортированный поток: ");
+        sortedStream.forEach((n) -> System.out.print(n + " "));
+        System.out.println();
+        // Отобразить только нечетные значения с применением filter().
 
     }
 }
