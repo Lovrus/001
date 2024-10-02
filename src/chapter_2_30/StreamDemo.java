@@ -35,6 +35,10 @@ public class StreamDemo {
         sortedStream.forEach((n) -> System.out.print(n + " "));
         System.out.println();
         // Отобразить только нечетные значения с применением filter().
+        Stream<Integer> oddVals = myList.stream().sorted().filter((n) -> (n % 2) == 1);
+        System.out.print("Нечетные значения: ");
+        oddVals.forEach((n) -> System.out.print(n + " "));
+        System.out.println();
 
     }
 }
