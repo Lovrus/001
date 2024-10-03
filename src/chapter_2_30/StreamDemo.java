@@ -39,6 +39,6 @@ public class StreamDemo {
         System.out.print("Нечетные значения: ");
         oddVals.forEach((n) -> System.out.print(n + " "));
         System.out.println();
-
+// Отобразить только нечетные значения, которые больше 5.
     }
 }
