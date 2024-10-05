@@ -26,12 +26,12 @@ public class StreamDemo {
 // является заключительной операцией, которая потребляет поток.
         myStream = myList.stream();
         Optional<Integer> maxVal = myStream.max(Integer::compare);
-        if (minVal.isPresent()) System.out.println("Максимальное значение: " +
-                minVal.get());
-        // Отсортировать поток с применение sorted().
+        if (maxVal.isPresent()) System.out.println("Максимальное значение: " +
+                maxVal.get());
+        // Отсортировать поток с применением sorted().
         Stream<Integer> sortedStream = myList.stream().sorted();
-        // Отобразить отсортированный поток с использование forEach().
-        System.out.println("Отсортированный поток: ");
+        // Отобразить отсортированный поток с использованием forEach().
+        System.out.print("Отсортированный поток: ");
         sortedStream.forEach((n) -> System.out.print(n + " "));
         System.out.println();
         // Отобразить только нечетные значения с применением filter().
@@ -42,5 +42,10 @@ public class StreamDemo {
 // Отобразить только нечетные значения, которые больше 5
         // Обратите внимание,
         // что две операции фильтрования соединены в конвейер.
+        oddVals = myList.stream().filter((n) -> (n % 2) == 1)
+                .filter((n) -> n > 5);
+        System.out.print("Нечетные значения, которые больше 5: ");
+        oddVals.forEach((n) -> System.out.print(n + " "));
+        System.out.println();
     }
 }
