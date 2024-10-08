@@ -20,6 +20,11 @@ public class StreamDemo2 {
         if (productIbj.isPresent())
             System.out.println("Произведение как Optional: " + productIbj.get());
         int product = mylist.stream().reduce(1, (a, b) -> a * b);
+        int evenProduct = mylist.stream().reduce(1, (a, b) -> {
+            if (b % 2 == 0) return a * b;
+            else return a;
+        });
         System.out.println("Произведение как int: " + product);
+        System.out.println(evenProduct);
     }
 }
