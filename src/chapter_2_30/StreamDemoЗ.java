@@ -20,5 +20,10 @@ public class StreamDemoЗ {
                 (a, b) -> a * b
         );
         System.out.println("Произведение квадратный корней: " + productOfSqrRoots);
+        // Не работает.
+        double productOfSqrRoots2 = myList.parallelStream().reduce(
+                1.0,
+                (a, b) -> a * Math.sqrt(b));
+        System.out.println("Произведение аккумуляриющее: " + productOfSqrRoots2);
     }
 }
