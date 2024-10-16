@@ -6,5 +6,8 @@ import java.util.*;
 import java.util.stream.*;
 
 public class NamePhoneEmail {
+String name;
+String phonenum;
+String email;
 
 }
