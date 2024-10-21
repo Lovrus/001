@@ -26,9 +26,10 @@ class NamePhone {
         phonenum = p;
     }
 }
-public class StreamDemo5 (
-        public static void main(String[]args) {
-// Список имен, телефонных номоеров и адресов электронной почты.
 
+class StreamDemo5 {
+    public static void main(String[] args) {
+// Список имен, телефонных номоеров и адресов электронной почты.
+        ArrayList<NamePhoneEmail> myList = new ArrayList<>();
+    }
 }
-)
