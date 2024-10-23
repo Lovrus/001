@@ -31,8 +31,9 @@ class StreamDemo5 {
     public static void main(String[] args) {
 // Список имен, телефонных номоеров и адресов электронной почты.
         ArrayList<NamePhoneEmail> myList = new ArrayList<>();
-        myList.add(new NamePhoneEmail("Larry, "555 - 5555",
+        myList.add(new NamePhoneEmail("Larry", "555 - 5555",
                 "Larry@HerbShildt.com"));
-
+        myList.add(new NamePhoneEmail("James", "555 - 4444",
+                "James@HerbShildt.com"));
     }
 }
