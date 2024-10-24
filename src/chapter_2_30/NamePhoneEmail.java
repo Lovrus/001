@@ -35,5 +35,7 @@ class StreamDemo5 {
                 "Larry@HerbShildt.com"));
         myList.add(new NamePhoneEmail("James", "555 - 4444",
                 "James@HerbShildt.com"));
+        myList.add(new NamePhoneEmail("Mary", "555 - 3333",
+                "Mary@HerbShildt.com"));
     }
 }
