@@ -37,5 +37,10 @@ class StreamDemo5 {
                 "James@HerbShildt.com"));
         myList.add(new NamePhoneEmail("Mary", "555 - 3333",
                 "Mary@HerbShildt.com"));
+        System.out.println("Исходные значения в myList: ");
+        myList.stream().forEach((a) -> {
+            System.out.println(a.name + a.phonenum + " " + a.email);
+        });
+        System.out.println();
     }
 }
