@@ -42,5 +42,7 @@ class StreamDemo5 {
             System.out.println(a.name + a.phonenum + " " + a.email);
         });
         System.out.println();
+        // Сопоставить с новым потоком только имени и телефонные  номера.
+
     }
 }
