@@ -43,6 +43,9 @@ class StreamDemo5 {
         });
         System.out.println();
         // Сопоставить с новым потоком только имени и телефонные  номера.
+        Stream<NamePhone> nameAndPhone = myList.stream().map(
+                (a) -> new NamePhone(a.name, a.phonenum)
+        );
 
     }
 }
