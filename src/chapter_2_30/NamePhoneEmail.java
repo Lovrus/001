@@ -46,6 +46,7 @@ class StreamDemo5 {
         Stream<NamePhone> nameAndPhone = myList.stream().map(
                 (a) -> new NamePhone(a.name, a.phonenum)
         );
+        System.out.println("Список имен и телефонных номеров: ");
 
     }
 }
