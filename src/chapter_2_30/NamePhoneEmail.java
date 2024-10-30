@@ -47,6 +47,8 @@ class StreamDemo5 {
                 (a) -> new NamePhone(a.name, a.phonenum)
         );
         System.out.println("Список имен и телефонных номеров: ");
-
+        nameAndPhone.forEach((a) -> {
+            System.out.println(a.name + " " + a.phonenum);
+        });
     }
 }
