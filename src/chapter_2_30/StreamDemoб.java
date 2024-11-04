@@ -15,6 +15,12 @@ public class StreamDemoб {
         myList.add(12.1);
         myList.add(5.0);
         System.out.println("Исходные элементы myList: ");
+        myList.stream().forEach((a) -> {
+            System.out.println(a + " ");
+        });
+        System.out.println();
+        // Сопоставить ближайшие большие целые значения для элементов
+        // в myList с IntStream.
 
     }
 }
