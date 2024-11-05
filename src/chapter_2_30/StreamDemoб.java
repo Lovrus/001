@@ -6,7 +6,7 @@ import java.util.stream.*;
 
 public class StreamDemoб {
     public static void main(String[] args) {
-        // Споисок значений типа double.
+        // Список значений типа double.
         ArrayList<Double> myList = new ArrayList<>();
         myList.add(1.1);
         myList.add(3.6);
@@ -14,17 +14,17 @@ public class StreamDemoб {
         myList.add(4.7);
         myList.add(12.1);
         myList.add(5.0);
-        System.out.println("Исходные элементы myList: ");
+        System.out.print("Исходные элементы myList: ");
         myList.stream().forEach((a) -> {
-            System.out.println(a + " ");
+            System.out.print(a + " ");
         });
         System.out.println();
         // Сопоставить ближайшие большие целые значения для элементов
         // в myList с IntStream.
         IntStream cStrm = myList.stream().mapToInt((a) -> (int) Math.ceil(a));
-        System.out.println("Ближайшие большие целые значения для элементов myList: ");
+        System.out.print("Ближайшие большие целые значения для элементов myList: ");
         cStrm.forEach((a) -> {
-            System.out.println(a + " ");
+            System.out.print(a + " ");
         });
     }
 }
