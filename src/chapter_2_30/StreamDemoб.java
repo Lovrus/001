@@ -21,6 +21,10 @@ public class StreamDemoб {
         System.out.println();
         // Сопоставить ближайшие большие целые значения для элементов
         // в myList с IntStream.
-
+        IntStream cStrm = myList.stream().mapToInt((a) -> (int) Math.ceil(a));
+        System.out.println("Ближайшие большие целые значения для элементов myList: ");
+        cStrm.forEach((a) -> {
+            System.out.println(a + " ");
+        });
     }
 }
