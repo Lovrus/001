@@ -5,4 +5,13 @@ import java.util.*;
 import java.util.stream.*;
 
 public class NamePhoneEmail2 {
+    String name;
+    String phonenum;
+    String email;
+
+    NamePhoneEmail2(String n, String p, String e) {
+        name = n;
+        phonenum = p;
+        email = e;
+    }
 }
