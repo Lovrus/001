@@ -15,3 +15,19 @@ public class NamePhoneEmail2 {
         email = e;
     }
 }
+
+class NamePhone2 {
+    String name;
+    String phonenum;
+
+    NamePhone2(String n, String p) {
+        name = n;
+        phonenum = p;
+    }
+}
+
+class StreamDemo7 {
+    public static void main(String[] args) {
+
+    }
+}
