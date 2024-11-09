@@ -28,6 +28,8 @@ class NamePhone2 {
 
 class StreamDemo7 {
     public static void main(String[] args) {
+// Список имен, телефонных номеров и адресов электронной почты.
+        ArrayList<NamePhoneEmail2> myList = new ArrayList<>();
 
     }
 }
