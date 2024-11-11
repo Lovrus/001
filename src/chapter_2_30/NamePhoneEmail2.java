@@ -42,6 +42,8 @@ class StreamDemo7 {
         );
         // Использовать collect() для создания списка List
         // с именами и телефонными номерами.
+List<NamePhone2> pList = nameAndPhone.collect(Collectors.toList());
+        System.out.println("Имена и телефонные номера в  List:");
 
     }
 }
