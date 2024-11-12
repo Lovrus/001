@@ -42,8 +42,18 @@ class StreamDemo7 {
         );
         // Использовать collect() для создания списка List
         // с именами и телефонными номерами.
-List<NamePhone2> pList = nameAndPhone.collect(Collectors.toList());
+        List<NamePhone2> npList = nameAndPhone.collect(Collectors.toList());
         System.out.println("Имена и телефонные номера в  List:");
-
+        for (NamePhone2 e : npList)
+            System.out.println(e.name + ": " + e.phonenum);
+// Получить еще одно сопоставление имен и телефонных номеров.
+        nameAndPhone = myList.stream().map(
+                (a) -> new NamePhone2(a.name, a.phonenum)
+        );
+        // Создать набор Set с применением coooect().
+        Set<NamePhone2> npSet = nameAndPhone.collect(Collectors.toSet());
+        System.out.println("\nИмена и телефонные номера в Set:");
+        for (NamePhone2 e : npSet)
+            System.out.println(e.name + ": " + e.phonenum);
     }
 }
