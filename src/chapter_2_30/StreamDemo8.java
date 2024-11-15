@@ -14,6 +14,7 @@ public class StreamDemo8 {
         myList.add("Delta");
         myList.add("Phi");
         myList.add("Omega");
+// Получить поток для ArrayList.
 
     }
 }
