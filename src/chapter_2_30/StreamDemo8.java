@@ -15,6 +15,11 @@ public class StreamDemo8 {
         myList.add("Phi");
         myList.add("Omega");
 // Получить поток для ArrayList.
-
+        Stream<String> myStream = myList.stream();
+// Получить итератор для потока.
+        Iterator<String> itr = myStream.iterator();
+        // Пройти по элементам в потоке.
+        while (itr.hasNext())
+            System.out.println(itr.next());
     }
 }
