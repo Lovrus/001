@@ -18,6 +18,16 @@ public class StreamDemo10 {
         Stream<String> myStream = myList.stream();
         // Получить сплитератор.
         Spliterator<String> splitItr = myStream.spliterator();
-
+// Разбить на части splitItr.
+        Spliterator<String> splitItr2 = splitItr.trySplit();
+        // Если splitItr не удается разбить на части,
+        // тогда сначала использовать splitItr2.
+        if (splitItr2 != null) {
+            System.out.println("Вывод из splitItr2: ");
+            splitItr2.forEachRemaining((n) -> System.out.println(n));
+        }
+        // теперь использовать splitItr.
+        System.out.println("\nВывод из splitItr: ");
+        splitItr.forEachRemaining((n) -> System.out.println(n));
     }
 }
