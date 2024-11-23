@@ -11,6 +11,14 @@ public class RegExpr {
         pat = Pattern.compile("Java");
         mat = pat.matcher("Java");
         found = mat.matches(); // проверить на совпадение
-
+        System.out.println("Проверка на совпадение Java с Java");
+        if (found) System.out.println("Совпадает");
+        else System.out.println("не совпадает");
+        System.out.println();
+        System.out.println("Проверка на совпадение Java с Java SE.");
+        mat = pat.matcher("Java SE"); // Создать новый объект Matcher
+        found = mat.matches(); // Проверить на совпадение
+        if (found) System.out.println("Совпадает");
+        else System.out.println("Не совпадает");
     }
 }
