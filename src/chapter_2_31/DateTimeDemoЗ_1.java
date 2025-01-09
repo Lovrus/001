@@ -6,7 +6,8 @@ import java.time.format.*;
 
 public class DateTimeDemoЗ_1 {
     public static void main(String[] args) {
-
+        LocalDateTime curDateTime = LocalDateTime.now();
+        System.out.println(curDateTime.format(
+                DateTimeFormatter.ofPattern("MMMM d ',' yyy h ':'mm a")));
     }
-
 }
