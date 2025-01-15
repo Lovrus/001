@@ -12,9 +12,13 @@ public class EventDemo {
         // Создать контейнер JFrame.
         JFrame jfrm = new JFrame("An Event Example");
 // Пример обработки события
-        // Задать диспетчер компоновки FlowLayout,
+        // Задать диспетчер компоновки FlowLayout.
         jfrm.setLayout(new FlowLayout());
         // Установить начальные размеры фрейма.
+jfrm.setSize(220,90);
+// Закончить работу, когда пользователь закрывает приложение.
+        jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // Создать две кнопки.
 
     }
 }
