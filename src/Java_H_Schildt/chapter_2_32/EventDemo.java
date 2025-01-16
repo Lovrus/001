@@ -15,10 +15,17 @@ public class EventDemo {
         // Задать диспетчер компоновки FlowLayout.
         jfrm.setLayout(new FlowLayout());
         // Установить начальные размеры фрейма.
-jfrm.setSize(220,90);
+        jfrm.setSize(220, 90);
 // Закончить работу, когда пользователь закрывает приложение.
         jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // Создать две кнопки.
-
+        JButton jbtnAlpha = new JButton("Alpha");
+        JButton jbtnBeta = new JButton("Beta");
+// Добавить прослушиватель событий действий для кнопки Alpha.
+        jbtnAlpha.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                jlab.setText("Alpha was pressed.");
+            }
+        });
     }
 }
