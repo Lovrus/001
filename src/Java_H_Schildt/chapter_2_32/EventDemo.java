@@ -25,7 +25,10 @@ public class EventDemo {
         jbtnAlpha.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
                 jlab.setText("Alpha was pressed.");
+                // Нажата кнопка Alpha
             }
         });
+        // Добавить прослушиватель событий действий для кнопки Beta.
+
     }
 }
