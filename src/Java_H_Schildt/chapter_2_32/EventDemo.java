@@ -29,6 +29,31 @@ public class EventDemo {
             }
         });
         // Добавить прослушиватель событий действий для кнопки Beta.
+        jbtnBeta.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                jlab.setText("Beta was pressed.");
+                // Нажата кнопка Beta
+            }
+        });
+// Добавить кнопки в панель содержимого.
+        jfrm.add(jbtnAlpha);
+        jfrm.add(jbtnBeta);
+        // Создать текстовую метку.
+        jlab = new JLabel("Press a button."); // Нажмите кнопку
+        // Добавить метку в панель содержимого.
+        jfrm.add(jlab);
+        // Отобразить фрейм.
+        jfrm.setVisible(true);
+    }
 
+    public static void main(String[] args) {
+        // Создать фрейм в потоке диспетчеризации событий.
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new EventDemo();
+            }
+        });
     }
 }
