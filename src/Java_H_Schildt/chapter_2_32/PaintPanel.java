@@ -15,6 +15,9 @@ public class PaintPanel extends JPanel {
     // Создать панель.
     PaintPanel() {
         // Разместить рамку вокруг панели.
-
+        setBorder(BorderFactory.createLineBorder(Color.RED, 5));
+        rand = new Random();
     }
+    // Переопределить метод paintComponent().
+
 }
