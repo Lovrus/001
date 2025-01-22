@@ -18,6 +18,10 @@ public class PaintPanel extends JPanel {
         setBorder(BorderFactory.createLineBorder(Color.RED, 5));
         rand = new Random();
     }
-    // Переопределить метод paintComponent().
 
+    // Переопределить метод paintComponent().
+    protected void paintComponent(Graphics g) {
+        // Всегда первым вызывать метод суперклассав.
+
+    }
 }
