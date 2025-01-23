@@ -21,7 +21,10 @@ public class PaintPanel extends JPanel {
 
     // Переопределить метод paintComponent().
     protected void paintComponent(Graphics g) {
-        // Всегда первым вызывать метод суперклассав.
+        // Всегда первым вызывать метод суперкласса.
+        super.paintComponent(g);
+        int x, y, x2, y2;
+// Получить высоту и ширину компонента.
 
     }
 }
