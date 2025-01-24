@@ -25,6 +25,14 @@ public class PaintPanel extends JPanel {
         super.paintComponent(g);
         int x, y, x2, y2;
 // Получить высоту и ширину компонента.
+        int height = getHeight();
+        int width = getWidth();
+// Получить размеры границы.
+        ins = getInsets();
+        // Нарисовать десять линий со случайным образом
+        // сгенерированными конечными точками.
+        for (int i = 0; i < 10; i++) {
 
+        }
     }
 }
