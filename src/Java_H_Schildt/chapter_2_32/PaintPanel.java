@@ -34,6 +34,12 @@ public class PaintPanel extends JPanel {
         for (int i = 0; i < 10; i++) {
 // Получить случайные координаты, определяющие
             // конечные точки каждой линии.
+            x = rand.nextInt(width - ins.left);
+            y = rand.nextInt(height - ins.bottom);
+            x2 = rand.nextInt(width - ins.left);
+            y2 = rand.nextInt(height - ins.bottom);
+            // Нарисовать линию.
+            g.drawLine(x, y, x2, y2);
         }
     }
 }
