@@ -43,3 +43,13 @@ public class PaintPanel extends JPanel {
         }
     }
 }
+
+// Демонстрация рисования напрямую внутри панели.
+class PaintDemo {
+    JLabel jlab;
+    PaintPanel pp;
+
+    PaintDemo() {
+
+    }
+}
