@@ -50,6 +50,15 @@ class PaintDemo {
     PaintPanel pp;
 
     PaintDemo() {
+// Создать контейнер JFrame.
+        JFrame jfrm = new JFrame("Paint Demo");
+        //Демонстрация рисования
+        // Установить начальные размеры фрейма.
+        jfrm.setSize(200, 150);
+        // Закончить работу, когда пользователь закрывает приложение.
+        jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // Создать панель для рисования.
+        pp = new PaintPanel();
 
     }
 }
