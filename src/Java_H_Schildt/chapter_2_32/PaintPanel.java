@@ -62,6 +62,18 @@ class PaintDemo {
 // Добавить созданную панель в панель содержимого. Из-за использования
         // стандартной граничной компоновки панель будет автоматически
 // подгоняться, чтобы уместиться в центральной области.
+        jfrm.add(pp);
+// Отобразить фрейм.
+        jfrm.setVisible(true);
+    }
 
+    public static void main(String[] args) {
+// Создать фрейм в потоке диспетчеризации событий.
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new PaintDemo();
+            }
+        });
     }
 }
