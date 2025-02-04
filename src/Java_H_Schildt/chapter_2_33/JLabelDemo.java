@@ -12,6 +12,11 @@ public class JLabelDemo {
         jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jfrm.setSize(260, 210);
         // Создать значок.
+        ImageIcon ii = new ImageIcon("hourglass.png");
+// Создать метку.
+        JLabel jl = new JLabel("Hourglass", ii, JLabel.CENTER);
+        // Добавить метку в панель содержимого.
+        jfrm.add(jl);
 
     }
 }
