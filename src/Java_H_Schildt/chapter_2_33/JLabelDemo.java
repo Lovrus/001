@@ -17,6 +17,12 @@ public class JLabelDemo {
         JLabel jl = new JLabel("Hourglass", ii, JLabel.CENTER);
         // Добавить метку в панель содержимого.
         jfrm.add(jl);
+// Отобразить фрейм.
+        jfrm.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        // Создать фрейм в потоке диспетчеризации событий.
 
     }
 }
