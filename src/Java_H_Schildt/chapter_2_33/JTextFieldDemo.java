@@ -7,6 +7,9 @@ import javax.swing.*;
 
 public class JTextFieldDemo {
     public JTextFieldDemo() {
+// Настроить JFrame.
+        JFrame jfrm = new JFrame("JTextFieldDemo");
+        jfrm.setLayout(new FlowLayout());
 
     }
 }
