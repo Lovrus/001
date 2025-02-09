@@ -10,6 +10,9 @@ public class JTextFieldDemo {
 // Настроить JFrame.
         JFrame jfrm = new JFrame("JTextFieldDemo");
         jfrm.setLayout(new FlowLayout());
+        jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jfrm.setSize(260, 120);
+// Добавить текстовое поле в панель содержимого.
 
     }
 }
