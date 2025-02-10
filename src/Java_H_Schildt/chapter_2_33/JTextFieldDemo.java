@@ -13,6 +13,11 @@ public class JTextFieldDemo {
         jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jfrm.setSize(260, 120);
 // Добавить текстовое поле в панель содержимого.
+        JTextField jtf = new JTextField(15);
+        jfrm.add(jtf);
+// Добавить метку.
+        JLabel jlab = new JLabel();
+        jfrm.add(jlab);
 
     }
 }
