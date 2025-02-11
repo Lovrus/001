@@ -18,6 +18,16 @@ public class JTextFieldDemo {
 // Добавить метку.
         JLabel jlab = new JLabel();
         jfrm.add(jlab);
-
+// Обработать события действий.
+        jtf.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Отобразить текст, когда пользователь нажимает ENTER.
+                jlab.setText(jtf.getText());
+            }
+        });
+        // Отобразить фрейм.
+        jfrm.setVisible(true);
     }
+
 }
