@@ -30,4 +30,15 @@ public class JTextFieldDemo {
         jfrm.setVisible(true);
     }
 
+    public static void main(String[] args) {
+        // Создать фрейм в потоке диспетчеризации событий.
+        SwingUtilities.invokeLater(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        new JTextFieldDemo();
+                    }
+                }
+        );
+    }
 }
