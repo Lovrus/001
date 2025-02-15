@@ -8,4 +8,12 @@ import javax.swing.*;
 public class JButtonDemo implements ActionListener {
     JLabel jlab;
 
+    public JButtonDemo() {
+        // Настроить JFrame.
+        JFrame jfrm = new JFrame("JButtonDemo");
+        jfrm.setLayout(new FlowLayout());
+        jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jfrm.setSize(500, 450);
+
+    }
 }
