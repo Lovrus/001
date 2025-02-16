@@ -14,6 +14,13 @@ public class JButtonDemo implements ActionListener {
         jfrm.setLayout(new FlowLayout());
         jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jfrm.setSize(500, 450);
+// Добавить кнопки в панель содержимого.
+        ImageIcon hourglass = new ImageIcon("hourglass.png");
+        JButton jb = new JButton(hourglass);
+        jb.setActionCommand("Hourglass");// песочные часы
+        jb.addActionListener(this);
+        jfrm.add(jb);
 
     }
 }
+
