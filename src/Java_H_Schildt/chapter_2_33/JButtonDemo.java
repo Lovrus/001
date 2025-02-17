@@ -20,6 +20,11 @@ public class JButtonDemo implements ActionListener {
         jb.setActionCommand("Hourglass");// песочные часы
         jb.addActionListener(this);
         jfrm.add(jb);
+        ImageIcon analog = new ImageIcon("analog.png");
+        jb = new JButton(analog);
+        jb.setActionCommand("Analog Clock"); // стрелочные часы
+        jb.addActionListener(this);
+        jfrm.add(jb);
 
     }
 }
