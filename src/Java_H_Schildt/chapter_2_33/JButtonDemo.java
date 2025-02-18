@@ -25,6 +25,11 @@ public class JButtonDemo implements ActionListener {
         jb.setActionCommand("Analog Clock"); // стрелочные часы
         jb.addActionListener(this);
         jfrm.add(jb);
+        ImageIcon digital = new ImageIcon("digital.png");
+        jb = new JButton(digital);
+        jb.setActionCommand("Digital Clock"); // цифровые часы
+        jb.addActionListener(this);
+        jfrm.add(jb);
 
     }
 }
