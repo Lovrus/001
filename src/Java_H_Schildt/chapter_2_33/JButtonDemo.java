@@ -30,6 +30,8 @@ public class JButtonDemo implements ActionListener {
         jb.setActionCommand("Digital Clock"); // цифровые часы
         jb.addActionListener(this);
         jfrm.add(jb);
+        ImageIcon stopwattch = new ImageIcon("stopwatch.png");
+        jb = new JButton(stopwattch);
 
     }
 }
