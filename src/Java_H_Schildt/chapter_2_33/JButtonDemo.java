@@ -32,7 +32,16 @@ public class JButtonDemo implements ActionListener {
         jfrm.add(jb);
         ImageIcon stopwattch = new ImageIcon("stopwatch.png");
         jb = new JButton(stopwattch);
-
+        jb.setActionCommand("Stopwatch"); // секундомер
+        jb.addActionListener(this);
+        jfrm.add(jb);
+        // Создать метку и добавить ее в панель содержимого.
+        jlab = new JLabel("Choose a Timepiece");
+        // Выбери часы
+        jfrm.add(jlab);
+        // Отобразить фрейм.
+        jfrm.setVisible(true);
     }
-}
+    // Обработать события кнопок.
 
+}
