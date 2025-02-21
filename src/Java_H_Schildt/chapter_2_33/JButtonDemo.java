@@ -42,6 +42,20 @@ public class JButtonDemo implements ActionListener {
         // Отобразить фрейм.
         jfrm.setVisible(true);
     }
-    // Обработать события кнопок.
 
+    // Обработать события кнопок.
+    public void actionPerformed(ActionEvent ae) {
+        jlab.setText("You selected " + ae.getActionCommand());
+        // Вы выбрыли
+    }
+
+    public static void main(String[] args) {
+// Создать фрейм в потоке диспетчеризации событий.
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new JButtonDemo();
+            }
+        });
+    }
 }
