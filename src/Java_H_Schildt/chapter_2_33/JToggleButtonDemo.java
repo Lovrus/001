@@ -8,6 +8,12 @@ import javax.swing.*;
 public class JToggleButtonDemo {
     public JToggleButtonDemo() {
         // Настроить JFrame.
+        JFrame jfrm = new JFrame("JToggleButtonDemo");
+        jfrm.setLayout(new FlowLayout());
+        jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jfrm.setSize(200, 100);
+
+// Создать метку.
 
     }
 }
