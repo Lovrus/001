@@ -14,6 +14,10 @@ public class JToggleButtonDemo {
         jfrm.setSize(200, 100);
 
 // Создать метку.
+        JLabel jLab = new JLabel("Button is off."); // Кнопка выключена.
+        // Создать переключатель.
+        JToggleButton jtbn = new JToggleButton("On/Off");
+        // Добавить прослушиватель событий элементов для переключателя.
 
     }
 }
