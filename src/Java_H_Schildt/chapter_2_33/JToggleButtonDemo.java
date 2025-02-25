@@ -18,6 +18,13 @@ public class JToggleButtonDemo {
         // Создать переключатель.
         JToggleButton jtbn = new JToggleButton("On/Off");
         // Добавить прослушиватель событий элементов для переключателя.
+        jtbn.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if (jtbn.isSelected())
+                    jLab.setText("Button is on."); // Кнопка включена
 
+            }
+        });
     }
 }
