@@ -23,8 +23,14 @@ public class JToggleButtonDemo {
             public void itemStateChanged(ItemEvent e) {
                 if (jtbn.isSelected())
                     jLab.setText("Button is on."); // Кнопка включена
-
+                else
+                    jLab.setText("Button is off."); //Кнопка выключена
             }
         });
+        // Добавить переключатель и метку в панель содержимого.
+        jfrm.add(jtbn);
+        jfrm.add(jLab);
+        //Отобразить фрейм.
+
     }
 }
