@@ -16,6 +16,14 @@ public class JRadioButtonDemo implements ActionListener {
         jfrm.setSize(250, 100);
 
 // Создать переключатели и добавить их в панель содержимого.
+        JRadioButton b1 = new JRadioButton("A");
+        b1.addActionListener(this);
+        jfrm.add(b1);
+
+        JRadioButton b2 = new JRadioButton("B");
+        b2.addActionListener(this);
+        jfrm.add(b2);
+
 
     }
 }
