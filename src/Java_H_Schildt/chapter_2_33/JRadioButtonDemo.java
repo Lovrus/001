@@ -35,6 +35,12 @@ public class JRadioButtonDemo implements ActionListener {
         bg.add(b3);
 
         // Создать метку и добавить ее в панель содержимого.
+        jlab = new JLabel("Select One");
+        jfrm.add(jlab);
 
+// Отобразить фрейм.
+        jfrm.setVisible(true);
     }
+    // Обработать выбор кнопок.
+
 }
