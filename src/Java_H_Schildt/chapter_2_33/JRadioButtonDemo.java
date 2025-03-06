@@ -41,6 +41,14 @@ public class JRadioButtonDemo implements ActionListener {
 // Отобразить фрейм.
         jfrm.setVisible(true);
     }
-    // Обработать выбор кнопок.
 
+    // Обработать выбор кнопок.
+    public void actionPerformed(ActionEvent ae) {
+        jlab.setText("You selected " + ae.getActionCommand());
+    }
+
+    public static void main(String[] args) {
+        // Создать фрейм в потоке диспетчеризации событий.
+
+    }
 }
