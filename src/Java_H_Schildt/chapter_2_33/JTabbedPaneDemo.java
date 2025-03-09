@@ -7,6 +7,8 @@ import java.awt.*;
 public class JTabbedPaneDemo {
     public JTabbedPaneDemo() {
         //Настроить JFrame.
+        JFrame jfrm = new JFrame("JTabbedPaneDemo");
+        jfrm.setLayout(new FlowLayout());
 
     }
 }
