@@ -9,6 +9,27 @@ public class JTabbedPaneDemo {
         //Настроить JFrame.
         JFrame jfrm = new JFrame("JTabbedPaneDemo");
         jfrm.setLayout(new FlowLayout());
+        jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jfrm.setSize(400, 200);
+// Создать панель с вкладками.
+        JTabbedPane jtp = new JTabbedPane();
+        jtp.addTab("Cities", new CitiesPanel());
+        jtp.addTab("Colors", new ColorsPanel());
+        jtp.addTab("Flavors", new FlavorsPanel());
+        jfrm.add(jtp);
+        // Отобразить фрейм.
+        jfrm.setVisible(true);
+    }
 
+    public static void main(String[] args) {
+        // Создать фрейм в потоке диспетчеризации событий.
+        SwingUtilities.invokeLater(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        new JTabbedPaneDemo();
+                    }
+                }
+        );
     }
 }
