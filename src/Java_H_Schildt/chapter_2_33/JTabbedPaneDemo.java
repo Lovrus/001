@@ -36,5 +36,7 @@ public class JTabbedPaneDemo {
 
 // Создать панели, которые будут добавлены в панель с вкладками.
 class CitiesPanel extends JPanel {
+    public CitiesPanel() {
 
+    }
 }
