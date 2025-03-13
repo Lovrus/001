@@ -37,6 +37,12 @@ public class JTabbedPaneDemo {
 // Создать панели, которые будут добавлены в панель с вкладками.
 class CitiesPanel extends JPanel {
     public CitiesPanel() {
+        JButton b1 = new JButton("New York");
+        add(b1);
+        JButton b2 = new JButton("London");
+        add(b2);
+        JButton b3 = new JButton("Hong Kong");
+        add(b3);
 
     }
 }
