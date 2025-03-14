@@ -43,6 +43,7 @@ class CitiesPanel extends JPanel {
         add(b2);
         JButton b3 = new JButton("Hong Kong");
         add(b3);
-
+        JButton b4 = new JButton("Tokyo");
+        add(b4);
     }
 }
