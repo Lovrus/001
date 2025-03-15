@@ -47,3 +47,9 @@ class CitiesPanel extends JPanel {
         add(b4);
     }
 }
+
+class ColorsPanel extends JPanel {
+    public ColorsPanel() {
+
+    }
+}
