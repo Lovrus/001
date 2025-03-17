@@ -58,3 +58,13 @@ class ColorsPanel extends JPanel {
         add(cb3);
     }
 }
+
+class FlavorsPanel extends JPanel {
+    public FlavorsPanel() {
+        JComboBox<String> jcb = new JComboBox<String>();
+        jcb.addItem("Vanilla");
+        jcb.addItem("Chocolate");
+        jcb.addItem("Strawberry");
+        add(jcb);
+    }
+}
