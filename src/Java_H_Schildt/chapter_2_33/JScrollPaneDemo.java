@@ -6,6 +6,8 @@ import javax.swing.*;
 
 public class JScrollPaneDemo {
     public JScrollPaneDemo() {
+// Настроить JFrame. Использовать стандартную компоновку BorderLayot.
+        JFrame jfrm = new JFrame("JScrollPaneDemo");
 
     }
 }
