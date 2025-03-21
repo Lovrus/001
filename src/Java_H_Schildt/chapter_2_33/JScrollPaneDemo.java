@@ -14,6 +14,12 @@ public class JScrollPaneDemo {
         JPanel jp = new JPanel();
         jp.setLayout(new GridLayout(20, 20));
         int b = 0;
+        for (int i = 0; i < 20; i++) {
+            for (int j = 0; j < 20; j++) {
+                jp.add(new JButton("Button " + b));
+                ++b;
+            }
+        }
 
     }
 }
