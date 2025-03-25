@@ -25,6 +25,20 @@ public class JScrollPaneDemo {
         // Добавить панель прокрутки в панель содержимого.
         // Из-за применения стандартной компоновки панель
         // прокрутки добавится в центральную область.
+        jfrm.add(jsp, BorderLayout.CENTER);
+// Отобразить фрейм.
+        jfrm.setVisible(true);
+    }
 
+    public static void main(String[] args) {
+        // Создать фрейм в потоке диспетчеризации событий.
+        SwingUtilities.invokeLater(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        new JScrollPaneDemo();
+                    }
+                }
+        );
     }
 }
