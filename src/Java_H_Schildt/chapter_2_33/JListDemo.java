@@ -8,5 +8,12 @@ import java.awt.event.*;
 
 public class JListDemo {
     // Создать список городов.
+    String[] cities = {"New York", "Chicago", "Houston",
+            "Denver", "Los Angeles", "Seattle",
+            "London", "Paris", "New Delhi",
+            "Hong Kong", "Tokyo", "Sydney"};
 
+    public JListDemo() {
+
+    }
 }
