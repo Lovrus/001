@@ -14,6 +14,14 @@ public class JListDemo {
             "Hong Kong", "Tokyo", "Sydney"};
 
     public JListDemo() {
+// Настроить JFrame.
+        JFrame jfrm = new JFrame("JListDemo");
+        jfrm.setLayout(new FlowLayout());
+        jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jfrm.setSize(200, 200);
+
+        // Создать JList.
+        JList<String> jlst = new JList<String>(cities);
 
     }
 }
