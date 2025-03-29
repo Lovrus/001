@@ -23,5 +23,10 @@ public class JListDemo {
         // Создать JList.
         JList<String> jlst = new JList<String>(cities);
 
+        // Установить режим выбора списка в одиночный выбор.
+        jlst.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        // Добавить список в прокручиваемую панель.
+        JScrollPane jscrlp = new JScrollPane(jlst);
+
     }
 }
