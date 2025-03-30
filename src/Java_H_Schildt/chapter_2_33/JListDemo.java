@@ -8,10 +8,7 @@ import java.awt.event.*;
 
 public class JListDemo {
     // Создать список городов.
-    String[] cities = {"New York", "Chicago", "Houston",
-            "Denver", "Los Angeles", "Seattle",
-            "London", "Paris", "New Delhi",
-            "Hong Kong", "Tokyo", "Sydney"};
+    String[] cities = {"New York", "Chicago", "Houston", "Denver", "Los Angeles", "Seattle", "London", "Paris", "New Delhi", "Hong Kong", "Tokyo", "Sydney"};
 
     public JListDemo() {
 // Настроить JFrame.
@@ -27,6 +24,10 @@ public class JListDemo {
         jlst.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         // Добавить список в прокручиваемую панель.
         JScrollPane jscrlp = new JScrollPane(jlst);
+// Установить предпоичитаемые размеры прокручиваемой панели.
+        jscrlp.setPreferredSize(new Dimension(120, 90));
+        // Создать метку, которая будет отображать выбор.
+        JLabel jlab = new JLabel("Choose a City"); // Выберите город
 
     }
 }
