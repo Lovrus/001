@@ -28,6 +28,14 @@ public class JListDemo {
         jscrlp.setPreferredSize(new Dimension(120, 90));
         // Создать метку, которая будет отображать выбор.
         JLabel jlab = new JLabel("Choose a City"); // Выберите город
+// Добавить прослушиватель событий выбора для списка.
+        jlst.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                // Получить индекс измененного элемента.
+                int idx = jlst.getSelectedIndex();
 
+            }
+        });
     }
 }
