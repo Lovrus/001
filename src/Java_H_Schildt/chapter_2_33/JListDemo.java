@@ -34,8 +34,14 @@ public class JListDemo {
             public void valueChanged(ListSelectionEvent e) {
                 // Получить индекс измененного элемента.
                 int idx = jlst.getSelectedIndex();
-
+// Если элемент был выбран, тогда отобразить выбор.
+                if (idx != -1)
+                    jlab.setText("Current selection: " + cities[idx]);
+                    // Текущий выбор.
+                else // В противном случае запросить выбор заново.
+                    jlab.setText("Choose a City");
             }
         });
+
     }
 }
