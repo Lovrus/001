@@ -42,6 +42,10 @@ public class JListDemo {
                     jlab.setText("Choose a City");
             }
         });
+// Добавить список и метку в панель содержимого.
+        jfrm.add(jscrlp);
+        jfrm.add(jlab);
+        // Отобразить фрейм.
 
     }
 }
