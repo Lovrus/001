@@ -46,6 +46,18 @@ public class JListDemo {
         jfrm.add(jscrlp);
         jfrm.add(jlab);
         // Отобразить фрейм.
+        jfrm.setVisible(true);
+    }
 
+    public static void main(String[] args) {
+        // Создать фрейм в потоке диспетчеризации событий.
+        SwingUtilities.invokeLater(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        new JListDemo();
+                    }
+                }
+        );
     }
 }
