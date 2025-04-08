@@ -18,6 +18,16 @@ public class JComЬoBoxDemo {
         JComboBox<String> jcb = new JComboBox<String>(timepieces);
         jfrm.add(jcb);
         // Создать метку и добавить ее в панель содержимого.
+        JLabel jlab = new JLabel(new ImageIcon("hourglass.png"));
+        jfrm.add(jlab);
+// Обработать события выбора.
+        jcb.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String s = (String) jcb.getSelectedItem();
+                jlab.setIcon(new ImageIcon(s + ".png"));
+            }
+        });
 
     }
 }
