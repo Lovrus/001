@@ -28,6 +28,8 @@ public class JComЬoBoxDemo {
                 jlab.setIcon(new ImageIcon(s + ".png"));
             }
         });
-
+// Отобразить фрейм.
+        jfrm.setVisible(true);
     }
+
 }
