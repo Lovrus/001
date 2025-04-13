@@ -12,6 +12,16 @@ public class JTreeDemo {
         JFrame jfrm = new JFrame("JTreeDemo");
         jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jfrm.setSize(200, 250);
+// Создать верхний узел дерева.
+        DefaultMutableTreeNode top = new DefaultMutableTreeNode("Options");
+
+        // Создать поддерево "А".
+        DefaultMutableTreeNode a = new DefaultMutableTreeNode("A");
+        top.add(a);
+        DefaultMutableTreeNode a1 = new DefaultMutableTreeNode("A1");
+        a.add(a1);
+        DefaultMutableTreeNode a2 = new DefaultMutableTreeNode("A2");
+        a.add(a2);
 
     }
 
