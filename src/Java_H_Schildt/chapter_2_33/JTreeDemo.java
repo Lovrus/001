@@ -23,6 +23,14 @@ public class JTreeDemo {
         DefaultMutableTreeNode a2 = new DefaultMutableTreeNode("A2");
         a.add(a2);
 
+        // Создать поддерево "B".
+        DefaultMutableTreeNode b = new DefaultMutableTreeNode("B");
+        top.add(b);
+        DefaultMutableTreeNode b1 = new DefaultMutableTreeNode("B1");
+        a.add(b1);
+        DefaultMutableTreeNode b2 = new DefaultMutableTreeNode("B2");
+        a.add(b2);
+
     }
 
 }
