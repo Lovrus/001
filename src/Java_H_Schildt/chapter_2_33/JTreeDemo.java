@@ -31,6 +31,9 @@ public class JTreeDemo {
         DefaultMutableTreeNode b2 = new DefaultMutableTreeNode("B2");
         a.add(b2);
 
+        // Создать дерево.
+        JTree tree = new JTree(top);
+
     }
 
 }
