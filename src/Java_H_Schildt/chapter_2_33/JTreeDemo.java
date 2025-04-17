@@ -34,6 +34,9 @@ public class JTreeDemo {
         // Создать дерево.
         JTree tree = new JTree(top);
 
+        // Добавить деревов панель прокрутки.
+        JScrollPane jsp = new JScrollPane(tree);
+
     }
 
 }
