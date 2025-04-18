@@ -34,8 +34,15 @@ public class JTreeDemo {
         // Создать дерево.
         JTree tree = new JTree(top);
 
-        // Добавить деревов панель прокрутки.
+        // Добавить дерево панель прокрутки.
         JScrollPane jsp = new JScrollPane(tree);
+
+        // Добавить панель прокрутки в панель содержимого.
+        jfrm.add(jsp);
+
+        // Добавить метку в панель содержимого.
+        JLabel jlab = new JLabel();
+        jfrm.add(jlab, BorderLayout.SOUTH);
 
     }
 
