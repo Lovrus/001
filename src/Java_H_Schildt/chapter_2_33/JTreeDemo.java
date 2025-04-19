@@ -44,6 +44,14 @@ public class JTreeDemo {
         JLabel jlab = new JLabel();
         jfrm.add(jlab, BorderLayout.SOUTH);
 
+        // Обработать события выбора в дереве.
+        tree.addTreeSelectionListener(new TreeSelectionListener() {
+            @Override
+            public void valueChanged(TreeSelectionEvent e) {
+                jlab.setText("Selection is " + e.getPath());
+            }
+        });
+
     }
 
 }
