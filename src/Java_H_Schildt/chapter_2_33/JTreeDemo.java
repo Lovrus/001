@@ -1,7 +1,7 @@
 package Java_H_Schildt.chapter_2_33;
 // Демонстрация использования JTree.
 
-import java.awt.;
+import java.awt.*;
 import javax.swing.event.*;
 import javax.swing.*;
 import javax.swing.tree.*;
@@ -12,6 +12,7 @@ public class JTreeDemo {
         JFrame jfrm = new JFrame("JTreeDemo");
         jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jfrm.setSize(200, 250);
+
 // Создать верхний узел дерева.
         DefaultMutableTreeNode top = new DefaultMutableTreeNode("Options");
 
@@ -27,9 +28,11 @@ public class JTreeDemo {
         DefaultMutableTreeNode b = new DefaultMutableTreeNode("B");
         top.add(b);
         DefaultMutableTreeNode b1 = new DefaultMutableTreeNode("B1");
-        a.add(b1);
+        b.add(b1);
         DefaultMutableTreeNode b2 = new DefaultMutableTreeNode("B2");
-        a.add(b2);
+        b.add(b2);
+        DefaultMutableTreeNode b3 = new DefaultMutableTreeNode("B3");
+        b.add(b3);
 
         // Создать дерево.
         JTree tree = new JTree(top);
@@ -51,7 +54,19 @@ public class JTreeDemo {
                 jlab.setText("Selection is " + e.getPath());
             }
         });
-
+// Отобразить фрейм.
+        jfrm.setVisible(true);
     }
 
+    public static void main(String[] args) {
+// Создать фрейм в потоке диспетчеризации событий.
+        SwingUtilities.invokeLater(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        new JTreeDemo();
+                    }
+                }
+        );
+    }
 }
