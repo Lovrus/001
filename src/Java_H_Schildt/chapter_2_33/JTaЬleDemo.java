@@ -4,5 +4,6 @@ import java.awt.*;
 import javax.swing.*;
 
 public class JTaЬleDemo {
+// Инициализировать заголовки колонок.
 
 }
