@@ -8,5 +8,8 @@ public class JTaЬleDemo {
     // Инициализировать заголовки колонок.
     String[] colHeads = {"Name", "Extension", "ID#"};
 // Иницилизировать данные.
+Object[] [] data = {
+        { "Gail", "4567", "865"},
 
+}
 }
