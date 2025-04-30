@@ -24,4 +24,8 @@ public class JTaЬleDemo {
             {"Helen", "6751", "145"}
     };
 
+    public JTaЬleDemo() {
+        // Настроить JFrame. Использовать стандартную компоновку BorderLayout.
+
+    }
 }
