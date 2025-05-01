@@ -26,6 +26,8 @@ public class JTaЬleDemo {
 
     public JTaЬleDemo() {
         // Настроить JFrame. Использовать стандартную компоновку BorderLayout.
+        JFrame jfrm = new JFrame("JTableDemo");
+        jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
 }
