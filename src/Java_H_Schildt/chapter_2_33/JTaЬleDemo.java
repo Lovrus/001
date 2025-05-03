@@ -31,6 +31,11 @@ public class JTaЬleDemo {
         jfrm.setSize(300, 300);
 
 // Создать таблицу.
+        JTable table = new JTable(data, colHeads);
+
+// Добавить таблицу в панель прокрутки.
+        JScrollPane jsp = new JScrollPane(table);
+
 
     }
 }
