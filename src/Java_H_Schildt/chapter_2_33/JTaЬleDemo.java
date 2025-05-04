@@ -36,6 +36,10 @@ public class JTaЬleDemo {
 // Добавить таблицу в панель прокрутки.
         JScrollPane jsp = new JScrollPane(table);
 
-
+// Добавить панель прокрутки в панель содержимого.
+        jfrm.add(jsp);
+        // Отобразить фрейм.
+        jfrm.setVisible(true);
     }
+
 }
