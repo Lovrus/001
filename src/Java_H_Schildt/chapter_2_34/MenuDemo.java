@@ -9,6 +9,11 @@ public class MenuDemo implements ActionListener {
     JLabel jlab;
 
     MenuDemo() {
+// Создать контейнер JFrame.
+        JFrame jfrm = new JFrame("Menu Demo");
+
+        // Установить диспетчер компоновки FlowLayout.
+        jfrm.setLayout(new FlowLayout());
 
     }
 }
