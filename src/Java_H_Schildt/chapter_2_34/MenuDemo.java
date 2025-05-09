@@ -15,5 +15,11 @@ public class MenuDemo implements ActionListener {
         // Установить диспетчер компоновки FlowLayout.
         jfrm.setLayout(new FlowLayout());
 
+        // Назначить фрейму начальные размеры.
+        jfrm.setSize(220, 200);
+
+        // Прекращать работу при закрытии пользователем приложения.
+        jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
     }
 }
