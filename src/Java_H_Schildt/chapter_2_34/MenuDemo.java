@@ -21,5 +21,13 @@ public class MenuDemo implements ActionListener {
         // Прекращать работу при закрытии пользователем приложения.
         jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        // Создать метку, в которой будет отображаться выбор меню.
+        jlab = new JLabel();
+
+        // Создать панель меню.
+        JMenuBar jmb = new JMenuBar();
+
+        // Создать меню File.
+
     }
 }
