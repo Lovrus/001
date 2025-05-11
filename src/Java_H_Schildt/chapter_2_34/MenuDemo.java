@@ -28,6 +28,19 @@ public class MenuDemo implements ActionListener {
         JMenuBar jmb = new JMenuBar();
 
         // Создать меню File.
+        JMenu jmFile = new JMenu("File");
+        JMenuItem jmiOpen = new JMenuItem("Open");
+        JMenuItem jmiClose = new JMenuItem("Close");
+        JMenuItem jmiSave = new JMenuItem("Save");
+        JMenuItem jmiExit = new JMenuItem("Exit");
+        jmFile.add(jmiOpen);
+        jmFile.add(jmiClose);
+        jmFile.add(jmiSave);
+        jmFile.addSeparator();
+        jmFile.add(jmiExit);
+        jmb.add(jmFile);
+
+        // Создать меню Options.
 
     }
 }
