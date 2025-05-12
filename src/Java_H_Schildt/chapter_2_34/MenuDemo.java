@@ -41,6 +41,9 @@ public class MenuDemo implements ActionListener {
         jmb.add(jmFile);
 
         // Создать меню Options.
+        JMenu jmOptions = new JMenu("Options");
+
+//Создать подменю Colors.
 
     }
 }
