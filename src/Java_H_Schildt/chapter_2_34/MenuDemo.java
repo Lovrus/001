@@ -44,6 +44,16 @@ public class MenuDemo implements ActionListener {
         JMenu jmOptions = new JMenu("Options");
 
 //Создать подменю Colors.
+        JMenu jmColors = new JMenu("Colors");
+        JMenuItem jmiRed = new JMenuItem("Red");
+        JMenuItem jmiGreen = new JMenuItem("Green");
+        JMenuItem jmiBlue = new JMenuItem("Blue");
+        jmColors.add(jmiRed);
+        jmColors.add(jmiGreen);
+        jmColors.add(jmiBlue);
+        jmOptions.add(jmColors);
+
+        // Создать подменю Priority.
 
     }
 }
