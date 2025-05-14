@@ -54,6 +54,8 @@ public class MenuDemo implements ActionListener {
         jmOptions.add(jmColors);
 
         // Создать подменю Priority.
+        JMenu jmPriority = new JMenu("Priority");
+        JMenuItem jmiHigh = new JMenuItem("High");
 
     }
 }
