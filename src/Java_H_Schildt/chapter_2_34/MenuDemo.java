@@ -56,6 +56,11 @@ public class MenuDemo implements ActionListener {
         // Создать подменю Priority.
         JMenu jmPriority = new JMenu("Priority");
         JMenuItem jmiHigh = new JMenuItem("High");
+        JMenuItem jmiLow = new JMenuItem("Low");
+        jmPriority.add(jmiHigh);
+        jmPriority.add(jmiLow);
+        jmOptions.add(jmPriority);
 
+// Создать пункт меню Reset.
     }
 }
