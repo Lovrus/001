@@ -62,5 +62,10 @@ public class MenuDemo implements ActionListener {
         jmOptions.add(jmPriority);
 
 // Создать пункт меню Reset.
+        JMenuItem jmiReset = new JMenuItem("Reset");
+        jmOptions.addSeparator();
+        jmOptions.add(jmiReset);
+        // Добавить меню Options в панель меню.
+
     }
 }
