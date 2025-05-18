@@ -65,7 +65,17 @@ public class MenuDemo implements ActionListener {
         JMenuItem jmiReset = new JMenuItem("Reset");
         jmOptions.addSeparator();
         jmOptions.add(jmiReset);
+
         // Добавить меню Options в панель меню.
+jmb.add(jmOptions);
+
+// Создать меню Help.
+        JMenu jmHelp = new JMenu("Help");
+        JMenuItem jmiAbout = new JMenuItem("About");
+        jmHelp.add(jmiAbout);
+        jmb.add(jmHelp);
+
+        // Добавить прослушиватели событий действий для пунктов меню.
 
     }
 }
