@@ -67,7 +67,7 @@ public class MenuDemo implements ActionListener {
         jmOptions.add(jmiReset);
 
         // Добавить меню Options в панель меню.
-jmb.add(jmOptions);
+        jmb.add(jmOptions);
 
 // Создать меню Help.
         JMenu jmHelp = new JMenu("Help");
@@ -76,6 +76,9 @@ jmb.add(jmOptions);
         jmb.add(jmHelp);
 
         // Добавить прослушиватели событий действий для пунктов меню.
+        jmiOpen.addActionListener(this);
+        jmiClose.addActionListener(this);
+
 
     }
 }
