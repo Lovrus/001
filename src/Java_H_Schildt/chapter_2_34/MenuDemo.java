@@ -78,7 +78,8 @@ public class MenuDemo implements ActionListener {
         // Добавить прослушиватели событий действий для пунктов меню.
         jmiOpen.addActionListener(this);
         jmiClose.addActionListener(this);
-
+        jmiSave.addActionListener(this);
+        jmiExit.addActionListener(this);
 
     }
 }
