@@ -80,6 +80,12 @@ public class MenuDemo implements ActionListener {
         jmiClose.addActionListener(this);
         jmiSave.addActionListener(this);
         jmiExit.addActionListener(this);
+        jmiRed.addActionListener(this);
+        jmiGreen.addActionListener(this);
+        jmiBlue.addActionListener(this);
+        jmiHigh.addActionListener(this);
+        jmiLow.addActionListener(this);
+        jmiReset.addActionListener(this);
 
     }
 }
