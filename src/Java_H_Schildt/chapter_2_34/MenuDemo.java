@@ -86,6 +86,8 @@ public class MenuDemo implements ActionListener {
         jmiHigh.addActionListener(this);
         jmiLow.addActionListener(this);
         jmiReset.addActionListener(this);
+        jmiAbout.addActionListener(this);
+// Добавить метку в панель содержимого.
 
     }
 }
