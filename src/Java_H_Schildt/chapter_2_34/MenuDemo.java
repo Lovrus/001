@@ -87,7 +87,16 @@ public class MenuDemo implements ActionListener {
         jmiLow.addActionListener(this);
         jmiReset.addActionListener(this);
         jmiAbout.addActionListener(this);
-// Добавить метку в панель содержимого.
 
+        // Добавить метку в панель содержимого.
+        jfrm.add(jlab);
+
+// Добавить панель мерю во фрейм.
+        jfrm.setJMenuBar(jmb);
+
+        // Отобразить фрейм.
+        jfrm.setVisible(true);
     }
+    // Отобразить события действий для пунктов меню.
+
 }
