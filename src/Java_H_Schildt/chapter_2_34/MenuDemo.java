@@ -97,6 +97,11 @@ public class MenuDemo implements ActionListener {
         // Отобразить фрейм.
         jfrm.setVisible(true);
     }
-    // Отобразить события действий для пунктов меню.
 
+    // Отобразить события действий для пунктов меню.
+    public void actionPerformed(ActionEvent ae) {
+        // Получить команду действия из выбора меню.
+        String comStr = ae.getActionCommand();
+
+    }
 }
