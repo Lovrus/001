@@ -103,5 +103,19 @@ public class MenuDemo implements ActionListener {
         // Получить команду действия из выбора меню.
         String comStr = ae.getActionCommand();
 
+        // Если пользователь выбарал Exit, тогда завершить программу.
+        if (comStr.equals("Exit")) System.exit(0);
+        // Иначе отобразить выбор.
+        jlab.setText(comStr + "Selected");
+    }
+
+    public static void main(String[] args) {
+        // Создать фрейм  в потоке диспетчеризации событий.
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new MenuDemo();
+            }
+        });
     }
 }
