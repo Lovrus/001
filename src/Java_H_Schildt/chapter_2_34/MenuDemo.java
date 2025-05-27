@@ -96,6 +96,11 @@ public class MenuDemo implements ActionListener {
 
         // Отобразить фрейм.
         jfrm.setVisible(true);
+
+        // Создать меню File с мнемоничскими символами и клавиатурными сочетаниями
+        JMenu jmFile = new JMenu("File");
+        jmFile.setMnemonic(KeyEvent.VK_F);
+
     }
 
     // Отобразить события действий для пунктов меню.
