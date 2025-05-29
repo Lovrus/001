@@ -103,6 +103,7 @@ public class MenuDemo implements ActionListener {
 JMenuItem jmiOpen = new JMenuItem("Open", KeyEvent.VK_0);
 jmiOpen.setAccelerator(
         KeyStroke.getKeyStroke(KeyEvent.VK_0, InputEvent.CTRL_DOWN_MASK));
+        JMenuItem jmiClose = new JMenuItem ("Сlозе", KeyEvent.VK_C) ;
 
     }
 
