@@ -100,11 +100,13 @@ public class MenuDemo implements ActionListener {
         // Создать меню File с мнемоническими символами и клавиатурными сочетаниями
         JMenu jmFile = new JMenu("File");
         jmFile.setMnemonic(KeyEvent.VK_F);
-JMenuItem jmiOpen = new JMenuItem("Open", KeyEvent.VK_0);
-jmiOpen.setAccelerator(
-        KeyStroke.getKeyStroke(KeyEvent.VK_0, InputEvent.CTRL_DOWN_MASK));
-        JMenuItem jmiClose = new JMenuItem ("Сlозе", KeyEvent.VK_C) ;
-
+        JMenuItem jmiOpen = new JMenuItem("Open", KeyEvent.VK_0);
+        jmiOpen.setAccelerator(
+                KeyStroke.getKeyStroke(KeyEvent.VK_0, InputEvent.CTRL_DOWN_MASK));
+        JMenuItem jmiClose = new JMenuItem("Сlозе", KeyEvent.VK_C);
+        jmiClose.setAccelerator(
+                KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.CTRL_DOWN_MASK));
+        ;
     }
 
     // Отобразить события действий для пунктов меню.
