@@ -106,8 +106,8 @@ public class MenuDemo implements ActionListener {
         JMenuItem jmiClose = new JMenuItem("Сlозе", KeyEvent.VK_C);
         jmiClose.setAccelerator(
                 KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.CTRL_DOWN_MASK));
-        JMenuItem jmiSave = new JMenuItem ( "Save" , KeyEvent.VK_S) ;
-
+        JMenuItem jmiSave = new JMenuItem("Save", KeyEvent.VK_S);
+        jmiSave.setAccelerator();
     }
 
     // Отобразить события действий для пунктов меню.
