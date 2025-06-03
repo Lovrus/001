@@ -107,7 +107,10 @@ public class MenuDemo implements ActionListener {
         jmiClose.setAccelerator(
                 KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.CTRL_DOWN_MASK));
         JMenuItem jmiSave = new JMenuItem("Save", KeyEvent.VK_S);
-        jmiSave.setAccelerator();
+        jmiSave.setAccelerator(
+                KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_DOWN_MASK));
+
+
     }
 
     // Отобразить события действий для пунктов меню.
