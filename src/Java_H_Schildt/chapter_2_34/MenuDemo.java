@@ -109,7 +109,7 @@ public class MenuDemo implements ActionListener {
         JMenuItem jmiSave = new JMenuItem("Save", KeyEvent.VK_S);
         jmiSave.setAccelerator(
                 KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_DOWN_MASK));
-
+        JMenuItem jmiExit = new JMenuItem("Exit", KeyEvent.VK_E);
 
     }
 
