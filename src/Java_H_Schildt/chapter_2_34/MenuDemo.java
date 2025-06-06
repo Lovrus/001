@@ -4,6 +4,7 @@ package Java_H_Schildt.chapter_2_34;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.awt.event.InputEvent;
 
 public class MenuDemo implements ActionListener {
     JLabel jlab;
@@ -28,17 +29,21 @@ public class MenuDemo implements ActionListener {
         JMenuBar jmb = new JMenuBar();
 
         // Создать меню File.
+        // Создать меню File с мнемоническими символами и клавиатурными сочетаниями
         JMenu jmFile = new JMenu("File");
-        JMenuItem jmiOpen = new JMenuItem("Open");
-        JMenuItem jmiClose = new JMenuItem("Close");
-        JMenuItem jmiSave = new JMenuItem("Save");
-        JMenuItem jmiExit = new JMenuItem("Exit");
-        jmFile.add(jmiOpen);
-        jmFile.add(jmiClose);
-        jmFile.add(jmiSave);
-        jmFile.addSeparator();
-        jmFile.add(jmiExit);
-        jmb.add(jmFile);
+        jmFile.setMnemonic(KeyEvent.VK_F);
+        JMenuItem jmiOpen = new JMenuItem("Open", KeyEvent.VK_0);
+        jmiOpen.setAccelerator(
+                KeyStroke.getKeyStroke(KeyEvent.VK_0, InputEvent.CTRL_DOWN_MASK));
+        JMenuItem jmiClose = new JMenuItem("Сlозе", KeyEvent.VK_C);
+        jmiClose.setAccelerator(
+                KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.CTRL_DOWN_MASK));
+        JMenuItem jmiSave = new JMenuItem("Save", KeyEvent.VK_S);
+        jmiSave.setAccelerator(
+                KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_DOWN_MASK));
+        JMenuItem jmiExit = new JMenuItem("Exit", KeyEvent.VK_E);
+        jmiExit.setAccelerator(
+                KeyStroke.getKeyStroke(KeyEvent.VK_E, InputEvent.CTRL_DOWN_MASK));
 
         // Создать меню Options.
         JMenu jmOptions = new JMenu("Options");
@@ -97,22 +102,7 @@ public class MenuDemo implements ActionListener {
         // Отобразить фрейм.
         jfrm.setVisible(true);
 
-        // Создать меню File с мнемоническими символами и клавиатурными сочетаниями
-        JMenu jmFile = new JMenu("File");
-        jmFile.setMnemonic(KeyEvent.VK_F);
-        JMenuItem jmiOpen = new JMenuItem("Open", KeyEvent.VK_0);
-        jmiOpen.setAccelerator(
-                KeyStroke.getKeyStroke(KeyEvent.VK_0, InputEvent.CTRL_DOWN_MASK));
-        JMenuItem jmiClose = new JMenuItem("Сlозе", KeyEvent.VK_C);
-        jmiClose.setAccelerator(
-                KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.CTRL_DOWN_MASK));
-        JMenuItem jmiSave = new JMenuItem("Save", KeyEvent.VK_S);
-        jmiSave.setAccelerator(
-                KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_DOWN_MASK));
-        JMenuItem jmiExit = new JMenuItem("Exit", KeyEvent.VK_E);
-        jmiExit.setAccelerator(
-                KeyStroke.getKeyStroke(KeyEvent.VK_E, InputEvent.CTRL_DOWN_MASK));
-        ;
+
     }
 
     // Отобразить события действий для пунктов меню.
