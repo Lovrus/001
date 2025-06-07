@@ -50,6 +50,10 @@ public class MenuDemo implements ActionListener {
 
 //Создать подменю Colors.
         JMenu jmColors = new JMenu("Colors");
+
+        // Использовать флажки для цветов. Они позволяют
+        // пользователю выбирать более одного цвета.
+
         JMenuItem jmiRed = new JMenuItem("Red");
         JMenuItem jmiGreen = new JMenuItem("Green");
         JMenuItem jmiBlue = new JMenuItem("Blue");
@@ -101,7 +105,6 @@ public class MenuDemo implements ActionListener {
 
         // Отобразить фрейм.
         jfrm.setVisible(true);
-
 
     }
 
