@@ -53,10 +53,10 @@ public class MenuDemo implements ActionListener {
 
         // Использовать флажки для цветов. Они позволяют
         // пользователю выбирать более одного цвета.
+JCheckBoxMenuItem jmiRed = new JCheckBoxMenuItem("Red");
+        JCheckBoxMenuItem jmiGreen = new JCheckBoxMenuItem("Green");
+        JCheckBoxMenuItem jmiBlue = new JCheckBoxMenuItem("Blue");
 
-        JMenuItem jmiRed = new JMenuItem("Red");
-        JMenuItem jmiGreen = new JMenuItem("Green");
-        JMenuItem jmiBlue = new JMenuItem("Blue");
         jmColors.add(jmiRed);
         jmColors.add(jmiGreen);
         jmColors.add(jmiBlue);
