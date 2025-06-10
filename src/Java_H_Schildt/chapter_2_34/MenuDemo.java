@@ -64,6 +64,12 @@ JCheckBoxMenuItem jmiRed = new JCheckBoxMenuItem("Red");
 
         // Создать подменю Priority.
         JMenu jmPriority = new JMenu("Priority");
+
+        // Использовать переключатели для настройки приоритета. Они дают
+        // возможность показывать в меню применяемый проритет и также
+
+
+
         JMenuItem jmiHigh = new JMenuItem("High");
         JMenuItem jmiLow = new JMenuItem("Low");
         jmPriority.add(jmiHigh);
