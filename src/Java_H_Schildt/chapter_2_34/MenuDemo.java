@@ -53,7 +53,7 @@ public class MenuDemo implements ActionListener {
 
         // Использовать флажки для цветов. Они позволяют
         // пользователю выбирать более одного цвета.
-JCheckBoxMenuItem jmiRed = new JCheckBoxMenuItem("Red");
+        JCheckBoxMenuItem jmiRed = new JCheckBoxMenuItem("Red");
         JCheckBoxMenuItem jmiGreen = new JCheckBoxMenuItem("Green");
         JCheckBoxMenuItem jmiBlue = new JCheckBoxMenuItem("Blue");
 
@@ -66,8 +66,8 @@ JCheckBoxMenuItem jmiRed = new JCheckBoxMenuItem("Red");
         JMenu jmPriority = new JMenu("Priority");
 
         // Использовать переключатели для настройки приоритета. Они дают
-        // возможность показывать в меню применяемый проритет и также
-
+        // возможность показывать в меню применяемый приоритет и также
+        // гарантируют, что в любой момент времени может быть выбран один
 
 
         JMenuItem jmiHigh = new JMenuItem("High");
