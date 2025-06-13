@@ -70,6 +70,7 @@ public class MenuDemo implements ActionListener {
         // гарантируют, что в любой момент времени может быть выбран один
         // и только один приоритет. Обратите внимание, что изначально
         // выбран переключатель High (Высокий).
+        //
 
         JMenuItem jmiHigh = new JMenuItem("High");
         JMenuItem jmiLow = new JMenuItem("Low");
