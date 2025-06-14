@@ -73,9 +73,9 @@ public class MenuDemo implements ActionListener {
 
         JRadioButtonMenuItem jmiHigh =
                 new JRadioButtonMenuItem("High", true);
+        JRadioButtonMenuItem jmiLow =
+                new JRadioButtonMenuItem("Low");
 
-        JMenuItem jmiHigh = new JMenuItem("High");
-        JMenuItem jmiLow = new JMenuItem("Low");
         jmPriority.add(jmiHigh);
         jmPriority.add(jmiLow);
         jmOptions.add(jmPriority);
