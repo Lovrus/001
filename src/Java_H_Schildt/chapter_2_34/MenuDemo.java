@@ -80,6 +80,10 @@ public class MenuDemo implements ActionListener {
         jmPriority.add(jmiLow);
         jmOptions.add(jmPriority);
 
+        // Создать группу кнопок для пунктов меню с переключателями.
+        ButtonGroup bg = new ButtonGroup();
+        bg.add(jmiHigh); bg.add(jmiLow);
+
 // Создать пункт меню Reset.
         JMenuItem jmiReset = new JMenuItem("Reset");
         jmOptions.addSeparator();
