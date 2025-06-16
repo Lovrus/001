@@ -82,17 +82,18 @@ public class MenuDemo implements ActionListener {
 
         // Создать группу кнопок для пунктов меню с переключателями.
         ButtonGroup bg = new ButtonGroup();
-        bg.add(jmiHigh); bg.add(jmiLow);
+        bg.add(jmiHigh);
+        bg.add(jmiLow);
 
-// Создать пункт меню Reset.
+        // Создать пункт меню Reset.
         JMenuItem jmiReset = new JMenuItem("Reset");
         jmOptions.addSeparator();
         jmOptions.add(jmiReset);
 
-        // Добавить меню Options в панель меню.
+        // В заключение добавить все меню Options в панель меню.
         jmb.add(jmOptions);
 
-// Создать меню Help.
+        // Создать меню Help.
         JMenu jmHelp = new JMenu("Help");
         JMenuItem jmiAbout = new JMenuItem("About");
         jmHelp.add(jmiAbout);
@@ -119,7 +120,6 @@ public class MenuDemo implements ActionListener {
 
         // Отобразить фрейм.
         jfrm.setVisible(true);
-
     }
 
     // Отобразить события действий для пунктов меню.
