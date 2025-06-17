@@ -84,21 +84,17 @@ public class MenuDemo implements ActionListener {
         ButtonGroup bg = new ButtonGroup();
         bg.add(jmiHigh);
         bg.add(jmiLow);
-
         // Создать пункт меню Reset.
         JMenuItem jmiReset = new JMenuItem("Reset");
         jmOptions.addSeparator();
         jmOptions.add(jmiReset);
-
         // В заключение добавить все меню Options в панель меню.
         jmb.add(jmOptions);
-
         // Создать меню Help.
         JMenu jmHelp = new JMenu("Help");
         JMenuItem jmiAbout = new JMenuItem("About");
         jmHelp.add(jmiAbout);
         jmb.add(jmHelp);
-
         // Добавить прослушиватели событий действий для пунктов меню.
         jmiOpen.addActionListener(this);
         jmiClose.addActionListener(this);
@@ -111,17 +107,13 @@ public class MenuDemo implements ActionListener {
         jmiLow.addActionListener(this);
         jmiReset.addActionListener(this);
         jmiAbout.addActionListener(this);
-
         // Добавить метку в панель содержимого.
         jfrm.add(jlab);
-
 // Добавить панель мерю во фрейм.
         jfrm.setJMenuBar(jmb);
-
         // Отобразить фрейм.
         jfrm.setVisible(true);
     }
-
     // Отобразить события действий для пунктов меню.
     public void actionPerformed(ActionEvent ae) {
         // Получить команду действия из выбора меню.
@@ -132,7 +124,6 @@ public class MenuDemo implements ActionListener {
         // Иначе отобразить выбор.
         jlab.setText(comStr + "Selected");
     }
-
     public static void main(String[] args) {
         // Создать фрейм  в потоке диспетчеризации событий.
         SwingUtilities.invokeLater(new Runnable() {
