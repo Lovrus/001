@@ -8,6 +8,7 @@ import java.awt.event.InputEvent;
 
 public class MenuDemo implements ActionListener {
     JLabel jlab;
+JPopurMenu jpu;
 
     MenuDemo() {
 // Создать контейнер JFrame.
@@ -114,6 +115,7 @@ public class MenuDemo implements ActionListener {
         // Отобразить фрейм.
         jfrm.setVisible(true);
     }
+
     // Отобразить события действий для пунктов меню.
     public void actionPerformed(ActionEvent ae) {
         // Получить команду действия из выбора меню.
@@ -124,6 +126,10 @@ public class MenuDemo implements ActionListener {
         // Иначе отобразить выбор.
         jlab.setText(comStr + "Selected");
     }
+// Создать всплывающее меню Edit.
+    jpu = new JPopupMenu();
+// Создать пункты для высплывающего меню.
+
     public static void main(String[] args) {
         // Создать фрейм  в потоке диспетчеризации событий.
         SwingUtilities.invokeLater(new Runnable() {
