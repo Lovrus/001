@@ -129,7 +129,9 @@ JPopurMenu jpu;
 // Создать всплывающее меню Edit.
     jpu = new JPopupMenu();
 // Создать пункты для всплывающего меню.
-
+JMenuItem jmiCut = new JMenuItem("Cut");
+JMenuItem jmiCopy = new JMenuItem("Copy");
+JMenuItem jmiPaste = new JMenuItem("Paste");
 
     public static void main(String[] args) {
         // Создать фрейм  в потоке диспетчеризации событий.
