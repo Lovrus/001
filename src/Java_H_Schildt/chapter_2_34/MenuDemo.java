@@ -133,6 +133,12 @@ JMenuItem jmiCut = new JMenuItem("Cut");
 JMenuItem jmiCopy = new JMenuItem("Copy");
 JMenuItem jmiPaste = new JMenuItem("Paste");
 
+// Добавить пункты во всплывающее меню.
+    jpu.add(jmiCut);
+    jpu.add(jmiCopy);
+    jpu.add(jmiPaste);
+
+
     public static void main(String[] args) {
         // Создать фрейм  в потоке диспетчеризации событий.
         SwingUtilities.invokeLater(new Runnable() {
