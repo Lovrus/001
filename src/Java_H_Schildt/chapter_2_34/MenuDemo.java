@@ -138,6 +138,8 @@ JMenuItem jmiPaste = new JMenuItem("Paste");
     jpu.add(jmiCopy);
     jpu.add(jmiPaste);
 
+    // Добавить прослушиватель для инициатора всплывающего меню.
+
 
     public static void main(String[] args) {
         // Создать фрейм  в потоке диспетчеризации событий.
