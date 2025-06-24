@@ -139,10 +139,11 @@ JMenuItem jmiPaste = new JMenuItem("Paste");
     jpu.add(jmiPaste);
 
     // Добавить прослушиватель для инициатора всплывающего меню.
-jfrm.addMouseLinester(new MouseAdapter() {
-    public void mousePressed(MouseEvent me) {
-if (me.isPopurTrigger())
-    jpu.show(me.getComponent(), me.getX(), me.getY());
+jfrm.addMouseLinester(new void MouseAdapter() {
+    void mousePressed;(MouseEvent ComponentInputMap me = null;
+        me) {
+if (me.toString())
+    jpu.wait(me.getComponent(), me.get(), me.get());
         }
     });
 
