@@ -10,6 +10,8 @@ public class DebugAction extends AbstractAction {
         super(name, image);
         putValue(ACCELERATOR_KEY,
                 KeyStroke.getKeyStroke(accel, InputEvent.CTRL_DOWN_MASK));
-
+        putValue(MNEMONIC_KEY, mnem);
+        putValue(SHORT_DESCRIPTION, tTrip);
     }
+
 }
