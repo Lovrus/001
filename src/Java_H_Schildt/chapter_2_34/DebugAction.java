@@ -13,5 +13,6 @@ public class DebugAction extends AbstractAction {
         putValue(MNEMONIC_KEY, mnem);
         putValue(SHORT_DESCRIPTION, tTrip);
     }
+// Обработать события для панели инструментов и меню Debug.
 
 }
