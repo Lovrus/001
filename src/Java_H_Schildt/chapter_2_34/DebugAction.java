@@ -2,6 +2,7 @@ package Java_H_Schildt.chapter_2_34;
 // Класс представляющий действие для меню Debug и панели инструментов.
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.InputEvent;
 
 public class DebugAction extends AbstractAction {
@@ -13,6 +14,9 @@ public class DebugAction extends AbstractAction {
         putValue(MNEMONIC_KEY, mnem);
         putValue(SHORT_DESCRIPTION, tTrip);
     }
-// Обработать события для панели инструментов и меню Debug.
 
+    // Обработать события для панели инструментов и меню Debug.
+    public void actionPerformed(ActionEvent ae) {
+
+    }
 }
