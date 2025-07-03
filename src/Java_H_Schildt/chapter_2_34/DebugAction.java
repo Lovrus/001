@@ -17,6 +17,7 @@ public class DebugAction extends AbstractAction {
 
     // Обработать события для панели инструментов и меню Debug.
     public void actionPerformed(ActionEvent ae) {
+        String comStr = ae.getActionCommand();
 
     }
 }
