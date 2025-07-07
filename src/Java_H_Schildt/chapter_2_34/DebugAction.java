@@ -19,6 +19,8 @@ public class DebugAction extends AbstractAction {
     public void actionPerformed(ActionEvent ae) {
         String comStr = ae.getActionCommand();
         jlab.setText(comStr + "Selected");
+// Переключить включенное состояние пунктов
+        // Set Breakpoint и Clear Breakpoint.
 
     }
 }
