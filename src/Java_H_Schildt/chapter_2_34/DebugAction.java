@@ -21,6 +21,8 @@ public class DebugAction extends AbstractAction {
         jlab.setText(comStr + "Selected");
 // Переключить включенное состояние пунктов
         // Set Breakpoint и Clear Breakpoint.
+if (comStr.equals("Set Breakpoint")) {
 
+}
     }
 }
