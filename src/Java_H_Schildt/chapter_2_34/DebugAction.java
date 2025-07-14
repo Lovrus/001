@@ -26,7 +26,7 @@ public class DebugAction extends AbstractAction {
             setAct.setEnabled(false);
         } else if (comStr.equals("Clear Breakpoint")) {
             clearAct.setEnable(false);
-
+setAct.setEnabled(true);
         }
     }
 }
